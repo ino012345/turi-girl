@@ -1,0 +1,10 @@
+.c-test {
+	color: red;
+	font-size: rem(50);
+	@include mq(tab){
+	font-size: rem(30);
+		color: green;
+	}
+
+
+}
