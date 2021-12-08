@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'MyFont';
+	src: url(../../nicokaku_v1.ttf);
+}
+
 // 色
 $background: #fff; // 背景
 $text-color: #333; // テキスト色
@@ -6,7 +11,7 @@ $text-color: #333; // テキスト色
 $opacity: 0.7; // 透過度
 
 // フォント
-$font-family-base: "";// ベースフォント
+$font-family-base: "MyFont";// ベースフォント
 $font-size-base: 16px; // ベースフォントサイズ
 $font-weight-base: 400; // ベースフォントウェイト
 $lh: 1.6; // ベース行間

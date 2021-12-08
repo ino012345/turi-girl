@@ -1,3 +1,8 @@
+@font-face {
+	src: url(../../nicokaku_v1.ttf);
+	font-family: 'MyFont';
+}
+
 fieldset,
 legend,
 button {
@@ -314,10 +319,16 @@ input[type="checkbox"]:disabled + span::before {
 
 /* placeholder */
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 /* リキッドレイアウト対応 */
 
 html {
-	font-size: 16px;
+	font-size: 4.26667vw;
 }
 
 html,
@@ -331,13 +342,15 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: #fff;
 	color: #333;
-	font-family: font-family-base;
+	font-family: "MyFont";
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.6;
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 	overflow-wrap: break-word;
+	position: relative;
+	z-index: -9999;
 }
 
 /* Box sizing rules */
@@ -348,81 +361,301 @@ body {
 	box-sizing: border-box;
 }
 
-/* Remove default margin */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
 
-html,
-body,
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
+a,
 p,
-figure,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
 blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
 dl,
-dd {
-	margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-
-ul[role="list"],
-ol[role="list"] {
-	list-style: none;
-}
-
-/* Set core root defaults */
-
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-
-body {
-	line-height: 1.5;
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-}
-
-/* A elements that don't have a class get default styles */
-
-a:not([class]) {
-	-webkit-text-decoration-skip: ink;
-	text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
 img,
-picture {
-	display: block;
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+video,
+iframe,
+object {
+	border: none;
+	height: auto;
 	max-width: 100%;
 }
 
-/* Inherit fonts for inputs and buttons */
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border: 1px solid;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid;
+	padding: 4px 6px;
+	text-align: left;
+	vertical-align: top;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+	content: "";
+	content: none;
+}
+
+address {
+	font-style: normal;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	display: inline-block;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
 
 input,
 button,
-textarea,
+select,
+optgroup,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+
+button,
 select {
-	font: inherit;
+	text-transform: none;
+}
+
+select {
+	cursor: pointer;
+}
+
+textarea {
+	-ms-overflow-style: scrollbar;
+	overflow: auto;
+	resize: vertical;
+}
+
+dialog {
+	background-color: inherit;
+	border: solid;
+	color: inherit;
+	display: block;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+dialog:not([is-open]) {
+	display: none;
+}
+
+summary {
+	cursor: pointer;
+	display: list-item;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 
+.l-header {
+	width: 100%;
+}
+
 .l-inner {
 	height: inherit;
 	margin: 0 auto;
-	max-width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
-	width: 1000px;
+	max-width: 1050px;
+	padding-left: 25px;
+	padding-right: 25px;
+	width: 100%;
 }
 
-.c-test {
-	color: red;
-	font-size: 3.125rem;
+.header {
+	padding: 1.25rem;
+}
+
+.header__inner {
+	align-items: center;
+	display: flex;
+	justify-content: right;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 67.5rem;
+	position: relative;
+	width: 100%;
+}
+
+.header__logo {
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: -0.625rem;
+	width: 18.125rem;
+}
+
+.header__logo img {
+	height: 100%;
+	width: 100%;
+}
+
+.header__nav {
+	margin-right: 1.5625rem;
+}
+
+.header__navList {
+	align-items: center;
+	display: flex;
+}
+
+.header__navItem {
+	font-size: 1rem;
+	padding: 0 0.9375rem;
+}
+
+.header__snsList {
+	align-items: center;
+	display: flex;
+}
+
+.header__sns {
+	height: auto;
+	margin-right: 0.9375rem;
+	width: 2.1875rem;
+}
+
+.header__sns:last-child {
+	margin-right: 0;
+}
+
+.header__sns img {
+	height: 100%;
+	width: 100%;
 }
 
 .p-test {
@@ -449,6 +682,14 @@ html:focus-within {
 
 }
 
+@media (min-width: 1000px) {
+
+html {
+	font-size: 16px;
+}
+
+}
+
 @media screen and (min-width: 1440px) {
 
 .u-hidden-pc {
@@ -460,17 +701,14 @@ html:focus-within {
 @media screen and (max-width: 1023px) {
 
 html {
-	font-size: 1.5625vw;
+	font-size: 1.6vw;
 }
 
 .l-inner {
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-.c-test {
-	color: green;
-	font-size: 1.875rem;
+	max-width: 33.75rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
 }
 
 }

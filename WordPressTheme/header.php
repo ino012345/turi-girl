@@ -9,6 +9,44 @@
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header class="">
-    <p class="p-test">aaaa</p>
+  <header class="header l-header">
+    <div class="header__inner">
+      <figure class="header__logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TB_logo_fin_A.png" alt="ヘッダーロゴ">
+      </figure>
+      <nav class="header__nav">
+        <ul class="header__navList">
+          <li class="header__navItem">
+            <a href="#">サイトについて</a>
+          </li>
+          <li class="header__navItem">
+            <a href="#">メンバー</a>
+          </li>
+          <li class="header__navItem">
+            <a href="#">ブログ</a>
+          </li>
+          <li class="header__navItem">
+            <a href="#">ピックアップ</a>
+          </li>
+          <li class="header__navItem">
+            <a href="#">PR依頼</a>
+          </li>
+          <li class="header__navItem">
+            <a href="#">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="header__snsList">
+        <li class="header__sns">
+          <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Instagram.png" alt="インスタグラム">
+          </a>
+        </li>
+        <li class="header__sns">
+          <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/LINE.png" alt="LINE">
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
