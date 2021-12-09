@@ -1,0 +1,44 @@
+.news {
+  padding: rem(120) rem(20) rem(100) rem(20);
+  &__list {
+    margin-top: rem(60);
+    max-width: rem(625);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    font-family: "heading";
+    margin-top: rem(10);
+  }
+  &__date {
+    margin-right: rem(40);
+  }
+  &__bannerArea {
+    margin-top: rem(60);
+    margin-bottom: rem(-40);
+    max-width: rem(1040);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__banner {
+    width: rem(500);
+    height: auto;
+    margin-right: rem(40);
+    margin-bottom: rem(40);
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

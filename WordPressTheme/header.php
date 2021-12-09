@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/slick.css">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header class="header l-header">
     <div class="header__inner">
-      <figure class="header__logo">
+      <a href="#" class="header__logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TB_logo_fin_A.png" alt="ヘッダーロゴ">
-      </figure>
+      </a>
       <nav class="header__nav">
         <ul class="header__navList">
           <li class="header__navItem">

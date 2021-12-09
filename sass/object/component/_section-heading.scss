@@ -1,0 +1,26 @@
+.section-heading {
+  font-size: rem(32);
+  font-family: "heading";
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-align: center;
+  position: relative;
+  &::after {
+    content: "";
+    width: rem(555);
+    height: rem(70);
+    background-image: url(../img/heading-line.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: rem(-12.5);
+  }
+  &.mini {
+    &::after {
+      width: rem(390);
+      background-image: url(../img/heading-line-mini.png);
+    }
+  }
+}

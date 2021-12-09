@@ -1,0 +1,69 @@
+.member-blog {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  background-color: #4986d9;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: rem(80);
+    margin-bottom: rem(-60);
+  }
+  &__item {
+    width: rem(350);
+    margin-right: rem(15);
+    margin-bottom: rem(60);
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .new {
+      width: rem(70);
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-15%, -30%);
+    }
+  }
+  &__date {
+    font-size: rem(15);
+    margin-top: rem(15);
+    margin-bottom: rem(10);
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  }
+  &__title {
+    font-size: rem(16);
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  }
+  &__author {
+    margin-top: rem(15);
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    width: rem(50);
+    height: rem(50);
+    margin-right: rem(15);
+    img {
+      border-radius: rem(25);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__name {
+    font-size: rem(15);
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  }
+}

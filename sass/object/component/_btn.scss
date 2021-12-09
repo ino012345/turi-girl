@@ -1,0 +1,11 @@
+.btn {
+  &__wrap {
+    margin-top: rem(70);
+    text-align: center;
+  }
+  font-size: rem(16);
+  font-family: "heading";
+  padding: rem(7) rem(40);
+  border: rem(3) solid #fff;
+  border-radius: rem(20);
+}

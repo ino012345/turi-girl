@@ -163,7 +163,6 @@ button {
 	display: inline-block;
 	font-size: 20px;
 	margin: 0;
-	padding: 10px 30px;
 }
 
 /* ブラウザ対策
@@ -346,7 +345,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: #0397de;
-	color: #333;
+	color: #fff;
 	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -601,8 +600,91 @@ summary {
 	width: 100%;
 }
 
+.btn {
+	border: 0.1875rem solid #fff;
+	border-radius: 1.25rem;
+	font-family: "heading";
+	font-size: 1rem;
+	padding: 0.4375rem 2.5rem;
+}
+
+.btn__wrap {
+	margin-top: 4.375rem;
+	text-align: center;
+}
+
+.fv {
+	padding-top: 1.875rem;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+.slider { /*横幅94%で左右に余白を持たせて中央寄せ*/
+	width: 100%;
+}
+
+.slider img { /*スライダー内の画像を60vwにしてレスポンシブ化*/
+	height: auto;
+	width: 60vw;
+}
+
+.slider .slick-slide { /*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;
+	transform: scale(0.95); /*左右の画像のサイズを80%に*/
+	transition: all .5s; /*透過50%*/
+}
+
+.slider .slick-slide.slick-center { /*中央の画像のサイズだけ等倍に*/
+	opacity: 1;
+	transform: scale(1); /*透過なし*/
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	margin-top: 1.25rem;
+	text-align: center;
+}
+
+.slick-dots li {
+	display: inline-block;
+	margin: 0 0.625rem;
+}
+
+.slick-dots button {
+	background-color: #0397de;
+	border: none;
+	color: transparent; /*ドットボタンのサイズ*/
+	display: block; /*ドットボタンのサイズ*/
+	height: 1.25rem;
+	outline: none;
+	position: relative;
+	width: 1.25rem;
+}
+
+.slick-dots button::after {
+	background-image: url(../img/fish.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 100%;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .3s;
+	width: 100%;
+}
+
+.slick-dots .slick-active button::after {
+	background-image: url(../img/fish-black.png);
+}
+
 .header {
 	background-color: #fff;
+	color: #333;
 	font-family: 'MyFont';
 	padding: 1.5625rem;
 }
@@ -619,6 +701,7 @@ summary {
 }
 
 .header__logo {
+	display: block;
 	height: auto;
 	left: 0;
 	position: absolute;
@@ -663,6 +746,338 @@ summary {
 .header__sns img {
 	height: 100%;
 	width: 100%;
+}
+
+.instagram {
+	background-color: #fff;
+}
+
+.member-blog {
+	background-color: #4986d9;
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+}
+
+.member-blog__list {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: -3.75rem;
+	margin-top: 5rem;
+}
+
+.member-blog__item {
+	margin-bottom: 3.75rem;
+	margin-right: 0.9375rem;
+	width: 21.875rem;
+}
+
+.member-blog__item:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.member-blog__image {
+	height: auto;
+	position: relative;
+	width: 100%;
+}
+
+.member-blog__image img {
+	height: 100%;
+	width: 100%;
+}
+
+.member-blog__image .new {
+	height: auto;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: translate(-15%, -30%);
+	width: 4.375rem;
+}
+
+.member-blog__date {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 0.9375rem;
+	margin-bottom: 0.625rem;
+	margin-top: 0.9375rem;
+}
+
+.member-blog__title {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 1rem;
+}
+
+.member-blog__author {
+	align-items: center;
+	display: flex;
+	margin-top: 0.9375rem;
+}
+
+.member-blog__icon {
+	height: 3.125rem;
+	margin-right: 0.9375rem;
+	width: 3.125rem;
+}
+
+.member-blog__icon img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	border-radius: 1.5625rem;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.member-blog__name {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 0.9375rem;
+}
+
+.member {
+	background-color: #12a9e0;
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.member__list {
+	margin-top: 5rem;
+	width: 100%;
+}
+
+.member__link {
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	display: block;
+	margin: 0 0.625rem;
+	padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
+	position: relative;
+	text-align: center;
+	width: 15.625rem;
+}
+
+.member__image {
+	height: auto;
+	width: 100%;
+}
+
+.member__image img {
+	height: 100%;
+	width: 100%;
+}
+
+.member__name {
+	color: #333;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 0.9375rem;
+}
+
+.member__from {
+	color: #333;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 0.3125rem;
+}
+
+.member__favorite {
+	color: #333;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 0.3125rem;
+}
+
+.member__arrow {
+	color: #333;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 0.3125rem;
+	text-align: right;
+}
+
+.member::after {
+	background-image: url(../img/Official-tsuri-bijyo-members.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 6.375rem;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translate(-145%, -50%);
+	width: 23.25rem;
+}
+
+.news {
+	padding: 7.5rem 1.25rem 6.25rem 1.25rem;
+}
+
+.news__list {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.75rem;
+	max-width: 39.0625rem;
+	width: 100%;
+}
+
+.news__item {
+	align-items: center;
+	display: flex;
+	font-family: "heading";
+	font-size: 1.125rem;
+	margin-top: 0.625rem;
+}
+
+.news__date {
+	margin-right: 2.5rem;
+}
+
+.news__bannerArea {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -2.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.75rem;
+	max-width: 65rem;
+	width: 100%;
+}
+
+.news__banner {
+	height: auto;
+	margin-bottom: 2.5rem;
+	margin-right: 2.5rem;
+	width: 31.25rem;
+}
+
+.news__banner:nth-of-type(2n) {
+	margin-right: 0;
+}
+
+.news__banner img {
+	height: 100%;
+	width: 100%;
+}
+
+.pickup {
+	background-color: #00b8ff;
+	padding-bottom: 6.25rem;
+	padding-top: 6.25rem;
+	position: relative;
+}
+
+.pickup__inner {
+	margin-top: 5rem;
+}
+
+.pickup__media {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 3.75rem;
+}
+
+.pickup__image {
+	height: auto;
+	margin-right: 1.875rem;
+	width: 31.25rem;
+}
+
+.pickup__image img {
+	height: 100%;
+	width: 100%;
+}
+
+.pickup__body {
+	width: 31.25rem;
+}
+
+.pickup__date {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 1.5rem;
+	margin-bottom: 0.625rem;
+	margin-top: 0.9375rem;
+}
+
+.pickup__title {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 1.5rem;
+}
+
+.pickup__description {
+	font-size: 1rem;
+	margin-top: 0.9375rem;
+}
+
+.pickup__author {
+	align-items: center;
+	display: flex;
+	margin-top: 2.1875rem;
+}
+
+.pickup__icon {
+	height: 4.375rem;
+	margin-right: 0.9375rem;
+	width: 4.375rem;
+}
+
+.pickup__icon img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	border-radius: 2.1875rem;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.pickup__name {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 1.125rem;
+}
+
+.pickup::after {
+	background-image: url(../img/Members-blog.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 6.75rem;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	transform: translate(150%, -50%);
+	width: 13.25rem;
+}
+
+.section-heading {
+	font-family: "heading";
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: 0.075em;
+	position: relative;
+	text-align: center;
+}
+
+.section-heading::after {
+	background-image: url(../img/heading-line.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: -0.78125rem;
+	content: "";
+	height: 4.375rem;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 34.6875rem;
+}
+
+.section-heading.mini::after {
+	background-image: url(../img/heading-line-mini.png);
+	width: 24.375rem;
 }
 
 .p-test {
