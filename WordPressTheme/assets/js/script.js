@@ -84,5 +84,21 @@ jQuery(function ($) {
 			variableWidth: true,//幅の違う画像の高さを揃えて表示
 			dots: false,//下部ドットナビゲーションの表示
 		});
+		$('.slider3').slick({
+			autoplay: true,//自動的に動き出すか。初期値はfalse。
+			infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+			autoplaySpeed: 0,//自動的に動き出す待ち時間。初期値は3000
+			speed: 5000,//スライドのスピード。初期値は300。
+			slidesToShow: 4,
+			slidesToScroll: 2,//1回のスクロールで1枚の写真を移動して見せる
+			prevArrow: false,
+			nextArrow: false,
+			pauseOnHover: false,//オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
+			pauseOnFocus: false,//フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
+			centerMode: true,//要素を中央ぞろえにする
+			variableWidth: true,//幅の違う画像の高さを揃えて表示
+			dots: false,//下部ドットナビゲーションの表示
+			cssEase: 'linear',//動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear
+		});
 	});
 });

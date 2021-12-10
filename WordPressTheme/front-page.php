@@ -277,6 +277,7 @@
   <div class="pickup__inner">
     <div class="pickup__media">
       <figure class="pickup__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-pickup.png" alt="新着マーク" class="new">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog1.png" alt="ピックアップ記事アイキャッチ">
       </figure>
       <div class="pickup__body">
@@ -293,6 +294,7 @@
     </div>
     <div class="pickup__media">
       <figure class="pickup__image">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/new-pickup.png" alt="新着マーク" class="new">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog1.png" alt="ピックアップ記事アイキャッチ">
       </figure>
       <div class="pickup__body">
@@ -313,12 +315,45 @@
   </div>
 </section>
 <section class="instagram">
-  <h1 class="section-heading instagram">インスタグラム</h1>
+  <h1 class="section-heading blue">インスタグラム</h1>
   <div class="instagram__inner">
-    
+    <a href="https://www.instagram.com/tsuribijyo/" class="instagram__link" target="_blank" rel="noopener noreferrer">
+      <ul class="instagram__imageList slider3">
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+        <li class="instagram__imageItem">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
+        </li>
+      </ul>
+    </a>
   </div>
-  <div class="instagram__linkWrap">
-    <a href="#" class="instagram__link">釣り美女公式Instagramはコチラ</a>
+  <div class="instagram__buttonWrap">
+    <a href="https://www.instagram.com/tsuribijyo/" class="instagram__button" target="_blank" rel="noopener noreferrer">釣り美女公式Instagramはコチラ</a>
   </div>
 </section>
 

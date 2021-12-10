@@ -1,0 +1,46 @@
+.contact {
+  padding: rem(100) rem(20) rem(120) rem(20);
+  max-width: rem(1040);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: rem(1) dotted #fff;
+  background-color: #0397de;
+  &__btns {
+    display: block;
+    margin-top: rem(80);
+    display: flex;
+  }
+  &__btn {
+    padding: rem(20);
+    width: rem(500);
+    height: rem(250);
+    margin-right: rem(40);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    &::after {
+      content: "";
+      width: rem(30);
+      height: rem(30);
+      background-image: url(../img/arrow.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: rem(10);
+      bottom: rem(10);
+    }
+  }
+  &__text {
+    font-size: rem(40);
+    line-height: 1.5;
+    font-family: "MyFont";
+    text-align: center;
+    color: #4986d9;
+  }
+}

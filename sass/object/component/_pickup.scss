@@ -1,6 +1,5 @@
 .pickup {
-  padding-top: rem(100);
-  padding-bottom: rem(100);
+  padding: rem(100) rem(20);
   background-color: #00b8ff;
   position: relative;
   &__inner {
@@ -16,9 +15,18 @@
     width: rem(500);
     height: auto;
     margin-right: rem(30);
+    position: relative;
     img {
       width: 100%;
       height: 100%;
+    }
+    .new {
+      width: rem(80);
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-7%, -7%);
     }
   }
   &__body {
@@ -26,7 +34,6 @@
   }
   &__date {
     font-size: rem(24);
-    margin-top: rem(15);
     margin-bottom: rem(10);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   }
@@ -69,6 +76,6 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(150%, -50%);
+    transform: translate(rem(280), -50%);
   }
 }

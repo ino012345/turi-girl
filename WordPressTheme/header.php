@@ -45,7 +45,7 @@
         </li>
         <li class="header__sns">
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/LINE.png" alt="LINE">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line_icon.svg" alt="LINE">
           </a>
         </li>
       </ul>

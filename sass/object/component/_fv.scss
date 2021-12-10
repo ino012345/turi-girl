@@ -10,12 +10,14 @@
 }
 
 .slider img {
-  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  width:65vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
   height:auto;
+  @include mq(tab){
+    width: 82.5vw;
+  }
 }
 
 .slider .slick-slide {
-transform: scale(0.95);/*左右の画像のサイズを80%に*/
 transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
 opacity: 0.5;/*透過50%*/
 }

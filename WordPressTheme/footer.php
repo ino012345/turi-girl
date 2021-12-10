@@ -1,18 +1,18 @@
 <section class="contact">
   <h1 class="section-heading">お問い合わせ</h1>
-  <div class="contact__btns">
+  <a href="" class="contact__btns">
     <div class="contact__btn">
       <p class="contact__text">オフィシャルメンバーの<br>ご応募はコチラ</p>
     </div>
     <div class="contact__btn">
       <p class="contact__text">お仕事のご依頼は<br>コチラ</p>
     </div>
-  </div>
+  </a>
 </section>
 <footer class="footer">
   <div class="footer__inner">
     <figure class="footer__logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TB_logo_fin_B.png" alt="フッターロゴ">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="フッターロゴ">
     </figure>
     <nav class="footer__nav">
       <div class="footer__navLeft">
@@ -21,8 +21,14 @@
           <ul class="footer_navList">
             <li class="footer__navItem">
               <a href="#">- トップページ</a>
+            </li>
+            <li class="footer__navItem">
               <a href="#">- オフィシャルメンバー</a>
-              <a href="#">- ブラグ一覧</a>
+            </li>
+            <li class="footer__navItem">
+              <a href="#">- ブログ一覧</a>
+            </li>
+            <li class="footer__navItem">
               <a href="#">- ピックアップ</a>
             </li>
           </ul>
@@ -32,7 +38,11 @@
           <ul class="footer_navList">
             <li class="footer__navItem">
               <a href="#">- オフィシャルメンバー応募</a>
+            </li>
+            <li class="footer__navItem">
               <a href="#">- お仕事のご依頼はコチラ</a>
+            </li>
+            <li class="footer__navItem">
               <a href="#">- お問い合わせ</a>
             </li>
           </ul>
@@ -44,6 +54,8 @@
           <ul class="footer_navList">
             <li class="footer__navItem">
               <a href="#">- Instagram</a>
+            </li>
+            <li class="footer__navItem">
               <a href="#">- LINE</a>
             </li>
           </ul>

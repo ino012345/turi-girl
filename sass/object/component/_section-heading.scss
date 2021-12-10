@@ -23,4 +23,10 @@
       background-image: url(../img/heading-line-mini.png);
     }
   }
+  &.blue {
+    color: #4986d9;
+    &::after {
+      background-image: url(../img/heading-line-blue.png);
+    }
+  }
 }
