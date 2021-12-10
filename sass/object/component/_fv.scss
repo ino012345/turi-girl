@@ -1,5 +1,8 @@
 .fv {
   padding-top: rem(30);
+  @include mq(sp){
+    padding-top: rem(5);
+  }
 }
 
 /*==================================================
@@ -14,6 +17,11 @@
   height:auto;
   @include mq(tab){
     width: 82.5vw;
+  }
+  @include mq(sp){
+    width: 90vw;
+    height: rem(400);
+    object-fit: cover;
   }
 }
 

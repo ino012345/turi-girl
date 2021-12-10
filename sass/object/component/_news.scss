@@ -9,13 +9,19 @@
   }
   &__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-size: rem(18);
     font-family: "heading";
     margin-top: rem(10);
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
   &__date {
     margin-right: rem(40);
+    @include mq(sp){
+      margin-right: rem(25);
+    }
   }
   &__bannerArea {
     margin-top: rem(60);
@@ -27,6 +33,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mq(sp){
+      flex-direction: column;
+    }
   }
   &__banner {
     width: rem(500);
@@ -39,6 +48,11 @@
     img {
       width: 100%;
       height: 100%;
+    }
+    @include mq(sp){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(20);
     }
   }
 }

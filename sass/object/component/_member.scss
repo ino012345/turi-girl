@@ -61,5 +61,10 @@
     top: 0;
     left: 50%;
     transform: translate(rem(-480), -50%);
+    @include mq(sp){
+      width: rem(279);
+      height: rem(76.5);
+      transform: translate(rem(-180), -50%);
+    }
   }
 }

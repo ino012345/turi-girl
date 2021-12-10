@@ -8,4 +8,7 @@
   padding: rem(7) rem(40);
   border: rem(3) solid #fff;
   border-radius: rem(20);
+  @include mq(sp){
+    font-size: rem(14);
+  }
 }

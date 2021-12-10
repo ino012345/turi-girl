@@ -15,6 +15,10 @@
       height: 100%;
       object-fit: cover;
     }
+    @include mq(sp){
+      width: rem(150);
+      height: rem(150);
+    }
   }
   &__buttonWrap {
     margin-top: rem(60);
@@ -25,6 +29,7 @@
     font-size: rem(16);
     color: #4986d9;
     position: relative;
+    padding-left: rem(30);
     &::before {
       content: "";
       width: rem(30);
@@ -35,7 +40,10 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: rem(-40);
+      left: rem(-10);
+    }
+    @include mq(sp){
+      font-size: rem(14);
     }
   }
 }

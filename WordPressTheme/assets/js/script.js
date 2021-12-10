@@ -7,10 +7,14 @@ jQuery(function ($) {
 	jQuery(function() {
 		// スクロール判定
 		jQuery(window).on("scroll", function() {
-			if (100 < jQuery(this).scrollTop()) {
+			if (0 < jQuery(this).scrollTop()) {
 				jQuery("body").attr("data-scroll", "true");
+				jQuery(".flow-nav").css("top", "0");
+				jQuery(".flow-nav__arrow").css("top", "40px");
 			} else {
 				jQuery("body").attr("data-scroll", "false");
+				jQuery(".flow-nav").css("top", "-100%");
+				jQuery(".flow-nav__arrow").css("top", "-100%");
 			}
 		});
 

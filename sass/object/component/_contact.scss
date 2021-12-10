@@ -10,6 +10,9 @@
     display: block;
     margin-top: rem(80);
     display: flex;
+    @include mq(sp){
+      flex-direction: column;
+    }
   }
   &__btn {
     padding: rem(20);
@@ -35,6 +38,13 @@
       right: rem(10);
       bottom: rem(10);
     }
+    @include mq(sp){
+      width: 100%;
+      height: rem(170);
+      &:last-child {
+        margin-top: rem(30);
+      }
+    }
   }
   &__text {
     font-size: rem(40);
@@ -42,5 +52,8 @@
     font-family: "MyFont";
     text-align: center;
     color: #4986d9;
+    @include mq(sp){
+      font-size: rem(28);
+    }
   }
 }

@@ -1,10 +1,18 @@
-.header {
-  padding: rem(20);
+.flow-nav {
+  width: 100%;
+  padding: rem(5) rem(20);
   background-color: #fff;
   color: #333;
   font-family: 'MyFont';
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -100%;
+  transition: all .3s;
+  z-index: 9999;
   @include mq(sp){
-    padding: rem(5) rem(15);
+    padding: rem(15);
+    overflow-x: scroll;
   }
   &__inner {
     max-width: rem(1080);
@@ -15,15 +23,15 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    justify-content: space-between;
     @include mq(sp){
-      justify-content: space-between;
+      width: rem(600);
     }
   }
   &__logo {
     display: block;
-    width: rem(240);
+    width: rem(150);
     height: auto;
-    position: absolute;
     left: 0;
     top: rem(-15);
     img {
@@ -31,14 +39,13 @@
       height: 100%;
     }
     @include mq(sp){
-      position: static;
-      width: rem(150);
+      display: none;
     }
   }
   &__nav {
     margin-right: rem(25);
     @include mq(sp){
-      display: none;
+      margin-right: 0;
     }
   }
   &__navList {
@@ -52,6 +59,9 @@
   &__snsList {
     display: flex;
     align-items: center;
+    @include mq(sp){
+      display: none;
+    }
   }
   &__sns {
     width: rem(35);
@@ -63,6 +73,18 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+  &__arrow {
+    display: none;
+    @include mq(sp){
+      display: block;
+      position: fixed;
+      top: -100%;
+      right: rem(5);
+      width: rem(30);
+      height: auto;
+      transition: all .3s;
     }
   }
 }

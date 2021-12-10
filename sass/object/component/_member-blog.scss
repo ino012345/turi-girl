@@ -1,5 +1,5 @@
 .member-blog {
-  padding: rem(100) rem(20);
+  padding: rem(100) rem(15);
   background-color: #4986d9;
   &__list {
     display: flex;
@@ -20,6 +20,16 @@
     &:nth-of-type(3n) {
       margin-right: 0;
     }
+    @include mq(sp){
+      width: 49%;
+      margin-right: 2%;
+      &:nth-of-type(3n) {
+        margin-right: 2%;
+      }
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
   }
   &__image {
     width: 100%;
@@ -36,6 +46,9 @@
       top: 0;
       left: 0;
       transform: translate(-15%, -30%);
+      @include mq(sp){
+        width: rem(50);
+      }
     }
   }
   &__date {
@@ -43,10 +56,16 @@
     margin-top: rem(15);
     margin-bottom: rem(10);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
   &__title {
     font-size: rem(16);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
   &__author {
     margin-top: rem(15);
@@ -68,5 +87,8 @@
   &__name {
     font-size: rem(15);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
 }

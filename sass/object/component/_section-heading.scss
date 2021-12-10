@@ -5,6 +5,9 @@
   letter-spacing: 0.075em;
   text-align: center;
   position: relative;
+  @include mq(sp){
+    font-size: rem(20);
+  }
   &::after {
     content: "";
     width: rem(555);
@@ -16,11 +19,18 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: rem(-12.5);
+    @include mq(sp){
+      width: rem(340);
+      height: rem(43);
+    }
   }
   &.mini {
     &::after {
       width: rem(390);
       background-image: url(../img/heading-line-mini.png);
+      @include mq(sp){
+        width: rem(240);
+      }
     }
   }
   &.blue {

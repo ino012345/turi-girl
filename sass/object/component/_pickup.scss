@@ -1,5 +1,5 @@
 .pickup {
-  padding: rem(100) rem(20);
+  padding: rem(100) rem(15);
   background-color: #00b8ff;
   position: relative;
   &__inner {
@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
     margin-top: rem(60);
+    @include mq(sp){
+      flex-direction: column;
+    }
   }
   &__image {
     width: rem(500);
@@ -27,28 +30,51 @@
       top: 0;
       left: 0;
       transform: translate(-7%, -7%);
+      @include mq(sp){
+        width: rem(60);
+      }
+    }
+    @include mq(sp){
+      width: 100%;
+      margin-right: 0;
     }
   }
   &__body {
     width: rem(500);
+    @include mq(sp){
+      width: 100%;
+      margin-top: rem(20);
+    }
   }
   &__date {
     font-size: rem(24);
     margin-bottom: rem(10);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include mq(sp){
+      font-size: rem(18);
+    }
   }
   &__title {
     font-size: rem(24);
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    @include mq(sp){
+      font-size: rem(18);
+    }
   }
   &__description {
     margin-top: rem(15);
     font-size: rem(16);
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
   &__author {
     margin-top: rem(35);
     display: flex;
     align-items: center;
+    @include mq(sp){
+      margin-top: rem(20);
+    }
   }
   &__icon {
     width: rem(70);
@@ -77,5 +103,10 @@
     top: 0;
     left: 50%;
     transform: translate(rem(280), -50%);
+    @include mq(sp){
+      width: rem(159);
+      height: rem(81);
+      transform: translate(rem(20), -50%);
+    }
   }
 }

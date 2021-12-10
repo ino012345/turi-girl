@@ -21,9 +21,16 @@
     font-family: "heading";
     display: flex;
     justify-content: space-between;
+    @include mq(sp){
+      flex-direction: column;
+      margin-left: rem(90);
+    }
   }
   &__navLeft {
     display: flex;
+    @include mq(sp){
+      flex-direction: column;
+    }
   }
   &__navHead {
     font-size: rem(20);
@@ -41,9 +48,17 @@
       transform: translateY(-55%);
       left: rem(-20);
     }
+    @include mq(sp){
+      font-size: rem(18);
+      padding-left: rem(10);
+    }
   }
   &__navListWrap {
     margin-right: rem(80);
+    @include mq(sp){
+      margin-right: 0;
+      margin-top: rem(40);
+    }
   }
   &__navList {
     margin-top: rem(20);
@@ -51,6 +66,9 @@
   &__navItem {
     font-size: rem(16);
     margin-top: rem(15);
+    @include mq(sp){
+      font-size: rem(14);
+    }
   }
   &__copyright {
     font-size: rem(12);
