@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<div id="splash">
+<div id="splash_logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="" class="fadeIn"></div>
+<!--/splash--></div>
 <section class="fv">
   <ul class="fv__imageList slider">
     <li class="fv__image">
@@ -36,12 +39,12 @@
     <?php endforeach; endif; wp_reset_postdata(); ?>
   </ul>
   <div class="news__bannerArea">
-    <figure class="news__banner">
+    <a href="#" class="news__banner">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
-    </figure>
-    <figure class="news__banner">
+    </a>
+    <a  href="#" class="news__banner">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
-    </figure>
+    </a>
   </div>
   <div class="btn__wrap">
     <a href="#" class="btn">すべてのおしらせをチェック</a>

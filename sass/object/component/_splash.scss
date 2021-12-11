@@ -1,0 +1,46 @@
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background:#0397de;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+  #splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Loading アイコンの大きさ設定　*/
+  #splash_logo img {
+    width:rem(150);
+    height: auto;
+  }
+  
+  .fadeIn{
+  animation-name: fadeInAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

@@ -1203,6 +1203,7 @@ summary {
 }
 
 .news__banner {
+	display: block;
 	height: auto;
 	margin-bottom: 2.5rem;
 	margin-right: 2.5rem;
@@ -1352,6 +1353,48 @@ summary {
 
 .section-heading.blue::after {
 	background-image: url(../img/heading-line-blue.png);
+}
+
+/* Loading背景画面設定　*/
+
+#splash {
+	background: #0397de;
+	bottom: 0;
+	color: #fff;
+	height: 100vh;
+	left: 0; /*fixedで全面に固定*/
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 100vw;
+	z-index: 9999;
+}
+
+/* Loading画像中央配置　*/
+
+#splash_logo {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+
+#splash_logo img {
+	height: auto;
+	width: 9.375rem;
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeInAnime;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: fadeInAnime;
+	opacity: 0;
 }
 
 .p-test {
@@ -1649,6 +1692,30 @@ html {
 
 .u-hidden-sp {
 	display: none;
+}
+
+}
+
+@-webkit-keyframes fadeInAnime {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeInAnime {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
 }
 
 }
