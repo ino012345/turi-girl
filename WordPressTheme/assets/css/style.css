@@ -1028,13 +1028,16 @@ summary {
 }
 
 .member-blog__image {
-	height: auto;
+	font-size: 0;
+	height: 13.75rem;
 	position: relative;
 	width: 100%;
 }
 
 .member-blog__image img {
+	-o-object-fit: cover;
 	height: 100%;
+	object-fit: cover;
 	width: 100%;
 }
 
@@ -1110,12 +1113,14 @@ summary {
 }
 
 .member__image {
-	height: auto;
+	height: 10.3125rem;
 	width: 100%;
 }
 
 .member__image img {
+	-o-object-fit: cover;
 	height: 100%;
+	object-fit: cover;
 	width: 100%;
 }
 
@@ -1231,14 +1236,17 @@ summary {
 }
 
 .pickup__image {
-	height: auto;
+	font-size: 0;
+	height: 19.6875rem;
 	margin-right: 1.875rem;
 	position: relative;
 	width: 31.25rem;
 }
 
 .pickup__image img {
+	-o-object-fit: cover;
 	height: 100%;
+	object-fit: cover;
 	width: 100%;
 }
 
@@ -1540,6 +1548,10 @@ html {
 	width: 3.125rem;
 }
 
+.member-blog__image {
+	height: 6.6875rem;
+}
+
 .member-blog__date {
 	font-size: 0.875rem;
 }
@@ -1585,6 +1597,7 @@ html {
 }
 
 .pickup__image {
+	height: 13.75rem;
 	margin-right: 0;
 	width: 100%;
 }
