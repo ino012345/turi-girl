@@ -40,7 +40,7 @@
       <ul class="header__snsList">
         <li class="header__sns">
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Instagram.png" alt="インスタグラム">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="インスタグラム">
           </a>
         </li>
         <li class="header__sns">
@@ -81,7 +81,7 @@
       <ul class="flow-nav__snsList">
         <li class="flow-nav__sns">
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Instagram.png" alt="インスタグラム">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="インスタグラム">
           </a>
         </li>
         <li class="flow-nav__sns">
