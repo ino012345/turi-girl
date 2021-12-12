@@ -5,6 +5,11 @@
   font-family: 'MyFont';
   @include mq(sp){
     padding: rem(5) rem(15);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
   }
   &__inner {
     max-width: rem(1080);
@@ -52,6 +57,9 @@
   &__snsList {
     display: flex;
     align-items: center;
+    @include mq(sp){
+      display: none;
+    }
   }
   &__sns {
     width: rem(35);

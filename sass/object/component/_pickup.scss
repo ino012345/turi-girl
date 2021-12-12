@@ -6,10 +6,18 @@
     margin-top: rem(80);
   }
   &__media {
+    max-width: rem(1050);
+    width: 100%;
+    padding: rem(10);
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: rem(60);
+    background-color: #fff;
+    border: rem(2) solid #333;
+    color: #333;
     @include mq(sp){
       flex-direction: column;
     }
@@ -44,9 +52,11 @@
   }
   &__body {
     width: rem(500);
+    padding-right: rem(10);
     @include mq(sp){
       width: 100%;
       margin-top: rem(20);
+      padding-left: rem(10);
     }
   }
   &__date {

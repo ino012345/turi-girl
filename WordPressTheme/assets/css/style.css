@@ -738,10 +738,6 @@ summary {
 	width: 100%;
 }
 
-.flow-nav__arrow {
-	display: none;
-}
-
 .footer {
 	padding: 3.75rem 1.25rem;
 }
@@ -769,7 +765,7 @@ summary {
 	display: flex;
 	font-family: "heading";
 	justify-content: space-between;
-	margin-top: 3.75rem;
+	margin-top: 2.5rem;
 }
 
 .footer__navLeft {
@@ -881,6 +877,132 @@ summary {
 
 .slick-dots .slick-active button::after {
 	background-image: url(../img/fish-black.png);
+}
+
+.g-nav__navHead {
+	font-size: 1.125rem;
+	padding-left: 0.625rem;
+	position: relative;
+}
+
+.g-nav__navHead::before {
+	background-image: url(../img/arrow-down.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 1.0625rem;
+	left: -1.25rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-55%);
+	width: 1.1875rem;
+}
+
+.g-nav__navListWrap {
+	color: #fff;
+	font-family: "heading";
+	margin-left: 3.125rem;
+	margin-top: 2.5rem;
+}
+
+.g-nav__navListWrap:last-child {
+	margin-bottom: 2.5rem;
+}
+
+.g-nav__navList {
+	margin-top: 1.25rem;
+}
+
+.g-nav__navItem {
+	font-size: 0.875rem;
+	margin-top: 0.9375rem;
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav { /*ナビの高さ*/
+	background-color: #0397de;
+	height: 100vh; /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+	position: fixed;
+	right: -120%; /*ナビのスタート位置と形状*/
+	top: 0; /*動き*/
+	transition: all 0.6s;
+	width: 100%;
+	z-index: 999;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+
+#g-nav.panelactive {
+	right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+
+#g-nav.panelactive #g-nav-list {
+	-webkit-overflow-scrolling: touch;
+	height: 100vh; /*表示する高さ*/
+	overflow: auto; /*ナビの数が増えた場合縦スクロール*/
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+/*========= ボタンのためのCSS ===============*/
+
+.openbtn { /*ボタンを最前面に*/
+	cursor: pointer;
+	display: none;
+	height: 3.125rem;
+	position: relative;
+	width: 3.125rem;
+	z-index: 9999;
+}
+
+/*×に変化*/
+
+.openbtn span {
+	background-color: #0397de;
+	border-radius: 2px;
+	display: inline-block;
+	height: 0.125rem;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	transition: all .4s;
+	width: 65%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top: 0.75rem;
+}
+
+.openbtn span:nth-of-type(2) {
+	top: 1.4375rem;
+}
+
+.openbtn span:nth-of-type(3) {
+	top: 2.125rem;
+}
+
+.openbtn.active span:nth-of-type(1) {
+	background-color: #fff;
+	left: 18px;
+	top: 18px;
+	transform: translateY(6px) rotate(-45deg);
+	width: 60%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+	background-color: #fff;
+	left: 18px;
+	top: 30px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 60%;
 }
 
 .header {
@@ -1018,8 +1140,12 @@ summary {
 }
 
 .member-blog__item {
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	color: #333;
 	margin-bottom: 3.75rem;
 	margin-right: 1.7%;
+	padding: 0.625rem;
 	width: 32.2%;
 }
 
@@ -1066,6 +1192,7 @@ summary {
 	align-items: center;
 	display: flex;
 	margin-top: 0.9375rem;
+	padding-left: 0.3125rem;
 }
 
 .member-blog__icon {
@@ -1180,6 +1307,7 @@ summary {
 
 .news__item {
 	align-items: flex-start;
+	border-bottom: 0.0625rem dashed #fff;
 	display: flex;
 	font-family: "heading";
 	font-size: 1.125rem;
@@ -1231,9 +1359,17 @@ summary {
 
 .pickup__media {
 	align-items: center;
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	color: #333;
 	display: flex;
 	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 3.75rem;
+	max-width: 65.625rem;
+	padding: 0.625rem;
+	width: 100%;
 }
 
 .pickup__image {
@@ -1261,6 +1397,7 @@ summary {
 }
 
 .pickup__body {
+	padding-right: 0.625rem;
 	width: 31.25rem;
 }
 
@@ -1484,39 +1621,12 @@ html {
 }
 
 .flow-nav {
-	overflow-x: scroll;
-	padding: 0.9375rem;
-}
-
-.flow-nav__inner {
-	width: 37.5rem;
-}
-
-.flow-nav__logo {
 	display: none;
-}
-
-.flow-nav__nav {
-	margin-right: 0;
-}
-
-.flow-nav__snsList {
-	display: none;
-}
-
-.flow-nav__arrow {
-	display: block;
-	height: auto;
-	position: fixed;
-	right: 0.3125rem;
-	top: -100%;
-	transition: all .3s;
-	width: 1.875rem;
 }
 
 .footer__nav {
 	flex-direction: column;
-	margin-left: 5.625rem;
+	margin-left: 2.5rem;
 }
 
 .footer__navLeft {
@@ -1538,6 +1648,7 @@ html {
 }
 
 .fv {
+	margin-top: 4.375rem;
 	padding-top: 0.3125rem;
 }
 
@@ -1548,8 +1659,17 @@ html {
 	width: 90vw;
 }
 
+.openbtn {
+	display: block;
+}
+
 .header {
+	left: 0;
 	padding: 0.3125rem 0.9375rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
 }
 
 .header__inner {
@@ -1562,6 +1682,10 @@ html {
 }
 
 .header__nav {
+	display: none;
+}
+
+.header__snsList {
 	display: none;
 }
 
@@ -1647,6 +1771,7 @@ html {
 
 .pickup__body {
 	margin-top: 1.25rem;
+	padding-left: 0.625rem;
 	width: 100%;
 }
 

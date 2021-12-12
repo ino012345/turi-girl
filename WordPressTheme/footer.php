@@ -18,7 +18,7 @@
       <div class="footer__navLeft">
         <div class="footer__navListWrap">
           <p class="footer__navHead">コンテンツ</p>
-          <ul class="footer_navList">
+          <ul class="footer__navList">
             <li class="footer__navItem">
               <a href="#">- トップページ</a>
             </li>

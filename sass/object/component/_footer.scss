@@ -17,13 +17,13 @@
     }
   }
   &__nav {
-    margin-top: rem(60);
+    margin-top: rem(40);
     font-family: "heading";
     display: flex;
     justify-content: space-between;
     @include mq(sp){
       flex-direction: column;
-      margin-left: rem(90);
+      margin-left: rem(40);
     }
   }
   &__navLeft {

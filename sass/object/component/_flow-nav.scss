@@ -11,8 +11,7 @@
   transition: all .3s;
   z-index: 9999;
   @include mq(sp){
-    padding: rem(15);
-    overflow-x: scroll;
+    display: none;
   }
   &__inner {
     max-width: rem(1080);
@@ -24,9 +23,6 @@
     justify-content: right;
     align-items: center;
     justify-content: space-between;
-    @include mq(sp){
-      width: rem(600);
-    }
   }
   &__logo {
     display: block;
@@ -38,15 +34,9 @@
       width: 100%;
       height: 100%;
     }
-    @include mq(sp){
-      display: none;
-    }
   }
   &__nav {
     margin-right: rem(25);
-    @include mq(sp){
-      margin-right: 0;
-    }
   }
   &__navList {
     display: flex;
@@ -59,9 +49,6 @@
   &__snsList {
     display: flex;
     align-items: center;
-    @include mq(sp){
-      display: none;
-    }
   }
   &__sns {
     width: rem(35);
@@ -73,18 +60,6 @@
     img {
       width: 100%;
       height: 100%;
-    }
-  }
-  &__arrow {
-    display: none;
-    @include mq(sp){
-      display: block;
-      position: fixed;
-      top: -100%;
-      right: rem(5);
-      width: rem(30);
-      height: auto;
-      transition: all .3s;
     }
   }
 }

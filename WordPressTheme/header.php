@@ -49,7 +49,54 @@
           </a>
         </li>
       </ul>
+      <div class="openbtn"><span></span><span></span><span></span></div>
     </div>
+    <nav id="g-nav">
+      <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+        <div class="g-nav__navListWrap">
+          <p class="g-nav__navHead">コンテンツ</p>
+          <ul class="g-nav__navList">
+            <li class="g-nav__navItem">
+              <a href="#">- トップページ</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- オフィシャルメンバー</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- ブログ一覧</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- ピックアップ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="g-nav__navListWrap">
+          <p class="g-nav__navHead">お問い合わせ</p>
+          <ul class="g-nav_navList">
+            <li class="g-nav__navItem">
+              <a href="#">- オフィシャルメンバー応募</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- お仕事のご依頼はコチラ</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="g-nav__navListWrap">
+          <p class="g-nav__navHead">SNS</p>
+          <ul class="g-nav_navList">
+            <li class="g-nav__navItem">
+              <a href="#">- Instagram</a>
+            </li>
+            <li class="g-nav__navItem">
+              <a href="#">- LINE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
   <div class="flow-nav">
     <div class="flow-nav__inner">
@@ -91,6 +138,4 @@
         </li>
       </ul>
     </div>
-    <img class="flow-nav__arrow" src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-right.svg" alt="矢印">
-  </div>
-  
+  </div>  

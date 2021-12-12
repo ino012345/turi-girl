@@ -13,6 +13,7 @@
     font-size: rem(18);
     font-family: "heading";
     margin-top: rem(10);
+    border-bottom: rem(1) dashed #fff;
     @include mq(sp){
       font-size: rem(14);
     }

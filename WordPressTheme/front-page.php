@@ -46,9 +46,9 @@
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
     </a>
   </div>
-  <div class="btn__wrap">
+  <!-- <div class="btn__wrap">
     <a href="#" class="btn">すべてのおしらせをチェック</a>
-  </div>
+  </div> -->
 </section>
 <section class="member">
   <h1 class="section-heading">オフィシャルメンバー</h1>
@@ -103,29 +103,31 @@
     setup_postdata( $post ); // 記事データの取得
   ?>
     <li class="member-blog__item">
-      <figure class="member-blog__image">
-        <?php keika_time(3);?>
-        <?php if ( has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail(); ?>
-        <?php else : ?>
-          <p>サムネイルがないです</p>
-        <?php endif; ?>
-      </figure>
-      <p class="member-blog__date"><?php the_time('Y.m.d'); ?></p>
-      <a href="<?php the_permalink(); ?>" class="member-blog__title"><?php the_title(); ?></a>
-      <a href="<?php echo get_the_author_link() ?>" class="member-blog__author">
-        <figure class="member-blog__icon">
-        <?php
-          $author = get_the_author_meta('id');
-          $author_img = get_avatar($author);
-          $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
-          if(preg_match($imgtag, $author_img, $imgurl)){
-            $authorimg = $imgurl[2];
-          }
-          ?>
-          <img src="<?php echo $authorimg ?>" alt="メンバーのアイコン">
+      <a href="<?php the_permalink(); ?>">
+        <figure class="member-blog__image">
+          <?php keika_time(3);?>
+          <?php if ( has_post_thumbnail() ) : ?>
+            <?php the_post_thumbnail(); ?>
+          <?php else : ?>
+            <p>サムネイルがないです</p>
+          <?php endif; ?>
         </figure>
-        <p class="member-blog__name"><?php echo get_the_author_meta('nickname') ?></p>
+        <p class="member-blog__date"><?php the_time('Y.m.d'); ?></p>
+        <p class="member-blog__title"><?php the_title(); ?></p>
+        <div class="member-blog__author">
+          <figure class="member-blog__icon">
+          <?php
+            $author = get_the_author_meta('id');
+            $author_img = get_avatar($author);
+            $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
+            if(preg_match($imgtag, $author_img, $imgurl)){
+              $authorimg = $imgurl[2];
+            }
+            ?>
+            <img src="<?php echo $authorimg ?>" alt="メンバーのアイコン">
+          </figure>
+          <p class="member-blog__name"><?php echo get_the_author_meta('nickname') ?></p>
+        </div>
       </a>
     </li>
     <?php
