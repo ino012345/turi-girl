@@ -193,3 +193,18 @@ register_post_type( 'news', array( //カスタム投稿の名前
 	),
 	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK！
 ));
+
+//カスタム投稿（投稿項目の名前）
+register_post_type( 'profile', array( //カスタム投稿の名前
+	'label' => 'プロフィール', //管理画面に表示される名前
+	'public' => true, //trueでOK！
+	'query_var' => true, //URLの最適化。trueでOK！
+	'rewrite' => array( 'slug' => 'profile' ), //スラッグの指定
+	'capability_type' => 'post', //権限の設定。postでOK！
+	'hierarchical' => false, //カスタム投稿タイプで親子関係を作るか。（今回はfalse）
+	'menu_position' => 6, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
+	'supports' => array( //編集ページに表示させるもの
+			'title', //タイトル
+	),
+	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK！
+));
