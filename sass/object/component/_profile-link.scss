@@ -1,0 +1,105 @@
+.profile-link {
+  background-color: #12a9e0;
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  &__list {
+    max-width: rem(850);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: rem(80);
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem(40) rem(0) 0 rem(40);
+    background-color: #fff;
+    border: rem(2) solid #333;
+  }
+  &__item {
+    width: 22%;
+    margin-right: 4%;
+    margin-bottom: rem(50);
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+
+    a {
+      position: relative;
+      padding-left: rem(50);
+      font-size: rem(18);
+      font-weight: bold;
+      color: #333;
+      &::before {
+        position: absolute;
+        content: "";
+        width: rem(30);
+        height: rem(30);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+      &[href=""] {
+        opacity: .2;
+      }
+    }
+
+    &.instagram-link {
+      a {
+        &::before {
+          background-image: url(../img/instagram.svg);
+        }
+      }
+    }
+
+    &.twitter {
+      a {
+        &::before {
+          background-image: url(../img/Twitter.svg);
+        }
+      }
+    }
+
+    &.youtube {
+      a {
+        &::before {
+          background-image: url(../img/Youtube.svg);
+        }
+      }
+    }
+
+    &.tiktok {
+      a {
+        &::before {
+          background-image: url(../img/tiktok.svg);
+        }
+      }
+    }
+
+    &.line {
+      a {
+        &::before {
+          background-image: url(../img/line_icon.svg);
+        }
+      }
+    }
+
+    &.room {
+      a {
+        &::before {
+          background-image: url(../img/room.png);
+        }
+      }
+    }
+
+    &.amazon {
+      a {
+        &::before {
+          background-image: url(../img/amazon.svg);
+        }
+      }
+    }
+
+  }
+}

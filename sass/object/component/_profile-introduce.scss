@@ -1,0 +1,23 @@
+.profile-introduce {
+  background-color: #00b8ff;
+  padding-top: rem(100);
+  padding-right: rem(20);
+  padding-left: rem(20);
+  padding-bottom: rem(100);
+  &__content {
+    margin-top: rem(80);
+    max-width: rem(700);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border: rem(2) solid #333;
+    padding: rem(40);
+  }
+  &__text {
+    font-size: rem(18);
+    color: #333;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+}

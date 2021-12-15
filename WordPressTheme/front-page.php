@@ -53,39 +53,37 @@
 <section class="member">
   <h1 class="section-heading">オフィシャルメンバー</h1>
   <ul class="member__list slider2">
-  <?php $args = array(
-      'orderby'       => 'id', 
-      'order'         => 'DESC', 
-      'number'        => 3,
-      'show_fullname' => true ); ?>
-
-  <?php wp_list_authors( $args ); ?>
-
-  <?php $blogusers = get_users(); foreach ($blogusers as $user): ?>
-
-  <?php if($user->ID !==1): //ここで管理者を排除 ?>
+  <?php
+      $cat_posts = get_posts(array(
+          'post_type' => 'profile', // 投稿タイプ
+          'posts_per_page' => 5, // 表示件数
+          'orderby' => 'date', // 表示順の基準
+          'order' => 'DESC' // 昇順・降順
+      ));
+      global $post;
+      if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
 
     <li class="member__item">
-      <a href="<?php echo $user->display_name; ?>" class="member__link">
+      <a href="<?php the_permalink() ?>" class="member__link">
         <figure class="member__image">
-        <?php
-          $user_img = get_avatar($user->ID);
-          $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
-          if(preg_match($imgtag, $user_img, $imgurl)){
-            $userimg = $imgurl[2];
-          }
-          ?>
-          <img src="<?php echo $userimg ?>" alt="メンバーのアイコン">
+          <img src="<?php echo the_field('image1'); ?>" alt="プロフィール写真">
         </figure>
-        <p class="member__name"><?php echo $user->display_name; ?></p>
-        <p class="member__from">From：<?php echo get_user_meta( $user->ID, 'from', true); ?></p>
-        <p class="member__favorite">Favorite：<?php echo get_user_meta( $user->ID, 'favorite', true); ?></p>
+        <p class="member__name"><?php the_title(); ?></p>
+        <p class="member__from">拠点：<?php echo post_custom('from'); ?></p>
+        <p class="member__favorite">好きな釣り：
+        <?php
+          if(mb_strlen(get_field('fishing'))>6){
+          $text= mb_substr(strip_tags(get_field('fishing')), 0, 6);
+          echo $text.'…';
+          }else{
+          echo strip_tags(get_field('fishing'));
+          }
+        ?>
+        </p>
         <p class="member__arrow">PROFILE >>></p>
       </a>
     </li>
-  <? endif; ?>
-
-  <?php endforeach; ?>
+    <?php endforeach; endif; wp_reset_postdata(); ?>
   </ul>
   <div class="btn__wrap">
     <a href="#" class="btn">他のオフィシャルメンバーをチェック</a>

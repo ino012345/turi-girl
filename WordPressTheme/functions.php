@@ -150,17 +150,6 @@ function my_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
 
-// ユーザープロフィールの項目のカスタマイズ
-function my_user_meta($wb)
-{
-//項目の追加例
-$wb['from'] = '出身地（例：東京都）';
-$wb['favorite'] = '好きなこと（例：泳がせ釣り）';
-
-return $wb;
-}
-add_filter('user_contactmethods', 'my_user_meta', 10, 1);
-
 function keika_time($days){
 	$today = date_i18n('U');
 	$entry_day = get_the_time('U');
@@ -208,3 +197,36 @@ register_post_type( 'profile', array( //カスタム投稿の名前
 	),
 	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK！
 ));
+
+// カスタム投稿タイプの記事編集画面にメタボックス（作成者変更）を表示する
+
+/* admin_menu アクションフックでカスタムボックスを定義 */
+add_action('admin_menu', 'myplugin_add_custom_box');
+
+/* 投稿ページの "advanced" 画面にカスタムセクションを追加 */
+function myplugin_add_custom_box() {
+  if( function_exists( 'add_meta_box' )) {
+    add_meta_box( 'myplugin_sectionid', __( '作成者', 'myplugin_textdomain' ), 'post_author_meta_box', 'profile', 'side' );
+  }
+}
+
+function user_profile_hide_script( $hook ) {
+	$script = <<<SCRIPT
+	jQuery(function($) {
+		jQuery('#your-profile .user-rich-editing-wrap').hide(); //ビジュアルエディター
+		jQuery('#your-profile .user-syntax-highlighting-wrap').hide(); //シンタックスハイライト
+		jQuery('#your-profile .user-comment-shortcuts-wrap').hide(); //キーボードショートカット
+		jQuery('#your-profile .show-admin-bar').hide(); //ツールバー
+		jQuery('#your-profile .user-language-wrap').hide(); //言語
+		jQuery('#your-profile .user-url-wrap').hide(); //サイト
+		jQuery('#your-profile .user-aim-wrap').hide(); //AIM
+		jQuery('#your-profile .user-yim-wrap').hide(); //Yahoo IM
+		jQuery('#your-profile .user-jabber-wrap').hide(); //Jabber / Google Talk
+		jQuery('#your-profile .user-googleplus-wrap').hide(); //Google+
+		jQuery('#your-profile .user-description-wrap').hide(); //プロフィール情報
+		jQuery('#your-profile .user-sessions-wrap').hide(); //セッション
+	});
+	SCRIPT;
+	wp_add_inline_script( 'jquery-core', $script );
+	}
+	add_action( 'admin_enqueue_scripts', 'user_profile_hide_script' );
