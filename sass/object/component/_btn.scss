@@ -1,4 +1,5 @@
 .btn {
+  transition: all .3s;
   &__wrap {
     margin-top: rem(70);
     text-align: center;
@@ -10,5 +11,16 @@
   border-radius: rem(20);
   @include mq(sp){
     font-size: rem(14);
+  }
+  &.block {
+    display: block;
+    width: rem(400);
+    border-radius: rem(50);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &:hover {
+    color: #0397de;
+    background-color: #fff;
   }
 }

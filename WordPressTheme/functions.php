@@ -230,3 +230,19 @@ function user_profile_hide_script( $hook ) {
 	wp_add_inline_script( 'jquery-core', $script );
 	}
 	add_action( 'admin_enqueue_scripts', 'user_profile_hide_script' );
+
+	// カスタム投稿タイプの記事一覧に投稿者の項目を追加する
+function manage_books_columns ($columns) {
+	$columns['author'] = '作成者';
+	return $columns;
+}
+
+function add_books_column ($column, $post_id) {
+	if ('author' == $column) {
+			$value = get_the_term_list($post_id, 'author');
+			echo attribute_escape($value);
+	}
+}
+
+add_filter('manage_posts_columns', 'manage_books_columns');
+add_action('manage_posts_custom_column', 'add_books_column', 10, 2);

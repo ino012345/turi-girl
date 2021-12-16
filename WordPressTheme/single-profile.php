@@ -97,7 +97,7 @@
   <?php 
   $blogusers = get_the_author_meta( 'ID' );
   $args = array(
-    'author' => $blogusers
+    'author' => $blogusers,
   );
   query_posts($args);?>
 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>

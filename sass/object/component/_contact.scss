@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: all .3s;
     &:last-child {
       margin-right: 0;
     }
@@ -44,6 +45,10 @@
       &:last-child {
         margin-top: rem(30);
       }
+    }
+    &:hover {
+      box-shadow: 0 rem(7) rem(10) rgba(0, 0, 0, 0.3);
+      border-color: transparent;
     }
   }
   &__text {
