@@ -20,7 +20,9 @@
       <p class="member-blog__name"><?php echo get_the_author_meta('nickname', $author) ?></p>
     </div>
   </div>
-  <?php the_content(); ?>
+  <div class="article__contentWrap">
+    <?php the_content(); ?>
+  </div>
 </section>
 <section class="information">
 <?php 
@@ -40,10 +42,10 @@
         <figure class="information__icon">
           <img src="<?php echo the_field('image1'); ?>" alt="メンバーのアイコン">
         </figure>
-        <p class="information__name"><?php the_title();?></p>
       </div>
       <div class="information__introduce">
-        <p class="information__text"><?php echo the_field('introduce'); ?></p>
+        <p class="information__name"><?php the_title();?></p>
+        <p class="information__introText"><?php echo the_field('introduce'); ?></p>
       </div>
     </div>
     </a>
@@ -53,12 +55,12 @@
 endif;
 wp_reset_query();
 ?>
-  <div class="profile-btn">
-    <a href="#">お仕事・PRのご依頼はコチラ</a>
-  </div>
 </section>
+<div class="profile-btn">
+  <a href="#">お仕事・PRのご依頼はコチラ</a>
+</div>
 <section class="recommend">
-  <p class="information__recommend">コチラの記事もオススメ！</p>
+  <p class="recommend__heading">コチラの記事もオススメ！</p>
   <ul class="member-blog__list">
     <?php
       $args = array(

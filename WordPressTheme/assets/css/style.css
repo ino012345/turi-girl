@@ -600,6 +600,67 @@ summary {
 	width: 100%;
 }
 
+.article {
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	color: #333;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6.25rem;
+	max-width: 56.25rem;
+	padding: 2.5rem;
+	width: 100%;
+}
+
+.article__information {
+	align-items: center;
+	border-bottom: 0.125rem dashed #0397de;
+	display: flex;
+	margin-top: 0.9375rem;
+	padding-bottom: 2.5rem;
+}
+
+.article__date {
+	margin-right: 1.875rem;
+}
+
+.article .member-blog__author {
+	margin-top: 0;
+	padding-left: 0;
+}
+
+.article__contentWrap {
+	margin-top: 2.5rem;
+	padding-left: 0.3125rem;
+	padding-right: 0.3125rem;
+}
+
+.article__contentWrap p {
+	line-height: 1.75;
+	margin-bottom: 2.1875rem;
+}
+
+.article__contentWrap h2 {
+	margin-bottom: 1.25rem;
+	padding-left: 0.625rem;
+	position: relative;
+}
+
+.article__contentWrap h2:before {
+	background-color: #0397de;
+	content: "";
+	height: 2.5rem;
+	left: -0.625rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.1875rem;
+}
+
+.article__contentWrap figure.wp-block-image {
+	margin-bottom: 2.1875rem;
+}
+
 .btn {
 	border: 0.1875rem solid #fff;
 	border-radius: 1.25rem;
@@ -1089,6 +1150,58 @@ summary {
 .header__sns img {
 	height: 100%;
 	width: 100%;
+}
+
+.information {
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	color: #333;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.875rem;
+	max-width: 56.25rem;
+	padding: 2.5rem;
+	width: 100%;
+}
+
+.information__text {
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+.information__media {
+	align-items: center;
+	display: flex;
+	margin-top: 1.875rem;
+}
+
+.information__author {
+	border-right: 0.125rem dashed #0397de;
+	margin-right: 3.75rem;
+	padding-right: 3.75rem;
+	width: 30%;
+}
+
+.information__icon {
+	height: auto;
+	width: 100%;
+}
+
+.information__icon img {
+	height: 100%;
+	width: 100%;
+}
+
+.information__name {
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+.information__introText {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5;
+	margin-top: 1.25rem;
 }
 
 .instagram {
@@ -1780,6 +1893,25 @@ summary {
 
 .profile-link__item.amazon a::before {
 	background-image: url(../img/amazon.svg);
+}
+
+.recommend {
+	background-color: #4986d9;
+	margin-top: 6.25rem;
+	padding: 6.25rem 1.25rem;
+}
+
+.recommend__heading {
+	border-bottom: 0.125rem dashed #fff;
+	font-family: "heading";
+	font-size: 2rem;
+	font-weight: 600;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 56.25rem;
+	padding-bottom: 0.9375rem;
+	text-align: center;
+	width: 100%;
 }
 
 .section-heading {

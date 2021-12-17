@@ -1,0 +1,17 @@
+.recommend {
+  margin-top: rem(100);
+  padding: rem(100) rem(20);
+  background-color: #4986d9;
+  &__heading {
+    max-width: rem(900);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: rem(32);
+    text-align: center;
+    font-family: "heading";
+    font-weight: 600;
+    padding-bottom: rem(15);
+    border-bottom: rem(2) dashed #fff;
+  }
+}
