@@ -29,13 +29,19 @@
       bottom: rem(10);
     }
     @include mq(sp){
-      font-size: rem(28);
-      width: 100%;
-      height: rem(170);
+      font-size: rem(24);
+      width: 90%;
+      height: rem(140);
     }
     &:hover {
       box-shadow: 0 rem(7) rem(10) rgba(0, 0, 0, 0.3);
       border-color: transparent;
+    }
+    .sp {
+      display: none;
+      @include mq(sp){
+        display: block;
+      }
     }
   }
 }

@@ -18,6 +18,9 @@
     border-radius: rem(50);
     margin-right: auto;
     margin-left: auto;
+    @include mq(sp){
+      width: rem(335);
+    }
   }
   &:hover {
     color: #0397de;

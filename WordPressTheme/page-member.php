@@ -2,9 +2,9 @@
 
 <section class="member-introduce">
   <h1 class="section-heading">釣り美女<br>オフィシャルメンバー</h1>
-  <p class="member-introduce__text">釣りガールの普及や釣り業界を盛り上げてくれている<br>釣り美女オフィシャルメンバーををご紹介します</p>
+  <p class="member-introduce__text">釣りガールの普及や釣り業界を<br class="sp">盛り上げてくれている<br>釣り美女オフィシャルメンバーを<br class="sp">ご紹介します</p>
   <div class="profile-btn">
-    <a href="#">オフィシャルメンバーの応募はこちら</a>
+    <a href="#">オフィシャルメンバーの応募は<br class="sp">こちら</a>
   </div>
   <div class="btn__wrap">
     <a href="#" class="btn block">釣り美女・オフィシャルメンバーへの<br>お仕事依頼はこちら</a>
@@ -30,12 +30,21 @@
           <p class="member-introduce__from">拠点：<?php echo post_custom('from'); ?></p>
           <p class="member-introduce__favorite">好きな釣り：<br>
           <?php
+          if(is_mobile()) {
+            if(mb_strlen(get_field('fishing'))>8){
+            $text= mb_substr(strip_tags(get_field('fishing')), 0, 8);
+            echo $text.'…';
+            }else{
+            echo strip_tags(get_field('fishing'));
+            }
+          }else {
             if(mb_strlen(get_field('fishing'))>14){
             $text= mb_substr(strip_tags(get_field('fishing')), 0, 14);
             echo $text.'…';
             }else{
             echo strip_tags(get_field('fishing'));
             }
+          }
           ?>
           </p>
           <p class="member-introduce__arrow">PROFILE >>></p>

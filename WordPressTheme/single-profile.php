@@ -61,7 +61,7 @@
     <p class="profile-introduce__text"><?php echo the_field('introduce'); ?></p>
   </div>
   <div class="profile-btn">
-    <a href="#">お仕事・PRのご依頼はコチラ</a>
+    <a href="#">お仕事・PRのご依頼は<br class="sp">コチラ</a>
   </div>
 </section>
 <section class="profile-link">
@@ -140,7 +140,7 @@ wp_reset_query();
     <a href="#" class="btn">すべてのブログをチェック</a>
   </div> -->
   <div class="profile-btn">
-    <a href="#">お仕事・PRのご依頼はコチラ</a>
+    <a href="#">お仕事・PRのご依頼は<br class="sp">コチラ</a>
   </div>
 </section>
 

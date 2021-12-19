@@ -1,5 +1,18 @@
 <?php get_header(); ?>
 
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+  <?php
+  breadcrumb_trail(
+    array(
+      'separator' => '&raquo;',//区切りの記号
+      'show_browse' => false,//Browse: を非表示に
+      'labels' => array(
+        'home'	=> __( 'ホーム',	'breadcrumb-trail' ),//Homeを日本語で
+      ),
+    )
+  );
+  ?>
+</div>
 <section class="article">
   <h1 class="article__title"><?php the_title();?></h1>
   <div class="article__information">
@@ -55,11 +68,20 @@
 endif;
 wp_reset_query();
 ?>
+<p class="information__arrow">PROFILE >>></p>
 </section>
 <div class="profile-btn">
   <a href="#">お仕事・PRのご依頼はコチラ</a>
 </div>
 <section class="recommend">
+<div class="recommend__bannerArea">
+    <a href="#" class="recommend__banner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
+    </a>
+    <a  href="#" class="recommend__banner">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
+    </a>
+  </div>
   <p class="recommend__heading">コチラの記事もオススメ！</p>
   <ul class="member-blog__list">
     <?php
@@ -70,7 +92,7 @@ wp_reset_query();
       foreach ( $posts as $post ): // ループの開始
       setup_postdata( $post ); // 記事データの取得
     ?>
-    <li class="member-blog__item">
+    <li class="member-blog__item recommend-blog">
       <a href="<?php the_permalink(); ?>">
         <figure class="member-blog__image">
           <?php keika_time(3);?>

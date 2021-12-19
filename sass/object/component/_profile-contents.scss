@@ -3,19 +3,36 @@
   padding-bottom: rem(100);
   padding-right: rem(20);
   padding-left: rem(20);
+  @include mq(sp){
+    margin-top: rem(40);
+    padding-bottom: rem(80);
+  }
   &__media {
     margin-top: rem(80);
     display: flex;
     justify-content: center;
+    @include mq(sp){
+      flex-direction: column;
+      margin-top: rem(60);
+    }
   }
   &__slider {
     width: rem(500);
     height: rem(600);
     margin-right: rem(40);
+    @include mq(sp){
+      width: 100%;
+      height: rem(500);
+      margin-right: 0;
+    }
   }
   &__image {
     width: rem(500);
     height: rem(520);
+    @include mq(sp){
+      width: rem(345);
+      height: rem(420);
+    }
     img {
       width: 100%;
       height: 100%;
@@ -30,11 +47,18 @@
     padding: rem(40);
     color: #333;
     font-weight: bold;
+    @include mq(sp){
+      width: 100%;
+      padding: rem(30);
+    }
   }
   &__name {
     font-size: rem(32);
     border-bottom: rem(2) dashed #0397de;
     display: inline;
+    @include mq(sp){
+      font-size: rem(24);
+    }
   }
   &__list {
     margin-top: rem(40);

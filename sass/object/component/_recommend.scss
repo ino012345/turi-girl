@@ -3,6 +3,7 @@
   padding: rem(100) rem(20);
   background-color: #4986d9;
   &__heading {
+    margin-top: rem(80);
     max-width: rem(900);
     width: 100%;
     margin-right: auto;
@@ -13,5 +14,51 @@
     font-weight: 600;
     padding-bottom: rem(15);
     border-bottom: rem(2) dashed #fff;
+    @include mq(sp){
+      font-size: rem(24);
+    }
+  }
+  &__bannerArea {
+    margin-bottom: rem(-40);
+    max-width: rem(1040);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(sp){
+      flex-direction: column;
+    }
+  }
+  &__banner {
+    display: block;
+    width: rem(500);
+    height: auto;
+    margin-right: rem(40);
+    margin-bottom: rem(40);
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @include mq(sp){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(20);
+    }
+  }
+  .recommend-blog {
+    @include mq(sp){
+      width: rem(345);
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: rem(20);
+      .member-blog__image {
+        height: rem(200);
+      }
+    }
   }
 }

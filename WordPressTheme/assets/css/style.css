@@ -606,7 +606,7 @@ summary {
 	color: #333;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 6.25rem;
+	margin-top: 0.625rem;
 	max-width: 56.25rem;
 	padding: 2.5rem;
 	width: 100%;
@@ -659,6 +659,11 @@ summary {
 
 .article__contentWrap figure.wp-block-image {
 	margin-bottom: 2.1875rem;
+}
+
+.breadcrumbs {
+	margin: 5rem auto 0 auto;
+	max-width: 56.25rem;
 }
 
 .btn {
@@ -1160,8 +1165,14 @@ summary {
 	margin-right: auto;
 	margin-top: 1.875rem;
 	max-width: 56.25rem;
-	padding: 2.5rem;
+	position: relative;
+	transition: all .3s;
 	width: 100%;
+}
+
+.information a {
+	display: block;
+	padding: 2.5rem;
 }
 
 .information__text {
@@ -1193,6 +1204,8 @@ summary {
 }
 
 .information__name {
+	border-bottom: 0.125rem dashed #0397de;
+	display: inline-block;
 	font-size: 1.125rem;
 	font-weight: bold;
 }
@@ -1202,6 +1215,19 @@ summary {
 	font-weight: 500;
 	line-height: 1.5;
 	margin-top: 1.25rem;
+}
+
+.information:hover {
+	box-shadow: 0 0.4375rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+.information__arrow {
+	bottom: 0.625rem;
+	color: #333;
+	font-size: 1rem;
+	font-weight: bold;
+	position: absolute;
+	right: 1.25rem;
 }
 
 .instagram {
@@ -1361,10 +1387,14 @@ summary {
 	text-align: center;
 }
 
+.member-introduce__text .sp {
+	display: none;
+}
+
 .member-introduce__listWrap {
 	background-color: #00b8ff;
 	margin-top: 6.25rem;
-	padding: 6.25rem 1.25rem;
+	padding: 6.25rem 0.9375rem;
 }
 
 .member-introduce__list {
@@ -1720,6 +1750,10 @@ summary {
 	box-shadow: 0 0.4375rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
+.profile-btn a .sp {
+	display: none;
+}
+
 .profile-contents {
 	padding-bottom: 6.25rem;
 	padding-left: 1.25rem;
@@ -1817,6 +1851,8 @@ summary {
 .profile-link {
 	background-color: #12a9e0;
 	padding-bottom: 6.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 	padding-top: 6.25rem;
 }
 
@@ -1908,9 +1944,38 @@ summary {
 	font-weight: 600;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 5rem;
 	max-width: 56.25rem;
 	padding-bottom: 0.9375rem;
 	text-align: center;
+	width: 100%;
+}
+
+.recommend__bannerArea {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -2.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 65rem;
+	width: 100%;
+}
+
+.recommend__banner {
+	display: block;
+	height: auto;
+	margin-bottom: 2.5rem;
+	margin-right: 2.5rem;
+	width: 31.25rem;
+}
+
+.recommend__banner:nth-of-type(2n) {
+	margin-right: 0;
+}
+
+.recommend__banner img {
+	height: 100%;
 	width: 100%;
 }
 
@@ -2056,8 +2121,30 @@ html {
 	font-size: 16px;
 }
 
+.article {
+	max-width: 21.5625rem;
+	padding: 1.25rem;
+}
+
+.article__information {
+	padding-bottom: 1.25rem;
+}
+
+.breadcrumbs {
+	padding-left: 0.625rem;
+	padding-right: 0.9375rem;
+}
+
+.breadcrumbs .trail-item {
+	font-size: 0.75rem;
+}
+
 .btn {
 	font-size: 0.875rem;
+}
+
+.btn.block {
+	width: 20.9375rem;
 }
 
 .contact__btns {
@@ -2146,6 +2233,29 @@ html {
 	display: none;
 }
 
+.information {
+	max-width: 21.5625rem;
+}
+
+.information a {
+	padding: 1.875rem 1.875rem 3.125rem 1.875rem;
+}
+
+.information__media {
+	flex-direction: column;
+}
+
+.information__author {
+	border: none;
+	margin-right: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.information__introduce {
+	margin-top: 1.875rem;
+}
+
 .instagram__imageItem {
 	height: 9.375rem;
 	width: 9.375rem;
@@ -2186,6 +2296,55 @@ html {
 
 .member-blog__name {
 	font-size: 0.875rem;
+}
+
+.member-introduce {
+	margin-top: 2.5rem;
+}
+
+.member-introduce__text .sp {
+	display: block;
+}
+
+.member-introduce__text {
+	font-size: 1.125rem;
+}
+
+.member-introduce__item {
+	margin-right: 0.9375rem;
+}
+
+.member-introduce__item:nth-of-type(3n) {
+	margin-right: 0.9375rem;
+}
+
+.member-introduce__item:nth-of-type(2n) {
+	margin-right: 0rem;
+}
+
+.member-introduce__link {
+	width: 10.3125rem;
+}
+
+.member-introduce__image {
+	height: 6.875rem;
+}
+
+.member-introduce__name {
+	font-size: 0.875rem;
+}
+
+.member-introduce__from {
+	font-size: 0.875rem;
+}
+
+.member-introduce__favorite {
+	font-size: 0.875rem;
+}
+
+.member-introduce__arrow {
+	font-size: 0.75rem;
+	margin-top: 0.625rem;
 }
 
 .member::after {
@@ -2255,9 +2414,107 @@ html {
 }
 
 .profile-btn a {
-	font-size: 1.75rem;
-	height: 10.625rem;
+	font-size: 1.5rem;
+	height: 8.75rem;
+	width: 90%;
+}
+
+.profile-btn a .sp {
+	display: block;
+}
+
+.profile-contents {
+	margin-top: 2.5rem;
+	padding-bottom: 5rem;
+}
+
+.profile-contents__media {
+	flex-direction: column;
+	margin-top: 3.75rem;
+}
+
+.profile-contents__slider {
+	height: 31.25rem;
+	margin-right: 0;
 	width: 100%;
+}
+
+.profile-contents__image {
+	height: 26.25rem;
+	width: 21.5625rem;
+}
+
+.profile-contents__body {
+	padding: 1.875rem;
+	width: 100%;
+}
+
+.profile-contents__name {
+	font-size: 1.5rem;
+}
+
+.profile-introduce {
+	padding-bottom: 5rem;
+	padding-top: 5rem;
+}
+
+.profile-introduce__content {
+	padding: 1.875rem;
+}
+
+.profile-introduce__text {
+	font-size: 1rem;
+}
+
+.profile-link {
+	padding-bottom: 5rem;
+	padding-top: 5rem;
+}
+
+.profile-link__list {
+	padding: 1.875rem 0rem 0 1.875rem;
+}
+
+.profile-link__item {
+	margin-right: 4%;
+	width: 48%;
+}
+
+.profile-link__item:nth-of-type(2n) {
+	margin-right: 0;
+}
+
+.profile-link__item:last-child {
+	width: 60%;
+}
+
+.profile-link__item a {
+	padding-left: 2.5rem;
+}
+
+.recommend__heading {
+	font-size: 1.5rem;
+}
+
+.recommend__bannerArea {
+	flex-direction: column;
+}
+
+.recommend__banner {
+	margin-bottom: 1.25rem;
+	margin-right: 0;
+	width: 100%;
+}
+
+.recommend .recommend-blog {
+	margin-bottom: 1.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 21.5625rem;
+}
+
+.recommend .recommend-blog .member-blog__image {
+	height: 12.5rem;
 }
 
 .section-heading {

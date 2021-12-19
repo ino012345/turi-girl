@@ -2,6 +2,12 @@
   background-color: #12a9e0;
   padding-top: rem(100);
   padding-bottom: rem(100);
+  padding-right: rem(20);
+  padding-left: rem(20);
+  @include mq(sp){
+    padding-top: rem(80);
+    padding-bottom: rem(80);  
+  }
   &__list {
     max-width: rem(850);
     width: 100%;
@@ -13,16 +19,27 @@
     padding: rem(40) rem(0) 0 rem(40);
     background-color: #fff;
     border: rem(2) solid #333;
+    @include mq(sp){      
+      padding: rem(30) rem(0) 0 rem(30);
+    }
   }
   &__item {
     width: 22%;
     margin-right: 4%;
     margin-bottom: rem(50);
-
     &:nth-of-type(4n) {
       margin-right: 0;
     }
-
+    @include mq(sp){
+      width: 48%;
+      margin-right: 4%;
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      &:last-child {
+        width: 60%;
+      }
+    }
     a {
       position: relative;
       padding-left: rem(50);
@@ -42,6 +59,9 @@
       }
       &[href=""] {
         opacity: .2;
+      }
+      @include mq(sp){
+        padding-left: rem(40);
       }
     }
 
