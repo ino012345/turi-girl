@@ -612,16 +612,16 @@ summary {
 	width: 100%;
 }
 
+.article__title {
+	margin-top: 0.3125rem;
+}
+
 .article__information {
 	align-items: center;
 	border-bottom: 0.125rem dashed #0397de;
 	display: flex;
 	margin-top: 0.9375rem;
 	padding-bottom: 2.5rem;
-}
-
-.article__date {
-	margin-right: 1.875rem;
 }
 
 .article .member-blog__author {
@@ -636,6 +636,7 @@ summary {
 }
 
 .article__contentWrap p {
+	font-size: 1.125rem;
 	line-height: 1.75;
 	margin-bottom: 2.1875rem;
 }
@@ -678,6 +679,10 @@ summary {
 .btn__wrap {
 	margin-top: 4.375rem;
 	text-align: center;
+}
+
+.btn__wrap--member-page {
+	margin-top: 1.875rem;
 }
 
 .btn.block {
@@ -1376,14 +1381,14 @@ summary {
 }
 
 .member-introduce {
-	padding-top: 3.75rem;
+	padding-top: 2.5rem;
 }
 
 .member-introduce__text {
-	font-size: 1.375rem;
+	font-size: 1.125rem;
 	font-weight: bold;
 	line-height: 1.75;
-	margin-top: 3.75rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -1391,10 +1396,20 @@ summary {
 	display: none;
 }
 
+.member-introduce__linkTextWrap {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.member-introduce__linkText {
+	font-size: 1rem;
+	text-decoration: underline;
+}
+
 .member-introduce__listWrap {
 	background-color: #00b8ff;
-	margin-top: 6.25rem;
-	padding: 6.25rem 0.9375rem;
+	margin-top: 2.5rem;
+	padding: 2.5rem 0.9375rem;
 }
 
 .member-introduce__list {
@@ -1901,6 +1916,7 @@ summary {
 
 .profile-link__item a[href=""] {
 	opacity: .2;
+	pointer-events: none;
 }
 
 .profile-link__item.instagram-link a::before {
@@ -1929,6 +1945,14 @@ summary {
 
 .profile-link__item.amazon a::before {
 	background-image: url(../img/amazon.svg);
+}
+
+.profile-link__item.only-link a {
+	padding-left: 1.5625rem;
+}
+
+.profile-link__item.only-link a::before {
+	content: none;
 }
 
 .recommend {
@@ -2012,6 +2036,15 @@ summary {
 
 .section-heading.blue::after {
 	background-image: url(../img/heading-line-blue.png);
+}
+
+.section-heading.member-page {
+	font-size: 1.9375rem;
+}
+
+.section-heading.member-page::after {
+	height: 4.75rem;
+	width: 37.5rem;
 }
 
 /* Loading背景画面設定　*/
@@ -2299,7 +2332,7 @@ html {
 }
 
 .member-introduce {
-	margin-top: 2.5rem;
+	margin-top: 3.125rem;
 }
 
 .member-introduce__text .sp {
@@ -2307,7 +2340,11 @@ html {
 }
 
 .member-introduce__text {
-	font-size: 1.125rem;
+	font-size: 1rem;
+}
+
+.member-introduce__linkText {
+	font-size: 0.875rem;
 }
 
 .member-introduce__item {
@@ -2485,12 +2522,16 @@ html {
 	margin-right: 0;
 }
 
-.profile-link__item:last-child {
+.profile-link__item.amazon {
 	width: 60%;
 }
 
 .profile-link__item a {
 	padding-left: 2.5rem;
+}
+
+.profile-link__item.only-link a {
+	padding-left: 0rem;
 }
 
 .recommend__heading {
@@ -2529,6 +2570,19 @@ html {
 
 .section-heading.mini::after {
 	width: 15rem;
+}
+
+.section-heading.member-page::after {
+	display: none;
+}
+
+.section-heading.member-page {
+	border-bottom: 0.125rem dashed #fff;
+	font-size: 1.375rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 0.3125rem;
+	width: 90%;
 }
 
 .p-test {

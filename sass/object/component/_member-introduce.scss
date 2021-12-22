@@ -1,11 +1,11 @@
 .member-introduce {
-  padding-top: rem(60);
+  padding-top: rem(40);
   @include mq(sp){
-    margin-top: rem(40);
+    margin-top: rem(50);
   }
   &__text {
-    margin-top: rem(60);
-    font-size: rem(22);
+    margin-top: rem(40);
+    font-size: rem(18);
     font-weight: bold;
     line-height: 1.75;
     text-align: center;
@@ -16,12 +16,23 @@
       }
     }
     @include mq(sp){
-      font-size: rem(18);
+      font-size: rem(16);
+    }
+  }
+  &__linkTextWrap {
+    margin-top: rem(40);
+    text-align: center;
+  }
+  &__linkText {
+    font-size: rem(16);
+    text-decoration: underline;
+    @include mq(sp){
+      font-size: rem(14);
     }
   }
   &__listWrap {
-    margin-top: rem(100);
-    padding: rem(100) rem(15);
+    margin-top: rem(40);
+    padding: rem(40) rem(15);
     background-color: #00b8ff;
   }
   &__list {

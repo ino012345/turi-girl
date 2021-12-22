@@ -36,7 +36,7 @@
       &:nth-of-type(2n) {
         margin-right: 0;
       }
-      &:last-child {
+      &.amazon {
         width: 60%;
       }
     }
@@ -59,6 +59,7 @@
       }
       &[href=""] {
         opacity: .2;
+        pointer-events: none;
       }
       @include mq(sp){
         padding-left: rem(40);
@@ -117,6 +118,18 @@
       a {
         &::before {
           background-image: url(../img/amazon.svg);
+        }
+      }
+    }
+
+    &.only-link {
+      a {
+        padding-left: rem(25);
+        &::before {
+          content: none;
+        }
+        @include mq(sp){
+          padding-left: rem(0);
         }
       }
     }

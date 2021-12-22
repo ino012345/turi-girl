@@ -39,4 +39,22 @@
       background-image: url(../img/heading-line-blue.png);
     }
   }
+  &.member-page {
+    font-size: rem(31);
+    &::after {
+      width: rem(600);
+      height: rem(76); 
+      @include mq(sp){
+        display: none;
+      } 
+    }
+    @include mq(sp){
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: rem(5);
+      font-size: rem(22);
+      border-bottom: rem(2) dashed #fff;
+    }
+  }
 }

@@ -3,6 +3,9 @@
   &__wrap {
     margin-top: rem(70);
     text-align: center;
+    &--member-page {
+      margin-top: rem(30);
+    }
   }
   font-size: rem(16);
   font-family: "heading";

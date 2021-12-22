@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <section class="member-introduce">
-  <h1 class="section-heading">釣り美女<br>オフィシャルメンバー</h1>
+  <h1 class="section-heading member-page">オフィシャルメンバー一覧</h1>
   <p class="member-introduce__text">釣りガールの普及や釣り業界を<br class="sp">盛り上げてくれている<br>釣り美女オフィシャルメンバーを<br class="sp">ご紹介します</p>
-  <div class="profile-btn">
-    <a href="#">オフィシャルメンバーの応募は<br class="sp">こちら</a>
+  <div class="btn__wrap btn__wrap--member-page">
+    <a href="#" class="btn block">オフィシャルメンバーの応募はこちら</a>
   </div>
-  <div class="btn__wrap">
-    <a href="#" class="btn block">釣り美女・オフィシャルメンバーへの<br>お仕事依頼はこちら</a>
+  <div class="member-introduce__linkTextWrap">
+    <a href="#" class="member-introduce__linkText">釣り美女・オフィシャルメンバーへのお仕事依頼はこちら</a>
   </div>
   <div class="member-introduce__listWrap">
     <ul class="member-introduce__list">

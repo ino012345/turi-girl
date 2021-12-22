@@ -14,24 +14,28 @@
   ?>
 </div>
 <section class="article">
+  <p class="article__date"><?php the_time('Y.m.d'); ?></p>
   <h1 class="article__title"><?php the_title();?></h1>
   <div class="article__information">
-    <p class="article__date"><?php the_time('Y.m.d'); ?></p>
-    <div class="member-blog__author">
+    <?php
+      $blogusers = $post->post_author;
+      $args = array(
+        'author' => $blogusers,
+        'post_type' => 'profile', // 投稿タイプ
+      );
+      query_posts($args);
+    ?>
+    <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+    <a href="<?php the_permalink(); ?>" class="member-blog__author">
       <figure class="member-blog__icon">
-      <?php
-        $ID = $post->post_author;
-        $author = $ID;
-        $author_img = get_avatar($author);
-        $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
-        if(preg_match($imgtag, $author_img, $imgurl)){
-          $authorimg = $imgurl[2];
-        }
-        ?>
-        <img src="<?php echo $authorimg ?>" alt="メンバーのアイコン">
+        <img src="<?php echo the_field('image1'); ?>" alt="メンバーのアイコン">
       </figure>
-      <p class="member-blog__name"><?php echo get_the_author_meta('nickname', $author) ?></p>
-    </div>
+      <p class="member-blog__name"><?php the_title();?></p>
+    </a>
+    <?php endwhile;
+      endif;
+      wp_reset_query();
+    ?>
   </div>
   <div class="article__contentWrap">
     <?php the_content(); ?>
@@ -39,7 +43,7 @@
 </section>
 <section class="information">
 <?php 
-  $blogusers = $ID;
+  $blogusers = $post->post_author;
   $args = array(
     'author' => $blogusers,
     'post_type' => 'profile', // 投稿タイプ
