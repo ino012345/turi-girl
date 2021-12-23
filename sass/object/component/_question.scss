@@ -1,0 +1,58 @@
+.question {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  background-color: #4986d9;
+}
+
+/*アコーディオン全体*/
+.accordion-area{
+  margin-top: rem(60);
+  list-style: none;
+  max-width: rem(700);
+  margin:0 auto;
+}
+
+.accordion-area li{
+  margin: rem(10) 0;
+  background-color: #fff;
+  color: #333;
+  border-radius: rem(20);
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: rem(18);
+  font-weight: bold;
+  padding: 3% 5%;
+  transition: all .5s ease;
+}
+
+.title::after{
+  content: '';
+  position: absolute;
+  right: rem(30);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(10) rem(6) 0 rem(6);
+  border-color: #333 rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+  transition: all .3s;
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::after{
+transform: translateY(-50%) rotate(-180deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;/*はじめは非表示*/
+  margin:0 3% 3% 3%;
+  padding: 0 3% 3% 3%;
+  font-size: rem(16);
+}

@@ -1,0 +1,38 @@
+.application {
+  background-color: #4986d9;
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+  &__list {
+    max-width: rem(830);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: rem(60);
+  }
+  &__item {
+    display: flex;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    padding-left: rem(20);
+    border-top: rem(1) solid #fff;
+    &:last-child {
+      border-bottom: rem(1) solid #fff;
+    }
+  }
+  &__head {
+    width: 25%;
+    font-size: rem(18);
+    font-weight: bold;
+  }
+  &__detail {
+    width: 75%;
+    font-size: rem(18);
+  }
+  &__text {
+    font-size: rem(24);
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.75;
+    margin-top: rem(60);
+  }
+}

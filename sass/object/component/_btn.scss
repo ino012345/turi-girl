@@ -25,6 +25,10 @@
       width: rem(335);
     }
   }
+  &.official {
+    font-size: rem(22);
+    width: rem(500);
+  }
   &:hover {
     color: #0397de;
     background-color: #fff;

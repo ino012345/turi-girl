@@ -10,7 +10,7 @@
   transition: all .3s;
   position: relative;
   @include mq(sp){
-    max-width: rem(345);
+    max-width: rem(365);
   }
   a {
     padding: rem(40);

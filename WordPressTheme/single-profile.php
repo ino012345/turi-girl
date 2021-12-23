@@ -2,7 +2,7 @@
 
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <section class="profile-contents">
-  <h1 class="section-heading"><?php the_title();?>のプロフィール</h1>
+  <h1 class="section-heading"><?php the_title();?><span>の</span>プロフィール</h1>
   <div class="profile-contents__inner">
     <div class="profile-contents__media">
       <ul class="profile-contents__slider slider4">
