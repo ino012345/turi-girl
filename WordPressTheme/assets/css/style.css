@@ -604,6 +604,7 @@ summary {
 	background-color: #4986d9;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
+	position: relative;
 }
 
 .application__list {
@@ -643,6 +644,28 @@ summary {
 	line-height: 1.75;
 	margin-top: 3.75rem;
 	text-align: center;
+}
+
+.application__backImage {
+	bottom: 0;
+	height: auto;
+	position: absolute;
+	width: 12.5rem;
+}
+
+.application__backImage img {
+	height: 100%;
+	width: 100%;
+}
+
+.application__backImage.left {
+	left: 50%;
+	transform: translateX(-200%);
+}
+
+.application__backImage.right {
+	right: 50%;
+	transform: translateX(200%);
 }
 
 .article {
@@ -739,8 +762,35 @@ summary {
 }
 
 .btn.official {
-	font-size: 1.375rem;
+	background-color: #fff100;
+	border-color: #fff100;
+	color: #0397de;
+	font-size: 1.5rem;
+	position: relative;
 	width: 31.25rem;
+}
+
+.btn.official::after {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #0397de;
+	border-style: solid;
+	border-width: 0.375rem 0rem 0.375rem 0.625rem;
+	content: '';
+	height: 0;
+	position: absolute;
+	right: 1.875rem;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .3s;
+	width: 0;
+}
+
+.btn.official:hover {
+	background-color: #0397de;
+	color: #fff100;
+}
+
+.btn.official:hover::after {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff100;
 }
 
 .btn:hover {
@@ -880,26 +930,44 @@ summary {
 }
 
 .flow {
-	background-color: #4986d9;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
+	position: relative;
 }
 
 .flow__list {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 3.75rem;
+	margin-top: 5rem;
 	max-width: 43.75rem;
 	width: 100%;
 }
 
 .flow__item {
-	margin-top: 3.75rem;
+	margin-top: 6.25rem;
 	padding-left: 5rem;
+	position: relative;
 }
 
 .flow__item:first-child {
 	margin-top: 0;
+}
+
+.flow__item::after {
+	border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 1.25rem 0.75rem 0 0.75rem;
+	bottom: -3.75rem;
+	content: '';
+	height: 0;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 0;
+}
+
+.flow__item:last-child::after {
+	display: none;
 }
 
 .flow__head {
@@ -910,7 +978,7 @@ summary {
 
 .flow__head::before {
 	bottom: -40%;
-	color: rgba(255, 255, 255, 0.75);
+	color: white;
 	content: attr(data-number);
 	font-size: 50px;
 	left: -5rem;
@@ -924,7 +992,7 @@ summary {
 	height: 0.0625rem;
 	left: -5rem;
 	position: absolute;
-	width: 3.75rem;
+	width: 21.875rem;
 }
 
 .flow__text {
@@ -934,6 +1002,24 @@ summary {
 
 .flow__text a {
 	text-decoration: underline;
+}
+
+.flow__text a:hover {
+	color: #fff100;
+}
+
+.flow__backImage {
+	bottom: 0;
+	height: auto;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-200%);
+	width: 15.625rem;
+}
+
+.flow__backImage img {
+	height: 100%;
+	width: 100%;
 }
 
 .footer {
@@ -1669,7 +1755,7 @@ summary {
 }
 
 .message {
-	background-color: #12a9e0;
+	background-color: #4986d9;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
 }
@@ -2086,9 +2172,34 @@ summary {
 }
 
 .question {
-	background-color: #4986d9;
+	background-color: #fff;
+	color: #333;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
+	position: relative;
+}
+
+.question__backImage {
+	bottom: 0;
+	height: auto;
+	position: absolute;
+	width: 15.625rem;
+	z-index: 0;
+}
+
+.question__backImage img {
+	height: 100%;
+	width: 100%;
+}
+
+.question__backImage.left {
+	left: 50%;
+	transform: translateX(-200%);
+}
+
+.question__backImage.right {
+	right: 50%;
+	transform: translateX(200%);
 }
 
 /*アコーディオン全体*/
@@ -2098,12 +2209,14 @@ summary {
 	margin: 0 auto;
 	margin-top: 3.75rem;
 	max-width: 43.75rem;
+	position: relative;
+	z-index: 3;
 }
 
 .accordion-area li {
 	background-color: #fff;
+	border: 0.125rem solid #0397de;
 	border-radius: 1.25rem;
-	color: #333;
 	margin: 0.625rem 0;
 }
 
@@ -2116,6 +2229,11 @@ summary {
 	padding: 3% 5%;
 	position: relative;
 	transition: all .5s ease;
+}
+
+.title span {
+	font-size: 1.375rem;
+	margin-right: 0.9375rem;
 }
 
 .title::after {
@@ -2225,10 +2343,12 @@ summary {
 }
 
 .recruit-title h1::after {
+	-webkit-animation: updown 2s infinite ease-in-out;
+	animation: updown 2s infinite ease-in-out;
 	border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 	border-style: solid;
 	border-width: 0.625rem 0.375rem 0 0.375rem;
-	bottom: -3.125rem;
+	bottom: -3.75rem;
 	content: '';
 	height: 0;
 	left: 50%;
@@ -2237,84 +2357,50 @@ summary {
 	width: 0;
 }
 
-.recruit-title__left {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	height: 31.25rem;
-	justify-content: space-around;
-	left: 1%;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 27.5rem;
-}
-
-.recruit-title__right {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	height: 31.25rem;
-	justify-content: space-around;
-	position: absolute;
-	right: 1%;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 27.5rem;
-}
-
-.recruit-title__image {
-	height: 11.25rem;
-	position: relative;
-	width: 11.25rem;
-}
-
-.recruit-title__image img {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.recruit-title__image::after {
-	border-image-repeat: round;
-	border-image-slice: 10;
-	border-image-source: repeating-linear-gradient(45deg, #fff, #fff 3px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 6px);
-	border-style: solid;
-	border-width: 0.625rem;
-	content: '';
-	height: calc(100% + 10px);
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: calc(100% + 10px);
-}
-
-.recruit-title__image.image1 {
-	margin-top: 3.125rem;
-}
-
-.recruit-title__image.image3 {
-	margin-bottom: 1.25rem;
-}
-
-.recruit-title__image.image5 {
-	margin-top: 3.125rem;
-}
-
-.recruit-title__image.image6 {
-	margin-bottom: 1.25rem;
-}
-
 .recruit {
-	background-color: #12a9e0;
+	background-color: #fff;
+	color: #333;
 }
 
 .recruit__cta {
 	padding-bottom: 3.125rem;
 	padding-top: 3.125rem;
 	text-align: center;
+}
+
+.recruit__catch {
+	display: inline-block;
+	font-size: 1.625rem;
+	font-weight: bold;
+	margin-bottom: 1.25rem;
+	position: relative;
+}
+
+.recruit__catch::before {
+	background-color: #fff;
+	content: "";
+	height: 0.125rem;
+	left: -3.75rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(60deg);
+	width: 3.75rem;
+}
+
+.recruit__catch::after {
+	background-color: #fff;
+	content: "";
+	height: 0.125rem;
+	position: absolute;
+	right: -3.75rem;
+	top: 50%;
+	transform: translateY(-50%) rotate(-60deg);
+	width: 3.75rem;
+}
+
+.recruit__catch span {
+	color: #fff100;
+	font-size: 2rem;
 }
 
 .recruit__explainWrap {
@@ -2328,7 +2414,30 @@ summary {
 .recruit__overview {
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
+	position: relative;
 	text-align: center;
+}
+
+.recruit__overviewImage {
+	bottom: 0;
+	height: auto;
+	position: absolute;
+	width: 15.625rem;
+}
+
+.recruit__overviewImage img {
+	height: 100%;
+	width: 100%;
+}
+
+.recruit__overviewImage.left {
+	left: 50%;
+	transform: translateX(-175%);
+}
+
+.recruit__overviewImage.right {
+	right: 50%;
+	transform: translateX(175%);
 }
 
 .recruit__heading {
@@ -2339,20 +2448,86 @@ summary {
 	text-align: center;
 }
 
+.recruit__heading p {
+	position: relative;
+	z-index: 10;
+}
+
+.recruit__heading span {
+	background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
+	display: inline-block;
+	height: 0.625rem;
+	margin-bottom: 2.5rem;
+	width: 3.75rem;
+}
+
+.recruit__heading span.left {
+	margin-right: 0.9375rem;
+	transform: rotate(60deg);
+}
+
+.recruit__heading span.right {
+	margin-left: 0.9375rem;
+	position: relative;
+	transform: rotate(-60deg);
+}
+
+.recruit__heading span.right::after {
+	background-image: url(../img/fish-white.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 50%;
+	content: "";
+	height: 6.5625rem;
+	position: absolute;
+	right: -1.875rem;
+	transform: rotate(90deg);
+	width: 12.5rem;
+	z-index: -1;
+}
+
 .recruit__heading::before {
-	background-image: repeating-linear-gradient(90deg, #fff 0, #fff 0.5rem, rgba(0, 0, 0, 0) 0.5rem, rgba(0, 0, 0, 0) 0.75rem);
+	background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
 	content: '';
-	height: 0.125rem;
-	margin-right: 1.25rem;
-	width: 4.375rem;
+	display: inline-block;
+	height: 0.625rem;
+	margin-right: -4.6875rem;
+	margin-top: 1.25rem;
+	transform: rotate(60deg);
+	width: 5rem;
 }
 
 .recruit__heading::after {
-	background-image: repeating-linear-gradient(90deg, #fff 0, #fff 8px, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) 0.75rem);
+	background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
 	content: '';
-	height: 0.125rem;
-	margin-left: 1.25rem;
-	width: 4.375rem;
+	display: inline-block;
+	height: 0.625rem;
+	margin-left: -4.6875rem;
+	margin-top: 1.25rem;
+	transform: rotate(-60deg);
+	width: 5rem;
+}
+
+.recruit__heading.white span {
+	background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
+}
+
+.recruit__heading.white span.right::after {
+	background-image: url(../img/fish.svg);
+}
+
+.recruit__heading.white::before {
+	background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
+}
+
+.recruit__heading.white::after {
+	background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+	background-size: 0.625rem 0.625rem;
 }
 
 .recruit__overviewText {
@@ -2413,6 +2588,29 @@ summary {
 .recruit__service {
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
+	position: relative;
+}
+
+.recruit__serviceBackImage {
+	bottom: 0;
+	height: auto;
+	position: absolute;
+	width: 12.5rem;
+}
+
+.recruit__serviceBackImage img {
+	height: 100%;
+	width: 100%;
+}
+
+.recruit__serviceBackImage.left {
+	left: 50%;
+	transform: translateX(-200%);
+}
+
+.recruit__serviceBackImage.right {
+	right: 50%;
+	transform: translateX(200%);
 }
 
 .recruit__cardUnit {
@@ -2465,11 +2663,12 @@ summary {
 }
 
 .recruit__serviceText span {
+	color: #fff100;
 	position: relative;
 }
 
 .recruit__serviceText span::after {
-	background-color: #fff;
+	background-color: #fff100;
 	bottom: -0.3125rem;
 	content: "";
 	height: 0.125rem;
@@ -3080,6 +3279,38 @@ html {
 
 .u-hidden-sp {
 	display: none;
+}
+
+}
+
+@-webkit-keyframes updown {
+
+0% {
+	transform: translate(0, 0);
+}
+
+50% {
+	transform: translate(0, -0.9375rem);
+}
+
+100% {
+	transform: translate(0, 0);
+}
+
+}
+
+@keyframes updown {
+
+0% {
+	transform: translate(0, 0);
+}
+
+50% {
+	transform: translate(0, -0.9375rem);
+}
+
+100% {
+	transform: translate(0, 0);
 }
 
 }

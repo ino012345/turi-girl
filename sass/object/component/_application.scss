@@ -2,6 +2,7 @@
   background-color: #4986d9;
   padding-top: rem(100);
   padding-bottom: rem(100);
+  position: relative;
   &__list {
     max-width: rem(830);
     width: 100%;
@@ -34,5 +35,23 @@
     text-align: center;
     line-height: 1.75;
     margin-top: rem(60);
+  }
+  &__backImage {
+    width: rem(200);
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.left {
+      left: 50%;
+      transform: translateX(-200%);
+    }
+    &.right {
+      right: 50%;
+      transform: translateX(200%);
+    }
   }
 }

@@ -1,9 +1,41 @@
 .recruit {
-  background-color: #12a9e0;
+  color: #333;
+  background-color: #fff;
   &__cta {
     text-align: center;
     padding-top: rem(50);
     padding-bottom: rem(50);
+  }
+  &__catch {
+    display: inline-block;
+    font-size: rem(26);
+    font-weight: bold;
+    margin-bottom: rem(20);
+    position: relative;
+    &::before {
+      content: "";
+      width: rem(60);
+      height: rem(2);
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: rem(-60);
+      transform: translateY(-50%) rotate(60deg);
+    }
+    &::after {
+      content: "";
+      width: rem(60);
+      height: rem(2);
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      right: rem(-60);
+      transform: translateY(-50%) rotate(-60deg);
+    }
+    span {
+      color: #fff100;
+      font-size: rem(32);
+    }
   }
   &__explainWrap {
     margin-top: rem(15);
@@ -15,6 +47,25 @@
     text-align: center;
     padding-top: rem(100);
     padding-bottom: rem(100);
+    position: relative;
+  }
+  &__overviewImage {
+    width: rem(250);
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.left {
+      left: 50%;
+      transform: translateX(-175%);
+    }
+    &.right {
+      right: 50%;
+      transform: translateX(175%);
+    }
   }
   &__heading {
     font-size: rem(32);
@@ -22,19 +73,80 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    p {
+      position: relative;
+      z-index: 10;
+    }
+    span {
+      width: rem(60);
+      background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+      background-size: rem(10) rem(10);
+      display: inline-block;
+      height: rem(10);
+      margin-bottom: rem(40);
+      &.left {
+        transform: rotate(60deg);
+        margin-right: rem(15);
+      }
+      &.right {
+        transform: rotate(-60deg);
+        margin-left: rem(15);
+        position: relative;
+        &::after {
+          content: "";
+          width: rem(200);
+          height: rem(105);
+          background-image: url(../img/fish-white.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          bottom: 50%;
+          right: rem(-30);
+          transform: rotate(90deg);
+          z-index: -1;
+        }
+      }
+    }
     &::before {
       content: '';
-      width: rem(70);
-      height: rem(2);
-      background-image: repeating-linear-gradient(90deg, #fff 0, #fff rem(8), rgba(0,0,0,0) rem(8), rgba(0,0,0,0) rem(12));
-      margin-right: rem(20);
+      width: rem(80);
+      background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+      background-size: rem(10) rem(10);
+      display: inline-block;
+      height: rem(10);
+      transform: rotate(60deg);
+      margin-right: rem(-75);
+      margin-top: rem(20);
     }
     &::after {
       content: '';
-      width: rem(70);
-      height: rem(2);
-      background-image: repeating-linear-gradient(90deg, #fff 0, #fff 8px, rgba(0,0,0,0) 8px, rgba(0,0,0,0) rem(12));
-      margin-left: rem(20);
+      width: rem(80);
+      background: radial-gradient(circle farthest-side, #fff, #fff 30%, transparent 30%, transparent);
+      background-size: rem(10) rem(10);
+      display: inline-block;
+      height: rem(10);
+      transform: rotate(-60deg);
+      margin-left: rem(-75);
+      margin-top: rem(20);
+    }
+    &.white {
+      span {
+        background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+        background-size: rem(10) rem(10);
+        &.right {
+          &::after {
+            background-image: url(../img/fish.svg);
+          }
+        }
+      }
+      &::before {
+        background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+        background-size: rem(10) rem(10);
+      }
+      &::after {
+        background: radial-gradient(circle farthest-side, #0397de, #0397de 30%, transparent 30%, transparent);
+        background-size: rem(10) rem(10);
+      }  
     }
   }
   &__overviewText {
@@ -89,6 +201,25 @@
   &__service {
     padding-top: rem(100);
     padding-bottom: rem(100);
+    position: relative;
+  }
+  &__serviceBackImage {
+    width: rem(200);
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.left {
+      left: 50%;
+      transform: translateX(-200%);
+    }
+    &.right {
+      right: 50%;
+      transform: translateX(200%);
+    }
   }
   &__cardUnit {
     margin-top: rem(60);
@@ -132,6 +263,7 @@
     margin-top: rem(60);
     span {
       position: relative;
+      color: #fff100;
       &::after {
         position: absolute;
         left: 50%;
@@ -140,7 +272,7 @@
         content: "";
         width: 100%;
         height: rem(2);
-        background-color: #fff;
+        background-color: #fff100;
       }
     }
   }
