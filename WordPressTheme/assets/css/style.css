@@ -601,7 +601,8 @@ summary {
 }
 
 .application {
-	background-color: #4986d9;
+	background-color: #fff;
+	color: #333;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
 	position: relative;
@@ -616,7 +617,7 @@ summary {
 }
 
 .application__item {
-	border-top: 0.0625rem solid #fff;
+	border-top: 0.0625rem dashed #0397de;
 	display: flex;
 	padding-bottom: 1.25rem;
 	padding-left: 1.25rem;
@@ -624,7 +625,7 @@ summary {
 }
 
 .application__item:last-child {
-	border-bottom: 0.0625rem solid #fff;
+	border-bottom: 0.0625rem dashed #0397de;
 }
 
 .application__head {
@@ -643,7 +644,9 @@ summary {
 	font-weight: bold;
 	line-height: 1.75;
 	margin-top: 3.75rem;
+	position: relative;
 	text-align: center;
+	z-index: 1;
 }
 
 .application__backImage {
@@ -651,6 +654,7 @@ summary {
 	height: auto;
 	position: absolute;
 	width: 12.5rem;
+	z-index: 0;
 }
 
 .application__backImage img {
@@ -791,6 +795,25 @@ summary {
 
 .btn.official:hover::after {
 	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff100;
+}
+
+.btn.official.white {
+	background-color: #0397de;
+	border-color: #0397de;
+	color: #fff100;
+}
+
+.btn.official.white::after {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #fff100;
+}
+
+.btn.official.white:hover {
+	background-color: #fff100;
+	color: #0397de;
+}
+
+.btn.official.white:hover::after {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #0397de;
 }
 
 .btn:hover {
@@ -944,8 +967,11 @@ summary {
 }
 
 .flow__item {
+	background-color: #fff;
+	border: 0.125rem solid #333;
+	color: #333;
 	margin-top: 6.25rem;
-	padding-left: 5rem;
+	padding: 2.1875rem 1.25rem 1.5625rem 6.875rem;
 	position: relative;
 }
 
@@ -978,15 +1004,15 @@ summary {
 
 .flow__head::before {
 	bottom: -40%;
-	color: white;
+	color: #0397de;
 	content: attr(data-number);
-	font-size: 50px;
+	font-size: 3.125rem;
 	left: -5rem;
 	position: absolute;
 }
 
 .flow__head::after {
-	background-image: repeating-linear-gradient(90deg, #fff 0, #fff 0.5rem, rgba(0, 0, 0, 0) 0.5rem, rgba(0, 0, 0, 0) 0.75rem);
+	background-image: repeating-linear-gradient(90deg, #0397de 0, #0397de 0.5rem, rgba(0, 0, 0, 0) 0.5rem, rgba(0, 0, 0, 0) 0.75rem);
 	bottom: 0rem;
 	content: '';
 	height: 0.0625rem;
@@ -1001,7 +1027,9 @@ summary {
 }
 
 .flow__text a {
+	color: #0397de;
 	text-decoration: underline;
+	transition: all .3s;
 }
 
 .flow__text a:hover {
@@ -2368,11 +2396,15 @@ summary {
 	text-align: center;
 }
 
+.recruit__cta.white {
+	background-color: #fff;
+}
+
 .recruit__catch {
 	display: inline-block;
-	font-size: 1.625rem;
+	font-size: 1.375rem;
 	font-weight: bold;
-	margin-bottom: 1.25rem;
+	margin-bottom: 0.9375rem;
 	position: relative;
 }
 
@@ -2380,11 +2412,11 @@ summary {
 	background-color: #fff;
 	content: "";
 	height: 0.125rem;
-	left: -3.75rem;
+	left: -2.5rem;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%) rotate(60deg);
-	width: 3.75rem;
+	width: 2.5rem;
 }
 
 .recruit__catch::after {
@@ -2392,19 +2424,30 @@ summary {
 	content: "";
 	height: 0.125rem;
 	position: absolute;
-	right: -3.75rem;
+	right: -2.5rem;
 	top: 50%;
 	transform: translateY(-50%) rotate(-60deg);
-	width: 3.75rem;
+	width: 2.5rem;
 }
 
-.recruit__catch span {
-	color: #fff100;
-	font-size: 2rem;
+.recruit__catch.white {
+	color: #333;
+}
+
+.recruit__catch.white::before {
+	background-color: #333;
+}
+
+.recruit__catch.white::after {
+	background-color: #333;
 }
 
 .recruit__explainWrap {
 	margin-top: 0.9375rem;
+}
+
+.recruit__explainWrap.white {
+	color: #333;
 }
 
 .recruit__explain {
@@ -2561,6 +2604,7 @@ summary {
 }
 
 .recruit__mediaBody p {
+	border-bottom: 0.0625rem dashed #0397de;
 	font-size: 1.125rem;
 	font-weight: bold;
 	margin-top: 1.25rem;

@@ -52,6 +52,21 @@
         border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff100;
       }
     }
+    &.white {
+      background-color: #0397de;
+      color: #fff100;
+      border-color: #0397de;
+      &::after {
+        border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff100;
+      }
+      &:hover {
+        background-color: #fff100;
+        color: #0397de;
+        &::after {
+          border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #0397de;
+        }
+      }
+    }
   }
   &:hover {
     color: #0397de;

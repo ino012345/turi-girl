@@ -9,7 +9,7 @@
   </div>
 </section>
 <section class="recruit__cta">
-  <p class="recruit__catch">ご登録は<span>無料</span></p>
+  <p class="recruit__catch">LINEでカンタン応募（無料）</p>
   <a href="#" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
@@ -18,7 +18,7 @@
 </section>
 <section class="recruit">
   <div class="recruit__overview">
-    <h2 class="recruit__heading white"><span class="left"></span><p>#オフィシャルメンバー募集中</p><span class="right"></span></h2>
+    <h2 class="recruit__heading white"><span class="left"></span><p>オフィシャルメンバー募集中</p><span class="right"></span></h2>
     <p class="recruit__overviewText">釣り美女のオフィシャルメンバーは<br>"発信力を高めたい"<br>"釣りを通じてお仕事がしたい"<br>そんな釣りガールを応援するための<br>メンバーシップ制度です。（無料）</p>
     <figure class="recruit__overviewImage left">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/b0812.png" alt="魚を水揚げする女性">
@@ -69,7 +69,7 @@
   </figure>
 </section>
 <section class="recruit__cta">
-  <p class="recruit__catch">ご登録は<span>無料</span></p>
+  <p class="recruit__catch">LINEでカンタン応募（無料）</p>
   <a href="#" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
@@ -77,7 +77,7 @@
   </div>
 </section>
 <section class="application">
-  <h2 class="recruit__heading"><span class="left"></span><p>募集要項</p><span class="right"></span></h2>
+  <h2 class="recruit__heading white"><span class="left"></span><p>募集要項</p><span class="right"></span></h2>
   <ul class="application__list">
     <li class="application__item">
       <p class="application__head">釣りスキル</p>
@@ -121,7 +121,7 @@
   <ul class="flow__list">
     <li class="flow__item">
       <div class="flow__itemInner">
-        <p class="flow__head" data-number="01">LINEのお友達追加しよう</p>
+        <p class="flow__head" data-number="01">LINEを友だち追加しよう</p>
         <p class="flow__text"><a href="#">釣り美女事務局</a>のLINEを友だち追加してください。<br>登録後応募フォームをお送りします。</p>
       </div>
     </li>
@@ -149,7 +149,7 @@
   </figure>
 </section>
 <section class="recruit__cta">
-  <p class="recruit__catch">ご登録は<span>無料</span></p>
+  <p class="recruit__catch">LINEでカンタン応募（無料）</p>
   <a href="#" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
@@ -159,7 +159,7 @@
 <section class="message">
   <h2 class="recruit__heading"><span class="left"></span><p>運営からのメッセージ</p><span class="right"></span></h2>
   <div class="message__main">
-    <p class="message__text">いつもお世話になっております。<br><br>Instagramアカウントを開設して、<br>わずか1年で1万フォローを獲得し、<br>月間300インプレッションを獲得できるまで<br>成長することができました。<br><br>これも釣りガールの皆様のおかげです。<br>ありがとうございます。<br><br>この恩をどうすれば返せるか考え<br>この度釣り美女WEBをOPENしました。<br><br>釣り美女WEBは<br>Instagramという枠を超えて、<br>さらに釣りガールの皆さんの露出を増やし、<br>影響力を高めることができる仕組みを用意しました。<br><br>まず一つ目はブログ機能です。<br><br>今更ブログ？と思われるかもしれませんが<br>InstagramやTwitterが流行っている今だからこそ、<br>ブログが狙い目です。<br><br>釣りガールでブログ書いてる人って<br>そこまで多くないですよね？<br><br>つまり今ブログに取り組むと、<br>他の釣りガールと差別化を図ることができます。<br><br>また、ブログはGoogleやYahoo検索でヒットしますので<br>Instagramではアプローチできなかった層にあなたを知ってもらう事ができます。<br><br>2つ目の機能がプロフィールページです。<br><br>InstagramからURLを一つだけ貼ることができますが、そこに是非釣り美女WEBで作成したプロフィールページを設定してみてください。<br><br>釣り美女WEBで作成したプロフィールページでは<br>・プロフィール<br>・プロフィール写真<br>・各種SNSへのリンク<br>・ブログ一覧<br><br>をキレイに表示できるようにしました。<br><br>Instagramプロフィール<br>↓<br>釣り美女WEBプロフィール<br><br>へと誘導することで、よりあなたの事を知ってもらえ、ファン化、フォロワー増加を促進します。<br><br>この他にも今後、<br>様々なサービスを展開予定ですので、<br><br>釣りガールの皆さんは是非、<br>釣り美女WEBにご登録いただければと思います。<br><br>それでは、今後とも宜しくおねがいします。</p>
+    <p class="message__text">いつもお世話になっております。<br><br>Instagramアカウントを開設して、<br>わずか1年で1万フォローを獲得し、<br>月間300インプレッションを獲得できるまで<br>成長することができました。<br><br>これも釣りガールの皆様のおかげです。<br>ありがとうございます。<br><br>この恩をどうすれば返せるか考え<br>この度釣り美女WEBをOPENしました。<br><br>釣り美女WEBは<br>Instagramという枠を超えて、<br>さらに釣りガールの皆さんの露出を増やし、<br>影響力を高めることができる仕組みを用意しました。<br><br>まず一つ目はブログ機能です。<br><br>今更ブログ？と思われるかもしれませんが<br>InstagramやTwitterが流行っている今だからこそ、<br>ブログが狙い目です。<br><br>釣りガールでブログ書いてる人って<br>そこまで多くないですよね？<br><br>つまり今ブログに取り組むと、<br>他の釣りガールと差別化を図ることができます。<br><br>また、ブログはGoogleやYahoo検索でヒットしますので<br>Instagramではアプローチできなかった層にあなたを知ってもらう事ができます。<br><br>2つ目の機能がプロフィールページです。<br><br>InstagramからURLを一つだけ貼ることができますが、<br>そこに是非釣り美女WEBで作成したプロフィールページを設定してみてください。<br><br>釣り美女WEBで作成したプロフィールページでは<br>・プロフィール<br>・プロフィール写真<br>・各種SNSへのリンク<br>・ブログ一覧<br><br>をキレイに表示できるようにしました。<br><br>Instagramプロフィール<br>↓<br>釣り美女WEBプロフィール<br><br>へと誘導することで、よりあなたの事を知ってもらえ、<br>ファン化、フォロワー増加を促進します。<br><br>この他にも今後、<br>様々なサービスを展開予定ですので、<br><br>釣りガールの皆さんは是非、<br>釣り美女WEBにご登録いただければと思います。<br><br>それでは、今後とも宜しくおねがいします。</p>
   </div>
 </section>
 <section class="question">
@@ -247,10 +247,10 @@
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sango-1.svg" alt="サンゴの画像">
   </figure>
 </section>
-<section class="recruit__cta">
-  <p class="recruit__catch">ご登録は<span>無料</span></p>
-  <a href="#" class="btn block official">今すぐ応募する</a>
-  <div class="recruit__explainWrap">
+<section class="recruit__cta white">
+  <p class="recruit__catch white">LINEでカンタン応募（無料）</p>
+  <a href="#" class="btn block official white">今すぐ応募する</a>
+  <div class="recruit__explainWrap white">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
     <p class="recruit__explain">※LINE友達追加後に応募フォームが届きます。</p>
   </div>
