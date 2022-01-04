@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mq(sp){
+    padding-top: rem(100);
+  }
   &__logo {
     width: rem(175);
     height: auto;
@@ -33,6 +36,23 @@
       border-width: rem(10) rem(6) 0 rem(6);
       border-color: #fff rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
       animation: updown 2s infinite ease-in-out;
+      @include mq(sp){
+        bottom: rem(-80);
+      }
+    }
+    .sp {
+      display: none;
+      @include mq(sp){
+        display: block;
+      }
+    }
+    @include mq(sp){
+      padding-right: rem(15);
+      padding-left: rem(15);
+      padding-bottom: rem(15);
+      font-size: rem(32);
+      line-height: 1.25;
+      margin-top: rem(40);
     }
   }
 }

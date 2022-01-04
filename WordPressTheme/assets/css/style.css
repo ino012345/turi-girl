@@ -603,7 +603,10 @@ summary {
 .application {
 	background-color: #fff;
 	color: #333;
+	overflow: hidden;
 	padding-bottom: 6.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	padding-top: 6.25rem;
 	position: relative;
 }
@@ -953,7 +956,10 @@ summary {
 }
 
 .flow {
+	overflow: hidden;
 	padding-bottom: 6.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	padding-top: 6.25rem;
 	position: relative;
 }
@@ -1784,7 +1790,10 @@ summary {
 
 .message {
 	background-color: #4986d9;
+	overflow: hidden;
 	padding-bottom: 6.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	padding-top: 6.25rem;
 }
 
@@ -2202,7 +2211,10 @@ summary {
 .question {
 	background-color: #fff;
 	color: #333;
+	overflow: hidden;
 	padding-bottom: 6.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	padding-top: 6.25rem;
 	position: relative;
 }
@@ -2250,8 +2262,10 @@ summary {
 
 /*アコーディオンタイトル*/
 
-.title { /*+マークの位置基準とするためrelative指定*/
+.title {
+	align-items: center; /*+マークの位置基準とするためrelative指定*/
 	cursor: pointer;
+	display: flex;
 	font-size: 1.125rem;
 	font-weight: bold;
 	padding: 3% 5%;
@@ -2385,9 +2399,15 @@ summary {
 	width: 0;
 }
 
+.recruit-title h1 .sp {
+	display: none;
+}
+
 .recruit {
 	background-color: #fff;
 	color: #333;
+	overflow: hidden;
+	width: 100%;
 }
 
 .recruit__cta {
@@ -2488,6 +2508,8 @@ summary {
 	display: flex;
 	font-size: 2rem;
 	justify-content: center;
+	margin-left: -0.9375rem;
+	margin-right: -0.9375rem;
 	text-align: center;
 }
 
@@ -2573,6 +2595,10 @@ summary {
 	background-size: 0.625rem 0.625rem;
 }
 
+.recruit__heading .sp {
+	display: none;
+}
+
 .recruit__overviewText {
 	font-size: 1.125rem;
 	font-weight: bold;
@@ -2582,6 +2608,8 @@ summary {
 
 .recruit__recommend {
 	padding-bottom: 6.25rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	padding-top: 6.25rem;
 }
 
@@ -2630,6 +2658,7 @@ summary {
 }
 
 .recruit__service {
+	overflow: hidden;
 	padding-bottom: 6.25rem;
 	padding-top: 6.25rem;
 	position: relative;
@@ -2877,6 +2906,25 @@ html {
 	font-size: 16px;
 }
 
+.application__item {
+	flex-direction: column;
+	text-align: center;
+}
+
+.application__head {
+	width: 100%;
+}
+
+.application__detail {
+	font-size: 1rem;
+	margin-top: 1.25rem;
+	width: 100%;
+}
+
+.application__text {
+	font-size: 1.25rem;
+}
+
 .article {
 	max-width: 22.8125rem;
 	padding: 1.25rem;
@@ -2926,6 +2974,21 @@ html {
 
 .flow-nav {
 	display: none;
+}
+
+.flow__item {
+	padding-left: 1.5625rem;
+	padding-top: 6.25rem;
+}
+
+.flow__head::before {
+	bottom: 2.5rem;
+	left: 0;
+}
+
+.flow__head::after {
+	left: 0;
+	width: 100%;
 }
 
 .footer__nav {
@@ -3261,6 +3324,11 @@ html {
 	padding-left: 0rem;
 }
 
+.title p {
+	font-size: 1rem;
+	padding-right: 2.1875rem;
+}
+
 .recommend__heading {
 	font-size: 1.5rem;
 }
@@ -3284,6 +3352,102 @@ html {
 
 .recommend .recommend-blog .member-blog__image {
 	height: 12.5rem;
+}
+
+.recruit-title {
+	padding-top: 6.25rem;
+}
+
+.recruit-title h1::after {
+	bottom: -5rem;
+}
+
+.recruit-title h1 .sp {
+	display: block;
+}
+
+.recruit-title h1 {
+	font-size: 2rem;
+	line-height: 1.25;
+	margin-top: 2.5rem;
+	padding-bottom: 0.9375rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+
+.recruit__catch {
+	font-size: 1.25rem;
+}
+
+.recruit__explain {
+	font-size: 0.875rem;
+}
+
+.recruit__heading span {
+	margin-bottom: 3.4375rem;
+	width: 3.125rem;
+}
+
+.recruit__heading span.right::after {
+	height: 3.28125rem;
+	right: 0.9375rem;
+	width: 6.25rem;
+}
+
+.recruit__heading::before {
+	margin-right: -4.5rem;
+	width: 4.375rem;
+}
+
+.recruit__heading::after {
+	margin-left: -4.5rem;
+	width: 4.375rem;
+}
+
+.recruit__heading .sp {
+	display: block;
+}
+
+.recruit__heading {
+	font-size: 1.5625rem;
+	white-space: nowrap;
+}
+
+.recruit__media {
+	flex-direction: column;
+}
+
+.recruit__mediaImage {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.recruit__mediaBody p {
+	margin-top: 1.875rem;
+	padding-left: 2.5rem;
+}
+
+.recruit__mediaBody {
+	margin-top: 2.5rem;
+}
+
+.recruit__cardUnit {
+	flex-direction: column;
+}
+
+.recruit__card:last-child {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.875rem;
+}
+
+.recruit__card {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.recruit__serviceText {
+	font-size: 1.25rem;
 }
 
 .section-heading {

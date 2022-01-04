@@ -1,9 +1,12 @@
 .question {
   padding-top: rem(100);
   padding-bottom: rem(100);
+  padding-right: rem(15);
+  padding-left: rem(15);
   background-color: #fff;
   color: #333;
   position: relative;
+  overflow: hidden;
   &__backImage {
     width: rem(250);
     height: auto;
@@ -51,6 +54,14 @@
   font-weight: bold;
   padding: 3% 5%;
   transition: all .5s ease;
+  display: flex;
+  align-items: center;
+  p {
+    @include mq(sp){
+      padding-right: rem(35);
+      font-size: rem(16);
+    }
+  }
   span {
     font-size: rem(22);
     margin-right: rem(15);
