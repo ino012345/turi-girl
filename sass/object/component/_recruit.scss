@@ -253,6 +253,12 @@
       position: relative;
       padding-left: rem(35);
       border-bottom: rem(1) dashed #0397de;
+      .sp {
+        display: none;
+        @include mq(sp){
+          display: block;
+        }
+      }
       &:first-child {
         margin-top: 0;
       }

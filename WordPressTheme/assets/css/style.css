@@ -652,6 +652,10 @@ summary {
 	z-index: 1;
 }
 
+.application__text .sp {
+	display: none;
+}
+
 .application__backImage {
 	bottom: 0;
 	height: auto;
@@ -2640,6 +2644,10 @@ summary {
 	position: relative;
 }
 
+.recruit__mediaBody p .sp {
+	display: none;
+}
+
 .recruit__mediaBody p:first-child {
 	margin-top: 0;
 }
@@ -2923,6 +2931,10 @@ html {
 
 .application__text {
 	font-size: 1.25rem;
+}
+
+.application__text .sp {
+	display: block;
 }
 
 .application__backImage.left {
@@ -3472,6 +3484,10 @@ html {
 .recruit__mediaImage {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.recruit__mediaBody p .sp {
+	display: block;
 }
 
 .recruit__mediaBody p {
