@@ -5,7 +5,7 @@
     <figure class="recruit-title__logo">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="ロゴ">
     </figure>
-    <h1>オフィシャルメンバー<br class="sp">募集</h1>
+    <h1>オフィシャルメンバー募集</h1>
   </div>
 </section>
 <section class="recruit__cta">
@@ -108,7 +108,7 @@
       <p class="application__detail">月に1回以上釣りをされて、その投稿をInstagram等で発信されている方</p>
     </li>
   </ul>
-  <p class="application__text">釣り美女では既に大成している<br class="sp">釣りガールよりも<br>これから一緒に成長していける<br class="sp">釣りガールを大歓迎しています。<br><br>一緒に成長できる環境を<br class="sp">提供できるよう努めていきます。</p>
+  <p class="application__text">釣り美女では既に大成している<br class="sp">釣りガールよりも<br><span>これから一緒に成長していける<br class="sp">釣りガールを大歓迎しています。</span><br><br>一緒に成長できる環境を<br class="sp">提供できるよう努めていきます。</p>
   <figure class="application__backImage left">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/leaf-1.svg" alt="海藻の画像">
   </figure>

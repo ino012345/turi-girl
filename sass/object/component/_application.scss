@@ -56,12 +56,16 @@
     z-index: 1;
     @include mq(sp){
       font-size: rem(20);
+      font-weight: 400;
     }
     .sp {
       display: none;
       @include mq(sp){
         display: block;
       }
+    }
+    span {
+      border-bottom: rem(1) solid #0397de;
     }
   }
   &__backImage {

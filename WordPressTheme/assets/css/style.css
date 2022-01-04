@@ -656,6 +656,10 @@ summary {
 	display: none;
 }
 
+.application__text span {
+	border-bottom: 0.0625rem solid #0397de;
+}
+
 .application__backImage {
 	bottom: 0;
 	height: auto;
@@ -1796,8 +1800,8 @@ summary {
 	background-color: #4986d9;
 	overflow: hidden;
 	padding-bottom: 6.25rem;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+	padding-left: 0.3125rem;
+	padding-right: 0.3125rem;
 	padding-top: 6.25rem;
 }
 
@@ -2364,8 +2368,14 @@ summary {
 	display: flex;
 	height: calc(100vh - 75px);
 	justify-content: center;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	position: relative;
 	width: 100%;
+}
+
+.recruit-title__body {
+	margin-bottom: 2.5rem;
 }
 
 .recruit-title__logo {
@@ -2932,6 +2942,7 @@ html {
 
 .application__text {
 	font-size: 1.25rem;
+	font-weight: 400;
 }
 
 .application__text .sp {
@@ -3214,6 +3225,15 @@ html {
 	width: 17.4375rem;
 }
 
+.message__main {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.message__text {
+	font-weight: 400;
+}
+
 .news__item {
 	font-size: 0.875rem;
 }
@@ -3402,7 +3422,8 @@ html {
 }
 
 .recruit-title {
-	padding-top: 6.25rem;
+	height: calc(100vh - 300px);
+	padding-top: 4.6875rem;
 }
 
 .recruit-title h1::after {
@@ -3414,7 +3435,7 @@ html {
 }
 
 .recruit-title h1 {
-	font-size: 2rem;
+	font-size: 1.64063rem;
 	line-height: 1.25;
 	margin-top: 2.5rem;
 	padding-bottom: 0.9375rem;
@@ -3476,6 +3497,10 @@ html {
 .recruit__heading {
 	font-size: 1.5625rem;
 	white-space: nowrap;
+}
+
+.recruit__overviewText {
+	font-weight: 400;
 }
 
 .recruit__media {

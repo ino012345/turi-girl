@@ -216,6 +216,9 @@
     font-size: rem(18);
     font-weight: bold;
     line-height: 2;
+    @include mq(sp){
+      font-weight: 400;
+    }
   }
   &__recommend {
     padding-top: rem(100);

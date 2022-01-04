@@ -2,8 +2,8 @@
   background-color: #4986d9;
   padding-top: rem(100);
   padding-bottom: rem(100);
-  padding-right: rem(15);
-  padding-left: rem(15);
+  padding-right: rem(5);
+  padding-left: rem(5);
   overflow: hidden;
   &__main {
     margin-top: rem(60);
@@ -14,10 +14,17 @@
     margin-left: auto;
     background-color: #fff;
     border: rem(2) solid #333;
+    @include mq(sp){
+      padding-right: rem(20);
+      padding-left: rem(20);
+    }
   }
   &__text {
     color: #333;
     font-size: rem(16);
     font-weight: bold;
+    @include mq(sp){
+      font-weight: 400;
+    }
   }
 }
