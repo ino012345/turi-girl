@@ -20,12 +20,12 @@
   <div class="recruit__overview">
     <h2 class="recruit__heading white"><span class="left"></span><p>オフィシャルメンバー<br class="sp">募集中</p><span class="right"></span></h2>
     <p class="recruit__overviewText">釣り美女のオフィシャルメンバーは<br>"発信力を高めたい"<br>"釣りを通じてお仕事がしたい"<br>そんな釣りガールを応援するための<br>メンバーシップ制度です。（無料）</p>
-    <!-- <figure class="recruit__overviewImage left">
+    <figure class="recruit__overviewImage left">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/b0812.png" alt="魚を水揚げする女性">
     </figure>
     <figure class="recruit__overviewImage right">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/b0680.png" alt="写真を撮る女性">
-    </figure> -->
+    </figure>
   </div>
   <div class="recruit__recommend">
     <h2 class="recruit__heading white"><span class="left"></span><p>こんな方に<br class="sp">オススメです！</p><span class="right"></span></h2>
@@ -61,12 +61,12 @@
     </div>
   </div>
   <p class="recruit__serviceText">オフィシャルメンバーには<br class="sp">上記のサービスを<br><span>全て無料</span>（0円）で<br class="sp">ご提供させていただきます。</p>
-  <!-- <figure class="recruit__serviceBackImage left">
+  <figure class="recruit__serviceBackImage left">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/asari-1.svg" alt="貝殻の画像">
   </figure>
   <figure class="recruit__serviceBackImage right">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/asari-2.svg" alt="貝殻の画像">
-  </figure> -->
+  </figure>
 </section>
 <section class="recruit__cta">
   <p class="recruit__catch">LINEでカンタン応募（無料）</p>
@@ -109,12 +109,12 @@
     </li>
   </ul>
   <p class="application__text">釣り美女では既に大成している<br class="sp">釣りガールよりも<br>これから一緒に成長していける<br class="sp">釣りガールを大歓迎しています。<br><br>一緒に成長できる環境を<br class="sp">提供できるよう努めていきます。</p>
-  <!-- <figure class="application__backImage left">
+  <figure class="application__backImage left">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/leaf-1.svg" alt="海藻の画像">
   </figure>
   <figure class="application__backImage right">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/leaf-2.svg" alt="海藻の画像">
-  </figure> -->
+  </figure>
 </section>
 <section class="flow">
   <h2 class="recruit__heading"><span class="left"></span><p>お申し込みの流れ</p><span class="right"></span></h2>
@@ -144,9 +144,9 @@
       </div>
     </li>
   </ul>
-  <!-- <figure class="flow__backImage">
+  <figure class="flow__backImage">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fish-2.svg" alt="魚の群れの画像">
-  </figure> -->
+  </figure>
 </section>
 <section class="recruit__cta">
   <p class="recruit__catch">LINEでカンタン応募（無料）</p>
@@ -240,12 +240,12 @@
   </li>
 
   </ul>
-  <!-- <figure class="question__backImage left">
+  <figure class="question__backImage left">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sango-2.svg" alt="サンゴの画像">
   </figure>
   <figure class="question__backImage right">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sango-1.svg" alt="サンゴの画像">
-  </figure> -->
+  </figure>
 </section>
 <section class="recruit__cta white">
   <p class="recruit__catch white">LINEでカンタン応募（無料）</p>

@@ -70,10 +70,21 @@
     &.left {
       left: 50%;
       transform: translateX(-200%);
+      @include mq(sp){
+        left: rem(15);
+        transform: none;
+      }
     }
     &.right {
       right: 50%;
       transform: translateX(200%);
+      @include mq(sp){
+        right: rem(15);
+        transform: none;
+      }
+    }
+    @include mq(sp){
+      width: rem(125);
     }
   }
 }

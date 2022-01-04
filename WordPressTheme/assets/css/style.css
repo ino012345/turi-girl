@@ -2925,6 +2925,20 @@ html {
 	font-size: 1.25rem;
 }
 
+.application__backImage.left {
+	left: 0.9375rem;
+	transform: none;
+}
+
+.application__backImage.right {
+	right: 0.9375rem;
+	transform: none;
+}
+
+.application__backImage {
+	width: 7.8125rem;
+}
+
 .article {
 	max-width: 22.8125rem;
 	padding: 1.25rem;
@@ -2989,6 +3003,12 @@ html {
 .flow__head::after {
 	left: 0;
 	width: 100%;
+}
+
+.flow__backImage {
+	left: 0.9375rem;
+	transform: none;
+	width: 9.375rem;
 }
 
 .footer__nav {
@@ -3324,6 +3344,20 @@ html {
 	padding-left: 0rem;
 }
 
+.question__backImage.left {
+	left: 0.9375rem;
+	transform: none;
+}
+
+.question__backImage.right {
+	right: 0.9375rem;
+	transform: none;
+}
+
+.question__backImage {
+	width: 9.375rem;
+}
+
 .title p {
 	font-size: 1rem;
 	padding-right: 2.1875rem;
@@ -3383,6 +3417,24 @@ html {
 	font-size: 0.875rem;
 }
 
+.recruit__overview {
+	padding-bottom: 10.9375rem;
+}
+
+.recruit__overviewImage.left {
+	left: 0.9375rem;
+	transform: none;
+}
+
+.recruit__overviewImage.right {
+	right: 0.9375rem;
+	transform: none;
+}
+
+.recruit__overviewImage {
+	width: 10.9375rem;
+}
+
 .recruit__heading span {
 	margin-bottom: 3.4375rem;
 	width: 3.125rem;
@@ -3429,6 +3481,20 @@ html {
 
 .recruit__mediaBody {
 	margin-top: 2.5rem;
+}
+
+.recruit__serviceBackImage.left {
+	left: 0.9375rem;
+	transform: none;
+}
+
+.recruit__serviceBackImage.right {
+	right: 0.9375rem;
+	transform: none;
+}
+
+.recruit__serviceBackImage {
+	width: 9.375rem;
 }
 
 .recruit__cardUnit {

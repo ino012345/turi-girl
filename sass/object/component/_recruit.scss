@@ -67,6 +67,9 @@
     padding-top: rem(100);
     padding-bottom: rem(100);
     position: relative;
+    @include mq(sp){
+      padding-bottom: rem(175);
+    }
   }
   &__overviewImage {
     width: rem(250);
@@ -80,10 +83,21 @@
     &.left {
       left: 50%;
       transform: translateX(-175%);
+      @include mq(sp){
+        left: rem(15);
+        transform: none;
+      }
     }
     &.right {
       right: 50%;
       transform: translateX(175%);
+      @include mq(sp){
+        right: rem(15);
+        transform: none;
+      }
+    }
+    @include mq(sp){
+      width: rem(175);
     }
   }
   &__heading {
@@ -281,10 +295,21 @@
     &.left {
       left: 50%;
       transform: translateX(-200%);
+      @include mq(sp){
+        left: rem(15);
+        transform: none;
+      }
     }
     &.right {
       right: 50%;
       transform: translateX(200%);
+      @include mq(sp){
+        right: rem(15);
+        transform: none;
+      }
+    }
+    @include mq(sp){
+      width: rem(150);
     }
   }
   &__cardUnit {
