@@ -2916,6 +2916,7 @@ html {
 
 .application__item {
 	flex-direction: column;
+	padding-left: 0;
 	text-align: center;
 }
 
