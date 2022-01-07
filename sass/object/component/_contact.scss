@@ -1,64 +1,30 @@
 .contact {
-  padding: rem(100) rem(20) rem(120) rem(20);
-  max-width: rem(1040);
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  border-bottom: rem(1) dotted #fff;
-  background-color: #0397de;
-  &__btns {
-    display: block;
-    margin-top: rem(80);
-    display: flex;
-    @include mq(sp){
-      flex-direction: column;
+  background-color: #fff;
+  color: #333;
+  &__accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: rem(900);
+    margin:0 auto;
+    li {
+      margin: rem(10) 0;
+    }
+    section {
+      border: rem(1) solid #ccc;
     }
   }
-  &__btn {
-    padding: rem(20);
-    width: rem(500);
-    height: rem(250);
-    margin-right: rem(40);
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: all .3s;
-    &:last-child {
-      margin-right: 0;
-    }
-    &::after {
-      content: "";
-      width: rem(30);
-      height: rem(30);
-      background-image: url(../img/arrow.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: absolute;
-      right: rem(10);
-      bottom: rem(10);
-    }
-    @include mq(sp){
-      width: 100%;
-      height: rem(170);
-      &:last-child {
-        margin-top: rem(30);
-      }
-    }
-    &:hover {
-      box-shadow: 0 rem(7) rem(10) rgba(0, 0, 0, 0.3);
-      border-color: transparent;
-    }
+  &__title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% rem(50);
+    transition: all .5s ease;
   }
-  &__text {
-    font-size: rem(40);
-    line-height: 1.5;
-    font-family: "MyFont";
-    text-align: center;
-    color: #4986d9;
-    @include mq(sp){
-      font-size: rem(28);
-    }
+  &__box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+    margin:0 3% 3% 3%;
+    padding: 3%;
   }
 }

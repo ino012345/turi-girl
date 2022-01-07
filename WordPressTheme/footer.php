@@ -1,11 +1,11 @@
-<section class="contact">
+<section class="footer-contact">
   <h1 class="section-heading">お問い合わせ</h1>
-  <a href="" class="contact__btns">
-    <div class="contact__btn">
-      <p class="contact__text">オフィシャルメンバーの<br>ご応募はコチラ</p>
+  <a href="" class="footer-contact__btns">
+    <div class="footer-contact__btn">
+      <p class="footer-contact__text">オフィシャルメンバーの<br>ご応募はコチラ</p>
     </div>
-    <div class="contact__btn">
-      <p class="contact__text">お仕事のご依頼は<br>コチラ</p>
+    <div class="footer-contact__btn">
+      <p class="footer-contact__text">お仕事のご依頼は<br>コチラ</p>
     </div>
   </a>
 </section>
