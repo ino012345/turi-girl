@@ -15,6 +15,14 @@
   @include mq(sp){
     font-size: rem(14);
   }
+  &.blue {
+    color: #4986d9;
+    border-color: #4986d9;
+    &:hover {
+      color: #fff;
+      background-color: #4986d9;
+    }
+  }
   &.block {
     display: block;
     width: rem(400);

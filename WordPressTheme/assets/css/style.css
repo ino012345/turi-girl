@@ -110,28 +110,11 @@ input[type="checkbox"] {
 
 input[type="radio"] + span,
 input[type="checkbox"] + span {
-	color: #555;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 1.4rem;
 	line-height: 1;
-	margin-left: 8px;
-	padding: 10px 20px;
 	position: relative;
 	text-align: center;
-}
-
-input[type="radio"] + span::before,
-input[type="checkbox"] + span::before {
-	background: #fff;
-	border: 1px solid #ccc;
-	content: "";
-	height: 16px;
-	left: -8px;
-	margin-top: -8px;
-	position: absolute;
-	top: 50%;
-	width: 16px;
 }
 
 /* fieldset */
@@ -155,14 +138,7 @@ button {
 	-webkit-appearance: button;
 	-moz-appearance: button;
 	appearance: button;
-	background: #efefef;
-	border: 1px solid #999;
-	border-radius: 0;
-	color: #000;
 	cursor: pointer;
-	display: inline-block;
-	font-size: 20px;
-	margin: 0;
 }
 
 /* ブラウザ対策
@@ -227,40 +203,16 @@ input[type="checkbox"] + span:hover::before {
 	border-color: #000;
 }
 
-input[type="radio"] + span:hover::after,
-input[type="checkbox"] + span:hover::after {
-	background: #ccc;
-	content: "";
-	height: 8px;
-	left: -4px;
-	margin-top: -4px;
-	position: absolute;
-	top: 50%;
-	width: 8px;
-}
-
 /* checked */
 
 input[type="radio"]:checked + span,
 input[type="checkbox"]:checked + span {
-	color: #3498db;
+	color: #4986d9;
 }
 
-input[type="radio"]:checked + span::before,
-input[type="checkbox"]:checked + span::before {
-	border-color: #3498db;
-}
-
-input[type="radio"]:checked + span::after,
-input[type="checkbox"]:checked + span::after {
-	background: #3498db;
-	content: "";
-	height: 8px;
-	left: -4px;
-	margin-top: -4px;
-	position: absolute;
-	top: 50%;
-	width: 8px;
+input[type="radio"]:checked + span label,
+input[type="checkbox"]:checked + span label {
+	border-color: #4986d9;
 }
 
 /* radio */
@@ -768,6 +720,16 @@ summary {
 	margin-top: 1.875rem;
 }
 
+.btn.blue {
+	border-color: #4986d9;
+	color: #4986d9;
+}
+
+.btn.blue:hover {
+	background-color: #4986d9;
+	color: #fff;
+}
+
 .btn.block {
 	border-radius: 3.125rem;
 	display: block;
@@ -835,37 +797,208 @@ summary {
 .contact {
 	background-color: #fff;
 	color: #333;
+	padding: 6.25rem 0.9375rem;
+}
+
+.contact__content {
+	text-align: center;
+}
+
+.contact__complete {
+	font-size: 2rem;
+}
+
+.contact__complete .sp {
+	display: none;
+}
+
+.contact__text1 {
+	font-size: 1.125rem;
+	margin-top: 3.75rem;
+}
+
+.contact__text1 .sp {
+	display: none;
+}
+
+.contact__text2 {
+	font-size: 1.125rem;
+	margin-top: 1.25rem;
+}
+
+.contact__text2 a {
+	color: #4986d9;
+	text-decoration: underline;
+}
+
+.contact__text2 .sp {
+	display: none;
+}
+
+.contact__radioWrap {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.75rem;
+	max-width: 49.375rem;
+	width: 100%;
+}
+
+.contact__radioList {
+	border-bottom: 0.0625rem dashed #4986d9;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1.25rem;
+	width: 100%;
+}
+
+.contact .mw_wp_form .horizontal-item + .horizontal-item {
+	margin-bottom: 1.25rem;
+	margin-left: 1.25rem;
+}
+
+.contact .mw_wp_form .horizontal-item:nth-of-type(3n) + .horizontal-item {
+	margin-left: 0rem;
+}
+
+.contact span.mwform-radio-field {
+	text-align: center;
+}
+
+.contact .mwform-radio-field-text {
+	border: 0.0625rem solid #ccc;
+	display: block;
+	font-size: 1.125rem;
+	padding-bottom: 1.25rem;
+	padding-top: 1.25rem;
+	width: 15.625rem;
+}
+
+.contact input[type="radio"]:checked + span {
+	border-color: #4986d9;
 }
 
 .contact__accordion-area {
-	list-style: none;
 	margin: 0 auto;
-	max-width: 56.25rem;
-	width: 96%;
+	max-width: 48.75rem;
+	width: 100%;
 }
 
-.contact__accordion-area li {
-	margin: 0.625rem 0;
+.contact__head {
+	height: 0;
+	width: 100%;
 }
 
-.contact__accordion-area section {
-	border: 0.0625rem solid #ccc;
-}
-
-.contact__title { /*+マークの位置基準とするためrelative指定*/
-	cursor: pointer;
-	font-size: 1rem;
-	font-weight: normal;
-	padding: 3% 3% 3% 3.125rem;
+.contact__title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 1.875rem 0 1.25rem 2.5rem;
 	position: relative;
-	transition: all .5s ease;
+}
+
+.contact__title::before {
+	background-image: url(../img/fishing.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: '';
+	height: 1.875rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-35%);
+	width: 1.875rem;
+}
+
+.contact__title.need::after {
+	color: red;
+	content: '※';
+	font-size: 0.875rem;
+}
+
+.contact__title span {
+	font-size: 0.875rem;
 }
 
 .contact__box { /*はじめは非表示*/
-	background: #f3f3f3;
+	border-bottom: 0.0625rem dashed #4986d9;
 	display: none;
-	margin: 0 3% 3% 3%;
-	padding: 3%;
+	padding-bottom: 2.5rem;
+}
+
+.contact__box input {
+	width: 100%;
+}
+
+.contact__box input[type="submit"] {
+	background-color: #4986d9;
+	border: 0.0625rem solid #4986d9;
+	border-radius: 1.5625rem;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-family: "heading";
+	font-size: 1.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5rem;
+	padding-bottom: 0.625rem;
+	padding-top: 0.625rem;
+	pointer-events: all;
+	text-align: center;
+	transition: all .3s;
+	width: 15.625rem;
+}
+
+.contact__box input[type="submit"]:hover {
+	background-color: #fff;
+	color: #4986d9;
+}
+
+.contact__box input:disabled {
+	background-color: #ccc;
+	border-color: #ccc;
+	pointer-events: none;
+}
+
+.contact__nextBtn {
+	background-color: #4986d9;
+	border: 0.0625rem solid #4986d9;
+	border-radius: 1.5625rem;
+	color: #fff;
+	cursor: pointer;
+	font-family: "heading";
+	font-size: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5rem;
+	padding-bottom: 0.625rem;
+	padding-top: 0.625rem;
+	text-align: center;
+	transition: all .3s;
+	width: 9.375rem;
+}
+
+.contact__nextBtn:hover {
+	background-color: #fff;
+	color: #4986d9;
+}
+
+.contact__skipBtn {
+	color: #333;
+	font-family: "heading";
+	font-size: 1rem;
+	margin-top: 1.25rem;
+	text-align: center;
+}
+
+.contact__skipBtn p {
+	cursor: pointer;
+	display: inline;
+	text-decoration: underline;
+	transition: all .3s;
+}
+
+.contact__skipBtn p:hover {
+	color: #4986d9;
 }
 
 .flow-nav {
@@ -3027,6 +3160,55 @@ html {
 
 .btn.block {
 	width: 20.9375rem;
+}
+
+.contact__complete .sp {
+	display: block;
+}
+
+.contact__complete {
+	font-size: 1.5rem;
+}
+
+.contact__text1 .sp {
+	display: block;
+}
+
+.contact__text1 {
+	font-size: 1rem;
+}
+
+.contact__text2 {
+	font-size: 1rem;
+}
+
+.contact__text2 .sp {
+	display: block;
+}
+
+.contact .mw_wp_form .horizontal-item + .horizontal-item {
+	margin-bottom: 0.9375rem;
+	margin-left: 0.9375rem;
+}
+
+.contact .mw_wp_form .horizontal-item:nth-of-type(3n) + .horizontal-item {
+	margin-left: 0.9375rem;
+}
+
+.contact .mw_wp_form .horizontal-item:nth-of-type(2n) + .horizontal-item {
+	margin-left: 0rem;
+}
+
+.contact .mwform-radio-field-text {
+	width: 10.3125rem;
+}
+
+.contact__title {
+	font-size: 1.125rem;
+}
+
+.contact__nextBtn {
+	font-size: 0.875rem;
 }
 
 .flow-nav {

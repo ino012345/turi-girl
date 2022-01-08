@@ -12,7 +12,7 @@
   <?php wp_body_open(); ?>
   <header class="header l-header">
     <div class="header__inner">
-      <a href="#" class="header__logo">
+      <a href="<?php echo home_url(); ?>" class="header__logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TB_logo_fin_A.png" alt="ヘッダーロゴ">
       </a>
       <nav class="header__nav">

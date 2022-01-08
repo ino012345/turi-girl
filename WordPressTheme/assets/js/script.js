@@ -164,30 +164,64 @@ jQuery(function ($) {
 		});
 
 		$(function() {
-			$('.mwform-radio-field input').attr('onkeyup', 'inputCheck()');
+			$('.required input').attr('required', '');
 		});
+
+		$(function() {
+			//始めにjQueryで送信ボタンを無効化する
+			$('input[type="submit"]').prop("disabled", true);
+			
+			//入力欄の操作時
+			$('form input:required').change(function () {
+					//必須項目が空かどうかフラグ
+					let flag = true;
+					//必須項目をひとつずつチェック
+					$('form input:required').each(function(e) {
+							//もし必須項目が空なら
+							if ($('form input:required').eq(e).val() === "") {
+									flag = false;
+							}
+					});
+					//全て埋まっていたら
+					if (flag) {
+							//送信ボタンを復活
+							$('input[type="submit"]').prop("disabled", false);
+					}
+					else {
+							//送信ボタンを閉じる
+							$('input[type="submit"]').prop("disabled", true);
+					}
+			});
+	});
 
 		//アコーディオンをクリックした時の動作
-		$('.contact__title').on('click', function() {//タイトル要素をクリックしたら
-			var findElm = $(this).next(".contact__box");//直後のアコーディオンを行うエリアを取得し
-			$(findElm).slideToggle();//アコーディオンの上下動作
-				
-			if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
-				$(this).removeClass('close');//クラス名を除去し
-			}else{//それ以外は
-				$(this).addClass('close');//クラス名closeを付与
-			}
+		$('input[type="radio"]').click(function() {//前の項目をクリックしたら
+			$('.first .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.toSecond').click(function() {//前の項目をクリックしたら
+			$('.second .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.contact__skipBtn p').click(function() {//前の項目をクリックしたら
+			$('.second .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.toThird').click(function() {//前の項目をクリックしたら
+			$('.third .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.toFourth').click(function() {//前の項目をクリックしたら
+			$('.fourth .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.toFifth').click(function() {//前の項目をクリックしたら
+			$('.fifth .contact__box').slideDown();//アコーディオンの上下動作
+		});
+		//アコーディオンをクリックした時の動作
+		$('.toSixth').click(function() {//前の項目をクリックしたら
+			$('.sixth .contact__box').slideDown();//アコーディオンの上下動作
 		});
 
-		//ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
-		$(window).on('load', function(){
-			$('.accordion-area li:first-of-type section').addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
-			$(".open").each(function(index, element){	//openクラスを取得
-				var Title =$(element).children('.contact__title');	//openクラスの子要素のtitleクラスを取得
-				$(Title).addClass('close');				//タイトルにクラス名closeを付与し
-				var Box =$(element).children('.contact__box');	//openクラスの子要素boxクラスを取得
-				$(Box).slideDown(500);					//アコーディオンを開く
-			});
-		});
 	});
 });

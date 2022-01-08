@@ -102,25 +102,9 @@ input[type="radio"] + span,
 input[type="checkbox"] + span {
 	display: inline-block;
 	position: relative;
-	margin-left: 8px;
-	padding: 10px 20px;
-	color: #555;
-	font-size: 1.4rem;
 	text-align: center;
 	line-height: 1;
 	cursor: pointer;
-}
-input[type="radio"] + span::before,
-input[type="checkbox"] + span::before {
-	position: absolute;
-	top: 50%;
-	left: -8px;
-	width: 16px;
-	height: 16px;
-	content: "";
-	margin-top: -8px;
-	border: 1px solid #ccc;
-	background: #fff;
 }
 
 /* fieldset */
@@ -137,16 +121,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-	display: inline-block;
-	margin: 0;
-	border: 1px solid #999;
-	border-radius: 0;
 	-webkit-box-sizing: content-box;
 	-webkit-appearance: button;
 	appearance: button;
-	background: #efefef;
-	color: #000;
-	font-size: 20px;
 	cursor: pointer;
 }
 
@@ -212,38 +189,17 @@ input[type="radio"] + span:hover::before,
 input[type="checkbox"] + span:hover::before {
 	border-color: #000;
 }
-input[type="radio"] + span:hover::after,
-input[type="checkbox"] + span:hover::after {
-	position: absolute;
-	content: "";
-	top: 50%;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	margin-top: -4px;
-	background: #ccc;
-}
+
 
 /* checked */
 input[type="radio"]:checked + span,
 input[type="checkbox"]:checked + span {
-	color: #3498db;
+	color: #4986d9;
+	label {
+		border-color: #4986d9;
+	}
 }
-input[type="radio"]:checked + span::before,
-input[type="checkbox"]:checked + span::before {
-	border-color: #3498db;
-}
-input[type="radio"]:checked + span::after,
-input[type="checkbox"]:checked + span::after {
-	position: absolute;
-	content: "";
-	top: 50%;
-	left: -4px;
-	width: 8px;
-	height: 8px;
-	margin-top: -4px;
-	background: #3498db;
-}
+
 
 /* radio */
 input[type="radio"] + span::before,
