@@ -40,6 +40,9 @@
       color: #4986d9;
       text-decoration: underline;
     }
+    span {
+      color: red;
+    }
     .sp {
       display: none;
       @include mq(sp){
@@ -127,7 +130,11 @@
       &::after {
         content: '※';
         color: red;
-        font-size: rem(14);
+        // font-size: rem(14);
+        font-size: rem(20);
+        @include mq(sp){
+          font-size: rem(18);
+        }
       }
     }
     span {
@@ -138,7 +145,7 @@
     }
   }
   &__box {
-    display: none;/*はじめは非表示*/
+    // display: none;/*はじめは非表示*/
     border-bottom: rem(1) dashed #4986d9;
     padding-bottom: rem(40);  
     input {
@@ -173,44 +180,51 @@
       pointer-events: none;
     }
   }
-  &__nextBtn {
-    padding-top: rem(10);
-    padding-bottom: rem(10);
-    font-size: rem(16);
-    text-align: center;
-    width: rem(150);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: rem(40);
-    border: rem(1) solid #4986d9;
-    font-family: "heading";
-    background-color: #4986d9;
-    color: #fff;
-    transition: all .3s;
-    border-radius: rem(25);
-    cursor: pointer;
-    &:hover {
-      color: #4986d9;
-      background-color: #fff;
-    }
-    @include mq(sp){
-      font-size: rem(14);
+  &__birthday {
+    display: flex;
+    input {
+      width: rem(100);
+      margin-right: rem(20);
     }
   }
-  &__skipBtn {
-    font-size: rem(16);
-    text-align: center;
-    margin-top: rem(20);
-    font-family: "heading";
-    color: #333;
-    p {
-      display: inline;
-      text-decoration: underline;
-      transition: all .3s;
-      cursor: pointer;
-      &:hover {
-        color: #4986d9;
-      }
-    }
-  }
+  // &__nextBtn {
+  //   padding-top: rem(10);
+  //   padding-bottom: rem(10);
+  //   font-size: rem(16);
+  //   text-align: center;
+  //   width: rem(150);
+  //   margin-right: auto;
+  //   margin-left: auto;
+  //   margin-top: rem(40);
+  //   border: rem(1) solid #4986d9;
+  //   font-family: "heading";
+  //   background-color: #4986d9;
+  //   color: #fff;
+  //   transition: all .3s;
+  //   border-radius: rem(25);
+  //   cursor: pointer;
+  //   &:hover {
+  //     color: #4986d9;
+  //     background-color: #fff;
+  //   }
+  //   @include mq(sp){
+  //     font-size: rem(14);
+  //   }
+  // }
+  // &__skipBtn {
+  //   font-size: rem(16);
+  //   text-align: center;
+  //   margin-top: rem(20);
+  //   font-family: "heading";
+  //   color: #333;
+  //   p {
+  //     display: inline;
+  //     text-decoration: underline;
+  //     transition: all .3s;
+  //     cursor: pointer;
+  //     &:hover {
+  //       color: #4986d9;
+  //     }
+  //   }
+  // }
 }

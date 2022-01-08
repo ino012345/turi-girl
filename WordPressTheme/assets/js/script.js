@@ -194,34 +194,34 @@ jQuery(function ($) {
 			});
 	});
 
-		//アコーディオンをクリックした時の動作
-		$('input[type="radio"]').click(function() {//前の項目をクリックしたら
-			$('.first .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.toSecond').click(function() {//前の項目をクリックしたら
-			$('.second .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.contact__skipBtn p').click(function() {//前の項目をクリックしたら
-			$('.second .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.toThird').click(function() {//前の項目をクリックしたら
-			$('.third .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.toFourth').click(function() {//前の項目をクリックしたら
-			$('.fourth .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.toFifth').click(function() {//前の項目をクリックしたら
-			$('.fifth .contact__box').slideDown();//アコーディオンの上下動作
-		});
-		//アコーディオンをクリックした時の動作
-		$('.toSixth').click(function() {//前の項目をクリックしたら
-			$('.sixth .contact__box').slideDown();//アコーディオンの上下動作
-		});
+		// //アコーディオンをクリックした時の動作
+		// $('input[type="radio"]').click(function() {//前の項目をクリックしたら
+		// 	$('.first .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.toSecond').click(function() {//前の項目をクリックしたら
+		// 	$('.second .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.contact__skipBtn p').click(function() {//前の項目をクリックしたら
+		// 	$('.second .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.toThird').click(function() {//前の項目をクリックしたら
+		// 	$('.third .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.toFourth').click(function() {//前の項目をクリックしたら
+		// 	$('.fourth .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.toFifth').click(function() {//前の項目をクリックしたら
+		// 	$('.fifth .contact__box').slideDown();//アコーディオンの上下動作
+		// });
+		// //アコーディオンをクリックした時の動作
+		// $('.toSixth').click(function() {//前の項目をクリックしたら
+		// 	$('.sixth .contact__box').slideDown();//アコーディオンの上下動作
+		// });
 
 	});
 });

@@ -831,6 +831,10 @@ summary {
 	text-decoration: underline;
 }
 
+.contact__text2 span {
+	color: red;
+}
+
 .contact__text2 .sp {
 	display: none;
 }
@@ -911,16 +915,15 @@ summary {
 .contact__title.need::after {
 	color: red;
 	content: '※';
-	font-size: 0.875rem;
+	font-size: 1.25rem;
 }
 
 .contact__title span {
 	font-size: 0.875rem;
 }
 
-.contact__box { /*はじめは非表示*/
+.contact__box {
 	border-bottom: 0.0625rem dashed #4986d9;
-	display: none;
 	padding-bottom: 2.5rem;
 }
 
@@ -959,46 +962,13 @@ summary {
 	pointer-events: none;
 }
 
-.contact__nextBtn {
-	background-color: #4986d9;
-	border: 0.0625rem solid #4986d9;
-	border-radius: 1.5625rem;
-	color: #fff;
-	cursor: pointer;
-	font-family: "heading";
-	font-size: 1rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2.5rem;
-	padding-bottom: 0.625rem;
-	padding-top: 0.625rem;
-	text-align: center;
-	transition: all .3s;
-	width: 9.375rem;
+.contact__birthday {
+	display: flex;
 }
 
-.contact__nextBtn:hover {
-	background-color: #fff;
-	color: #4986d9;
-}
-
-.contact__skipBtn {
-	color: #333;
-	font-family: "heading";
-	font-size: 1rem;
-	margin-top: 1.25rem;
-	text-align: center;
-}
-
-.contact__skipBtn p {
-	cursor: pointer;
-	display: inline;
-	text-decoration: underline;
-	transition: all .3s;
-}
-
-.contact__skipBtn p:hover {
-	color: #4986d9;
+.contact__birthday input {
+	margin-right: 1.25rem;
+	width: 6.25rem;
 }
 
 .flow-nav {
@@ -3203,12 +3173,12 @@ html {
 	width: 10.3125rem;
 }
 
-.contact__title {
+.contact__title.need::after {
 	font-size: 1.125rem;
 }
 
-.contact__nextBtn {
-	font-size: 0.875rem;
+.contact__title {
+	font-size: 1.125rem;
 }
 
 .flow-nav {
