@@ -144,6 +144,9 @@
       font-size: rem(18);
     }
   }
+  &__attention {
+    font-size: rem(14);
+  }
   &__box {
     // display: none;/*はじめは非表示*/
     border-bottom: rem(1) dashed #4986d9;
@@ -182,9 +185,21 @@
   }
   &__birthday {
     display: flex;
-    input {
+    align-items: center;
+    select {
       width: rem(100);
+      margin-right: rem(10);
+      @include mq(sp){
+        width: rem(70);
+        padding-right: rem(20);
+      }
+    }
+    .year-month-day {
       margin-right: rem(20);
+      font-size: rem(18);
+      @include mq(sp){
+        font-size: rem(16);
+      }
     }
   }
   // &__nextBtn {

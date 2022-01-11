@@ -269,3 +269,43 @@ function is_mobile(){
 	$pattern = '/'.implode('|', $useragents).'/i';
 	return preg_match($pattern, $_SERVER['HTTP_USER_AGENT']);
 }
+
+add_filter( 'mwform_choices_mw-wp-form-98', 'mwform_add_birthday_options', 10, 2 );
+function mwform_add_birthday_options( $children, $atts ) {
+  // 年設定
+  if ( $atts['name'] === 'birthday-year' ) {
+    for ( $i = 1980; $i <= date( 'Y' ); $i++ ) {
+      $children[$i] = $i;
+    }
+  }
+
+  // 月設定
+  if ( $atts['name'] === 'birthday-month' ) {
+    for ( $i = 1; $i <= 12; $i++ ) {
+      $children[$i] = $i;
+    }
+  }
+
+  // 日設定
+  if ( $atts['name'] === 'birthday-day' ) {
+    for ( $i = 1; $i <= 31; $i++ ) {
+      $children[$i] = $i;
+    }
+  }
+
+  return $children;
+}
+
+add_filter( 'mwform_value_mw-wp-form-xxx', 'mwform_birthday_year_value_setting', 10, 2 );
+function mwform_birthday_year_value_setting( $value, $name ) {
+  if ( $name === 'birthday-year' ) {
+    $value = 2000;
+  }
+  if ( $name === 'birthday-month' ) {
+    $value = 1;
+  }
+  if ( $name === 'birthday-day' ) {
+    $value = 1;
+  }
+  return $value;
+}

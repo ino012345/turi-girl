@@ -922,6 +922,10 @@ summary {
 	font-size: 0.875rem;
 }
 
+.contact__attention {
+	font-size: 0.875rem;
+}
+
 .contact__box {
 	border-bottom: 0.0625rem dashed #4986d9;
 	padding-bottom: 2.5rem;
@@ -963,12 +967,18 @@ summary {
 }
 
 .contact__birthday {
+	align-items: center;
 	display: flex;
 }
 
-.contact__birthday input {
-	margin-right: 1.25rem;
+.contact__birthday select {
+	margin-right: 0.625rem;
 	width: 6.25rem;
+}
+
+.contact__birthday .year-month-day {
+	font-size: 1.125rem;
+	margin-right: 1.25rem;
 }
 
 .flow-nav {
@@ -3179,6 +3189,15 @@ html {
 
 .contact__title {
 	font-size: 1.125rem;
+}
+
+.contact__birthday select {
+	padding-right: 1.25rem;
+	width: 4.375rem;
+}
+
+.contact__birthday .year-month-day {
+	font-size: 1rem;
 }
 
 .flow-nav {
