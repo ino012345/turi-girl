@@ -165,9 +165,17 @@
         <p class="pickup__description"><?php the_excerpt(); ?></p>
         <div class="pickup__author">
           <figure class="pickup__icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon.png" alt="メンバーのアイコン">
+          <?php
+            $author = get_the_author_meta('id');
+            $author_img = get_avatar($author);
+            $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
+            if(preg_match($imgtag, $author_img, $imgurl)){
+              $authorimg = $imgurl[2];
+            }
+            ?>
+            <img src="<?php echo $authorimg ?>" alt="メンバーのアイコン">
           </figure>
-          <p class="pickup__name">ようこ</p>
+          <p class="pickup__name"><?php echo get_the_author_meta('nickname') ?></p>
         </div>
       </div>
     </a>
