@@ -1996,6 +1996,10 @@ summary {
 	margin-right: 2.5rem;
 }
 
+.news__title {
+	pointer-events: none;
+}
+
 .news__bannerArea {
 	align-items: center;
 	display: flex;
@@ -2215,7 +2219,6 @@ summary {
 	border: 0.125rem solid #333;
 	color: #333;
 	font-weight: bold;
-	height: 35.625rem;
 	padding: 2.5rem;
 	width: 25rem;
 }
@@ -2237,13 +2240,13 @@ summary {
 }
 
 .profile-contents__head {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: bold;
 	width: 40%;
 }
 
 .profile-contents__value {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	width: 60%;
 }
 

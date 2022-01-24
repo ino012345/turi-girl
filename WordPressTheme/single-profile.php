@@ -68,28 +68,28 @@
   <h1 class="section-heading mini">リンク</h1>
   <ul class="profile-link__list">
     <li class="profile-link__item instagram-link">
-      <a href="<?php echo post_custom('instagram'); ?>">Instagram</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('instagram'); ?>">Instagram</a>
     </li>
     <li class="profile-link__item twitter">
-      <a href="<?php echo post_custom('twitter'); ?>">Twitter</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('twitter'); ?>">Twitter</a>
     </li>
     <li class="profile-link__item youtube">
-      <a href="<?php echo post_custom('youtube'); ?>">YouTube</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('youtube'); ?>">YouTube</a>
     </li>
     <li class="profile-link__item tiktok">
-      <a href="<?php echo post_custom('tiktok'); ?>">Tik Tok</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('tiktok'); ?>">Tik Tok</a>
     </li>
     <li class="profile-link__item line">
-      <a href="<?php echo post_custom('line'); ?>">LINE</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('line'); ?>">LINE</a>
     </li>
     <li class="profile-link__item room">
-      <a href="<?php echo post_custom('room'); ?>">ROOM</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('room'); ?>">ROOM</a>
     </li>
     <li class="profile-link__item amazon">
-      <a href="<?php echo post_custom('amazon'); ?>">欲しい物リスト</a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('amazon'); ?>">欲しい物リスト</a>
     </li>
     <li class="profile-link__item only-link">
-      <a href="<?php echo post_custom('link'); ?>"><?php echo post_custom('link_name'); ?></a>
+      <a target="_blank" rel="noopener noreferrer" href="<?php echo post_custom('link'); ?>"><?php echo post_custom('link_name'); ?></a>
     </li>
   </ul>
 </section>

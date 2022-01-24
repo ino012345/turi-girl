@@ -41,7 +41,6 @@
   }
   &__body {
     width: rem(400);
-    height: rem(570);
     background-color: #fff;
     border: rem(2) solid #333;
     padding: rem(40);
@@ -69,12 +68,12 @@
     border-bottom: rem(2) dashed #0397de;
   }
   &__head {
-    font-size: rem(18);
+    font-size: rem(16);
     font-weight: bold;
     width: 40%;
   }
   &__value {
-    font-size: rem(18);
+    font-size: rem(16);
     width: 60%;
   }
 }
