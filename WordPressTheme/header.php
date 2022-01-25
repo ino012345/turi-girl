@@ -18,33 +18,33 @@
       <nav class="header__nav">
         <ul class="header__navList">
           <li class="header__navItem">
-            <a href="#">サイトについて</a>
+            <a href="<?php echo home_url('official'); ?>">サイトについて</a>
           </li>
           <li class="header__navItem">
-            <a href="#">メンバー</a>
+            <a href="<?php echo home_url( 'member' ); ?>">メンバー</a>
           </li>
           <li class="header__navItem">
-            <a href="#">ブログ</a>
+            <a href="<?php echo home_url('blog'); ?>">ブログ</a>
           </li>
           <li class="header__navItem">
-            <a href="#">ピックアップ</a>
+            <a href="<?php echo home_url('pickup'); ?>">ピックアップ</a>
           </li>
           <li class="header__navItem">
-            <a href="#">PR依頼</a>
+            <a href="<?php echo home_url('contact'); ?>">PR依頼</a>
           </li>
           <li class="header__navItem">
-            <a href="#">お問い合わせ</a>
+            <a href="<?php echo home_url('contact'); ?>">お問い合わせ</a>
           </li>
         </ul>
       </nav>
       <ul class="header__snsList">
         <li class="header__sns">
-          <a href="#">
+          <a href="https://www.instagram.com/tsuribijyo/" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="インスタグラム">
           </a>
         </li>
         <li class="header__sns">
-          <a href="#">
+          <a href="https://lin.ee/ljxVioK" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line_icon.svg" alt="LINE">
           </a>
         </li>
@@ -57,16 +57,16 @@
           <p class="g-nav__navHead">コンテンツ</p>
           <ul class="g-nav__navList">
             <li class="g-nav__navItem">
-              <a href="#">- トップページ</a>
+              <a href="<?php echo home_url(); ?>">- トップページ</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- オフィシャルメンバー</a>
+              <a href="<?php echo home_url('member'); ?>">- オフィシャルメンバー</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- ブログ一覧</a>
+              <a href="<?php echo home_url('blog'); ?>">- ブログ一覧</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- ピックアップ</a>
+              <a href="<?php echo home_url('pickup'); ?>">- ピックアップ</a>
             </li>
           </ul>
         </div>
@@ -74,13 +74,13 @@
           <p class="g-nav__navHead">お問い合わせ</p>
           <ul class="g-nav_navList">
             <li class="g-nav__navItem">
-              <a href="#">- オフィシャルメンバー応募</a>
+              <a href="<?php echo home_url('register'); ?>">- オフィシャルメンバー応募</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- お仕事のご依頼はコチラ</a>
+              <a href="<?php echo home_url('contact'); ?>">- お仕事のご依頼はコチラ</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- お問い合わせ</a>
+              <a href="<?php echo home_url('contact'); ?>">- お問い合わせ</a>
             </li>
           </ul>
         </div>
@@ -88,10 +88,10 @@
           <p class="g-nav__navHead">SNS</p>
           <ul class="g-nav_navList">
             <li class="g-nav__navItem">
-              <a href="#">- Instagram</a>
+              <a href="https://www.instagram.com/tsuribijyo/" target="_blank" rel="noopener noreferrer">- Instagram</a>
             </li>
             <li class="g-nav__navItem">
-              <a href="#">- LINE</a>
+              <a href="https://lin.ee/ljxVioK" target="_blank" rel="noopener noreferrer">- LINE</a>
             </li>
           </ul>
         </div>
@@ -100,39 +100,39 @@
   </header>
   <div class="flow-nav">
     <div class="flow-nav__inner">
-      <a href="#" class="flow-nav__logo">
+      <a href="<?php echo home_url(); ?>" class="flow-nav__logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/TB_logo_fin_A.png" alt="ヘッダーロゴ">
       </a>
       <nav class="flow-nav__nav">
         <ul class="flow-nav__navList">
           <li class="flow-nav__navItem">
-            <a href="#">サイトについて</a>
+            <a href="<?php echo home_url('official'); ?>">サイトについて</a>
           </li>
           <li class="flow-nav__navItem">
-            <a href="#">メンバー</a>
+            <a href="<?php echo home_url('member'); ?>">メンバー</a>
           </li>
           <li class="flow-nav__navItem">
-            <a href="#">ブログ</a>
+            <a href="<?php echo home_url('blog'); ?>">ブログ</a>
           </li>
           <li class="flow-nav__navItem">
-            <a href="#">ピックアップ</a>
+            <a href="<?php echo home_url('pickup'); ?>">ピックアップ</a>
           </li>
           <li class="flow-nav__navItem">
-            <a href="#">PR依頼</a>
+            <a href="<?php echo home_url('contact'); ?>">PR依頼</a>
           </li>
           <li class="flow-nav__navItem">
-            <a href="#">お問い合わせ</a>
+            <a href="<?php echo home_url('contact'); ?>">お問い合わせ</a>
           </li>
         </ul>
       </nav>
       <ul class="flow-nav__snsList">
         <li class="flow-nav__sns">
-          <a href="#">
+          <a href="https://www.instagram.com/tsuribijyo/" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="インスタグラム">
           </a>
         </li>
         <li class="flow-nav__sns">
-          <a href="#">
+          <a href="https://lin.ee/ljxVioK" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/line_icon.svg" alt="LINE">
           </a>
         </li>

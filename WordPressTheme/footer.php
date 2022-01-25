@@ -1,13 +1,13 @@
 <section class="footer-contact">
   <h1 class="section-heading">お問い合わせ</h1>
-  <a href="" class="footer-contact__btns">
-    <div class="footer-contact__btn">
+  <div class="footer-contact__btns">
+    <a href="<?php echo home_url('register'); ?>" class="footer-contact__btn">
       <p class="footer-contact__text">オフィシャルメンバーの<br>ご応募はコチラ</p>
-    </div>
-    <div class="footer-contact__btn">
+    </a>
+    <a href="<?php echo home_url('contact'); ?>" class="footer-contact__btn">
       <p class="footer-contact__text">お仕事のご依頼は<br>コチラ</p>
-    </div>
-  </a>
+    </a>
+  </div>
 </section>
 <footer class="footer">
   <div class="footer__inner">
@@ -20,16 +20,16 @@
           <p class="footer__navHead">コンテンツ</p>
           <ul class="footer__navList">
             <li class="footer__navItem">
-              <a href="#">- トップページ</a>
+              <a href="<?php echo home_url(); ?>">- トップページ</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- オフィシャルメンバー</a>
+              <a href="<?php echo home_url('member'); ?>">- オフィシャルメンバー</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- ブログ一覧</a>
+              <a href="<?php echo home_url('blog'); ?>">- ブログ一覧</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- ピックアップ</a>
+              <a href="<?php echo home_url('pickup'); ?>">- ピックアップ</a>
             </li>
           </ul>
         </div>
@@ -37,13 +37,13 @@
           <p class="footer__navHead">お問い合わせ</p>
           <ul class="footer_navList">
             <li class="footer__navItem">
-              <a href="#">- オフィシャルメンバー応募</a>
+              <a href="<?php echo home_url('register'); ?>">- オフィシャルメンバー応募</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- お仕事のご依頼はコチラ</a>
+              <a href="<?php echo home_url('contact'); ?>">- お仕事のご依頼はコチラ</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- お問い合わせ</a>
+              <a href="<?php echo home_url('contact'); ?>">- お問い合わせ</a>
             </li>
           </ul>
         </div>
@@ -53,10 +53,10 @@
           <p class="footer__navHead">SNS</p>
           <ul class="footer_navList">
             <li class="footer__navItem">
-              <a href="#">- Instagram</a>
+              <a href="https://www.instagram.com/tsuribijyo/" target="_blank" rel="noopener noreferrer">- Instagram</a>
             </li>
             <li class="footer__navItem">
-              <a href="#">- LINE</a>
+              <a href="https://lin.ee/ljxVioK" target="_blank" rel="noopener noreferrer">- LINE</a>
             </li>
           </ul>
         </div>

@@ -86,7 +86,7 @@
     <?php endforeach; endif; wp_reset_postdata(); ?>
   </ul>
   <div class="btn__wrap">
-    <a href="#" class="btn">他のオフィシャルメンバーをチェック</a>
+    <a href="<?php echo home_url('member'); ?>" class="btn">他のオフィシャルメンバーをチェック</a>
   </div>
 </section>
 <section class="member-blog">
@@ -133,7 +133,7 @@
     ?>
   </ul>
   <div class="btn__wrap">
-    <a href="#" class="btn">すべてのブログをチェック</a>
+    <a href="<?php echo home_url('blog'); ?>" class="btn">すべてのブログをチェック</a>
   </div>
 </section>
 <section class="pickup">
@@ -182,7 +182,7 @@
     <?php endforeach; endif; wp_reset_postdata(); ?>
   </div>
   <div class="btn__wrap">
-    <a href="#" class="btn">すべてのピックアップ記事をチェック</a>
+    <a href="<?php echo home_url('pickup'); ?>" class="btn">すべてのピックアップ記事をチェック</a>
   </div>
 </section>
 <section class="instagram">

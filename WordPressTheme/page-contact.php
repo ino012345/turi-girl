@@ -5,7 +5,7 @@
 <div class="contact__content">
   <h1 class="section-heading blue">お問い合わせフォーム</h1>
   <p class="contact__text1">必要事項をご入力いただき、<br class="sp">お問い合せください。</p>
-  <p class="contact__text2">釣り美女オフィシャルメンバー<br class="sp">登録希望の方は<a href="">こちら</a></p>
+  <p class="contact__text2">釣り美女オフィシャルメンバー<br class="sp">登録希望の方は<a href="<?php echo home_url('register'); ?>">こちら</a></p>
   <p class="contact__text2"><span>※</span>は必須項目になります。</p>
 </div>
 

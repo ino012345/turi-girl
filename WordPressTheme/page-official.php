@@ -10,7 +10,7 @@
 </section>
 <section class="recruit__cta">
   <p class="recruit__catch">LINEでカンタン応募（無料）</p>
-  <a href="#" class="btn block official">今すぐ応募する</a>
+  <a href="<?php echo home_url('register'); ?>" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
     <p class="recruit__explain">※LINE友達追加後に応募フォームが届きます。</p>
@@ -70,7 +70,7 @@
 </section>
 <section class="recruit__cta">
   <p class="recruit__catch">LINEでカンタン応募（無料）</p>
-  <a href="#" class="btn block official">今すぐ応募する</a>
+  <a href="<?php echo home_url('register'); ?>" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
     <p class="recruit__explain">※LINE友達追加後に応募フォームが届きます。</p>
@@ -122,7 +122,7 @@
     <li class="flow__item">
       <div class="flow__itemInner">
         <p class="flow__head" data-number="01">LINEを友だち追加しよう</p>
-        <p class="flow__text"><a href="#">釣り美女事務局</a>のLINEを友だち追加してください。<br>登録後応募フォームをお送りします。</p>
+        <p class="flow__text"><a href="https://lin.ee/ljxVioK" target="_blank" rel="noopener noreferrer">釣り美女事務局</a>のLINEを友だち追加してください。<br>登録後応募フォームをお送りします。</p>
       </div>
     </li>
     <li class="flow__item">
@@ -150,7 +150,7 @@
 </section>
 <section class="recruit__cta">
   <p class="recruit__catch">LINEでカンタン応募（無料）</p>
-  <a href="#" class="btn block official">今すぐ応募する</a>
+  <a href="<?php echo home_url('register'); ?>" class="btn block official">今すぐ応募する</a>
   <div class="recruit__explainWrap">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
     <p class="recruit__explain">※LINE友達追加後に応募フォームが届きます。</p>
@@ -249,7 +249,7 @@
 </section>
 <section class="recruit__cta white">
   <p class="recruit__catch white">LINEでカンタン応募（無料）</p>
-  <a href="#" class="btn block official white">今すぐ応募する</a>
+  <a href="<?php echo home_url('register'); ?>" class="btn block official white">今すぐ応募する</a>
   <div class="recruit__explainWrap white">
     <p class="recruit__explain">※オフィシャルメンバーは無料でご登録できます。</p>
     <p class="recruit__explain">※LINE友達追加後に応募フォームが届きます。</p>

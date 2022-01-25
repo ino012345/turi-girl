@@ -75,7 +75,7 @@ wp_reset_query();
 <p class="information__arrow">PROFILE >>></p>
 </section>
 <div class="profile-btn">
-  <a href="#">お仕事・PRのご依頼はコチラ</a>
+  <a href="<?php echo home_url('contact'); ?>">お仕事・PRのご依頼はコチラ</a>
 </div>
 <section class="recommend">
 <div class="recommend__bannerArea">
