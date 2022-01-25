@@ -210,42 +210,42 @@ function myplugin_add_custom_box() {
   }
 }
 
-function user_profile_hide_script( $hook ) {
-	$script = <<<SCRIPT
-	jQuery(function($) {
-		jQuery('#your-profile .user-rich-editing-wrap').hide(); //ビジュアルエディター
-		jQuery('#your-profile .user-syntax-highlighting-wrap').hide(); //シンタックスハイライト
-		jQuery('#your-profile .user-comment-shortcuts-wrap').hide(); //キーボードショートカット
-		jQuery('#your-profile .show-admin-bar').hide(); //ツールバー
-		jQuery('#your-profile .user-language-wrap').hide(); //言語
-		jQuery('#your-profile .user-url-wrap').hide(); //サイト
-		jQuery('#your-profile .user-aim-wrap').hide(); //AIM
-		jQuery('#your-profile .user-yim-wrap').hide(); //Yahoo IM
-		jQuery('#your-profile .user-jabber-wrap').hide(); //Jabber / Google Talk
-		jQuery('#your-profile .user-googleplus-wrap').hide(); //Google+
-		jQuery('#your-profile .user-description-wrap').hide(); //プロフィール情報
-		jQuery('#your-profile .user-sessions-wrap').hide(); //セッション
-	});
-	SCRIPT;
-	wp_add_inline_script( 'jquery-core', $script );
-	}
-	add_action( 'admin_enqueue_scripts', 'user_profile_hide_script' );
+// function user_profile_hide_script( $hook ) {
+// 	$script = <<<SCRIPT
+// 	jQuery(function($) {
+// 		jQuery('#your-profile .user-rich-editing-wrap').hide(); //ビジュアルエディター
+// 		jQuery('#your-profile .user-syntax-highlighting-wrap').hide(); //シンタックスハイライト
+// 		jQuery('#your-profile .user-comment-shortcuts-wrap').hide(); //キーボードショートカット
+// 		jQuery('#your-profile .show-admin-bar').hide(); //ツールバー
+// 		jQuery('#your-profile .user-language-wrap').hide(); //言語
+// 		jQuery('#your-profile .user-url-wrap').hide(); //サイト
+// 		jQuery('#your-profile .user-aim-wrap').hide(); //AIM
+// 		jQuery('#your-profile .user-yim-wrap').hide(); //Yahoo IM
+// 		jQuery('#your-profile .user-jabber-wrap').hide(); //Jabber / Google Talk
+// 		jQuery('#your-profile .user-googleplus-wrap').hide(); //Google+
+// 		jQuery('#your-profile .user-description-wrap').hide(); //プロフィール情報
+// 		jQuery('#your-profile .user-sessions-wrap').hide(); //セッション
+// 	});
+// 	SCRIPT;
+// 	wp_add_inline_script( 'jquery-core', $script );
+// 	}
+// 	add_action( 'admin_enqueue_scripts', 'user_profile_hide_script' );
 
 	// カスタム投稿タイプの記事一覧に投稿者の項目を追加する
-function manage_books_columns ($columns) {
-	$columns['author'] = '作成者';
-	return $columns;
-}
+// function manage_books_columns ($columns) {
+// 	$columns['author'] = '作成者';
+// 	return $columns;
+// }
 
-function add_books_column ($column, $post_id) {
-	if ('author' == $column) {
-			$value = get_the_term_list($post_id, 'author');
-			echo attribute_escape($value);
-	}
-}
+// function add_books_column ($column, $post_id) {
+// 	if ('author' == $column) {
+// 			$value = get_the_term_list($post_id, 'author');
+// 			echo attribute_escape($value);
+// 	}
+// }
 
-add_filter('manage_posts_columns', 'manage_books_columns');
-add_action('manage_posts_custom_column', 'add_books_column', 10, 2);
+// add_filter('manage_posts_columns', 'manage_books_columns');
+// add_action('manage_posts_custom_column', 'add_books_column', 10, 2);
 
 //スマホ表示分岐
 function is_mobile(){
