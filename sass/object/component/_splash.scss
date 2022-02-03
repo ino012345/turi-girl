@@ -44,3 +44,9 @@
       opacity: 1;
     }
   }
+
+  .trail-item {
+    &:not(:first-of-type) {
+      pointer-events: none;
+    }
+  }

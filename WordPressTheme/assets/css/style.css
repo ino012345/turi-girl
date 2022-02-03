@@ -651,12 +651,15 @@ summary {
 	margin-top: 0.3125rem;
 }
 
+.article__title--pickup {
+	margin-bottom: 2.5rem;
+}
+
 .article__information {
 	align-items: center;
-	border-bottom: 0.125rem dashed #0397de;
 	display: flex;
+	margin-bottom: 2.5rem;
 	margin-top: 0.9375rem;
-	padding-bottom: 2.5rem;
 }
 
 .article .member-blog__author {
@@ -665,9 +668,10 @@ summary {
 }
 
 .article__contentWrap {
-	margin-top: 2.5rem;
+	border-top: 0.125rem dashed #0397de;
 	padding-left: 0.3125rem;
 	padding-right: 0.3125rem;
+	padding-top: 2.5rem;
 }
 
 .article__contentWrap p {
@@ -1725,6 +1729,10 @@ summary {
 	margin-right: 0;
 }
 
+.member-blog__item:last-child {
+	margin-right: 0;
+}
+
 .member-blog__image {
 	font-size: 0;
 	height: 13.75rem;
@@ -2504,7 +2512,6 @@ summary {
 	font-weight: 600;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5rem;
 	max-width: 56.25rem;
 	padding-bottom: 0.9375rem;
 	text-align: center;
@@ -3033,6 +3040,10 @@ summary {
 	animation-fill-mode: forwards;
 	animation-name: fadeInAnime;
 	opacity: 0;
+}
+
+.trail-item:not(:first-of-type) {
+	pointer-events: none;
 }
 
 .p-test {

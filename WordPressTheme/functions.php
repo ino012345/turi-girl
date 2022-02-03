@@ -198,11 +198,11 @@ register_post_type( 'profile', array( //カスタム投稿の名前
 ));
 
 //カスタム投稿（投稿項目の名前）
-register_post_type( 'pickup', array( //カスタム投稿の名前
+register_post_type( 'pickups', array( //カスタム投稿の名前
 	'label' => 'ピックアップ', //管理画面に表示される名前
 	'public' => true, //trueでOK
 	'query_var' => true, //URLの最適化。trueでOK
-	'rewrite' => array( 'slug' => 'pickup' ), //スラッグの指定
+	'rewrite' => array( 'slug' => 'pickups' ), //スラッグの指定
 	'capability_type' => 'post', //権限の設定。postでOK
 	'hierarchical' => false, //カスタム投稿タイプで親子関係を作るか。（今回はfalse）
 	'menu_position' => 7, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
@@ -320,3 +320,26 @@ function mwform_birthday_year_value_setting( $value, $name ) {
   }
   return $value;
 }
+
+function show_only_authorpost($query) {
+	global $current_user;
+	if(is_admin()){
+			if(current_user_can('author') ){
+					$query->set('author', $current_user->ID);
+			}
+	}
+}
+add_action('pre_get_posts', 'show_only_authorpost');
+
+function show_only_authorimage( $where ){
+	global $current_user;
+	if(is_admin()){
+			if(current_user_can('author') ){
+					if( isset( $_POST['action'] ) && ( $_POST['action'] == 'query-attachments' ) ){
+							$where .= ' AND post_author='.$current_user->data->ID;
+					}
+			}
+	}
+	return $where;
+}
+add_filter( 'posts_where', 'show_only_authorimage' );

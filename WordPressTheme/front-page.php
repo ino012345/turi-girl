@@ -147,7 +147,7 @@
   <div class="pickup__inner">
     <?php
     $cat_posts = get_posts(array(
-        'post_type' => 'pickup', // 投稿タイプ
+        'post_type' => 'pickups', // 投稿タイプ
         'posts_per_page' => 2, // 表示件数
         'orderby' => 'date', // 表示順の基準
         'order' => 'DESC' // 昇順・降順
