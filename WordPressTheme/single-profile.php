@@ -2,7 +2,7 @@
 
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 <section class="profile-contents">
-  <h1 class="section-heading"><?php the_title();?><span>の</span>プロフィール</h1>
+  <h1 class="section-heading"><?php the_title();?></h1>
   <div class="profile-contents__inner">
     <div class="profile-contents__media">
       <ul class="profile-contents__slider slider4">
@@ -142,9 +142,9 @@ wp_reset_query();
   <!-- <div class="btn__wrap">
     <a href="#" class="btn">すべてのブログをチェック</a>
   </div> -->
-  <div class="profile-btn">
+  <!-- <div class="profile-btn">
     <a href="<?php echo home_url('contact'); ?>">お仕事・PRのご依頼は<br class="sp">コチラ</a>
-  </div>
+  </div> -->
 </section>
 
 <?php get_footer(); ?>

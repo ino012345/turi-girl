@@ -1,7 +1,7 @@
 <section class="footer-contact">
   <h1 class="section-heading">お問い合わせ</h1>
   <div class="footer-contact__btns">
-    <a href="<?php echo home_url('register'); ?>" class="footer-contact__btn">
+    <a href="<?php echo home_url('official'); ?>" class="footer-contact__btn">
       <p class="footer-contact__text">オフィシャルメンバーの<br>ご応募はコチラ</p>
     </a>
     <a href="<?php echo home_url('contact'); ?>" class="footer-contact__btn">

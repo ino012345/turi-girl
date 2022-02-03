@@ -1290,6 +1290,18 @@ summary {
 	padding-top: 1.875rem;
 }
 
+.fv__preImage {
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90vw;
+}
+
+.fv__preImage img {
+	height: 100%;
+	width: 100%;
+}
+
 /*==================================================
 スライダーのためのcss
 ===================================*/
@@ -1352,6 +1364,14 @@ summary {
 
 .slick-dots .slick-active button::after {
 	background-image: url(../img/fish-black.png);
+}
+
+.sp {
+	display: none;
+}
+
+.pc {
+	display: block;
 }
 
 .g-nav__navHead {
@@ -1667,6 +1687,10 @@ summary {
 	top: 50%;
 	transform: translateY(-50%);
 	width: 1.875rem;
+}
+
+.sb_instagram_header.sbi_no_avatar {
+	display: none;
 }
 
 .member-blog {
@@ -3278,6 +3302,14 @@ html {
 	height: 25rem;
 	object-fit: cover;
 	width: 90vw;
+}
+
+.sp {
+	display: block;
+}
+
+.pc {
+	display: none;
 }
 
 .openbtn {

@@ -4,7 +4,13 @@
 <div id="splash_logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="" class="fadeIn"></div>
 <!--/splash--></div>
 <section class="fv">
-  <ul class="fv__imageList slider">
+  <figure class="fv__preImage pc">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/preImage.jpg" alt="イメージ画像">
+  </figure>
+  <figure class="fv__preImage sp">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/preImage-sp.svg" alt="イメージ画像">
+  </figure>
+  <!-- <ul class="fv__imageList slider">
     <li class="fv__image">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="イメージ画像">
     </li>
@@ -17,7 +23,7 @@
     <li class="fv__image">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="イメージ画像">
     </li>
-  </ul>
+  </ul> -->
 </section>
 <section class="news">
   <h1 class="section-heading mini">おしらせ</h1>
@@ -38,14 +44,14 @@
       </li>
     <?php endforeach; endif; wp_reset_postdata(); ?>
   </ul>
-  <div class="news__bannerArea">
+  <!-- <div class="news__bannerArea">
     <a href="#" class="news__banner">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
     </a>
     <a  href="#" class="news__banner">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.jpg" alt="バナー">
     </a>
-  </div>
+  </div> -->
   <!-- <div class="btn__wrap">
     <a href="#" class="btn">すべてのおしらせをチェック</a>
   </div> -->
@@ -141,8 +147,7 @@
   <div class="pickup__inner">
     <?php
     $cat_posts = get_posts(array(
-        'post_type' => 'post', // 投稿タイプ
-        'category_name' => 'pickup', // カテゴリをスラッグで指定する場合
+        'post_type' => 'pickup', // 投稿タイプ
         'posts_per_page' => 2, // 表示件数
         'orderby' => 'date', // 表示順の基準
         'order' => 'DESC' // 昇順・降順
@@ -188,7 +193,7 @@
 <section class="instagram">
   <h1 class="section-heading blue">インスタグラム</h1>
   <div class="instagram__inner">
-    <a href="https://www.instagram.com/tsuribijyo/" class="instagram__link" target="_blank" rel="noopener noreferrer">
+    <!-- <a href="https://www.instagram.com/tsuribijyo/" class="instagram__link" target="_blank" rel="noopener noreferrer">
       <ul class="instagram__imageList slider3">
         <li class="instagram__imageItem">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
@@ -221,7 +226,10 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top.jpg" alt="インスタグラムの投稿">
         </li>
       </ul>
-    </a>
+    </a> -->
+    <?php
+    echo do_shortcode('[instagram-feed]');
+    ?>
   </div>
   <div class="instagram__buttonWrap">
     <a href="https://www.instagram.com/tsuribijyo/" class="instagram__button" target="_blank" rel="noopener noreferrer">釣り美女公式Instagramはコチラ</a>

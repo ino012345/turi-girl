@@ -155,7 +155,7 @@ function keika_time($days){
 	$entry_day = get_the_time('U');
 	$keika = date('U',($today - $entry_day)) / 86400;
 	if ( $days > $keika ):
-		echo '<img src="http://tsuribijyo.local/wp-content/themes/WordPressTheme/assets/img/new.png" alt="新着マーク" class="new">';
+		echo '<img src="/wp-content/themes/WordPressTheme/assets/img/new.png" alt="新着マーク" class="new">';
 	endif;
 }
 function keika_time_pickup($days){
@@ -163,41 +163,52 @@ function keika_time_pickup($days){
 	$entry_day = get_the_time('U');
 	$keika = date('U',($today - $entry_day)) / 86400;
 	if ( $days > $keika ):
-		echo '<img src="http://tsuribijyo.local/wp-content/themes/WordPressTheme/assets/img/new-pickup.png" alt="新着マーク" class="new">';
+		echo '<img src="/wp-content/themes/WordPressTheme/assets/img/new-pickup.png" alt="新着マーク" class="new">';
 	endif;
 }
 
 //カスタム投稿（投稿項目の名前）
 register_post_type( 'news', array( //カスタム投稿の名前
 	'label' => 'ニュース', //管理画面に表示される名前
-	'public' => true, //trueでOK！
-	'query_var' => true, //URLの最適化。trueでOK！
+	'public' => true, //trueでOK
+	'query_var' => true, //URLの最適化。trueでOK
 	'rewrite' => array( 'slug' => 'news' ), //スラッグの指定
-	'capability_type' => 'post', //権限の設定。postでOK！
+	'capability_type' => 'post', //権限の設定。postでOK
 	'hierarchical' => false, //カスタム投稿タイプで親子関係を作るか。（今回はfalse）
 	'menu_position' => 5, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
 	'supports' => array( //編集ページに表示させるもの
 			'title', //タイトル
-			'editor', //本文
 	),
-	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK！
+	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK
 ));
 
 //カスタム投稿（投稿項目の名前）
 register_post_type( 'profile', array( //カスタム投稿の名前
 	'label' => 'プロフィール', //管理画面に表示される名前
-	'public' => true, //trueでOK！
-	'query_var' => true, //URLの最適化。trueでOK！
+	'public' => true, //trueでOK
+	'query_var' => true, //URLの最適化。trueでOK
 	'rewrite' => array( 'slug' => 'profile' ), //スラッグの指定
-	'capability_type' => 'post', //権限の設定。postでOK！
+	'capability_type' => 'post', //権限の設定。postでOK
 	'hierarchical' => false, //カスタム投稿タイプで親子関係を作るか。（今回はfalse）
 	'menu_position' => 6, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
 	'supports' => array( //編集ページに表示させるもの
 			'title', //タイトル
 	),
-	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK！
+	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK
 ));
 
+//カスタム投稿（投稿項目の名前）
+register_post_type( 'pickup', array( //カスタム投稿の名前
+	'label' => 'ピックアップ', //管理画面に表示される名前
+	'public' => true, //trueでOK
+	'query_var' => true, //URLの最適化。trueでOK
+	'rewrite' => array( 'slug' => 'pickup' ), //スラッグの指定
+	'capability_type' => 'post', //権限の設定。postでOK
+	'hierarchical' => false, //カスタム投稿タイプで親子関係を作るか。（今回はfalse）
+	'menu_position' => 7, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
+	'supports' => array('title','editor','thumbnail','custom-fields','author','comments','revisions','page-attributes'),
+	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK
+));
 // カスタム投稿タイプの記事編集画面にメタボックス（作成者変更）を表示する
 
 /* admin_menu アクションフックでカスタムボックスを定義 */
