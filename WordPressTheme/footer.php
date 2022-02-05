@@ -66,6 +66,8 @@
   <p class="footer__copyright">©釣り美女</p>
 </footer>
 <?php wp_footer(); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+cookie.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slick.min.js"></script>
 </body>
 </html>

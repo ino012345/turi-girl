@@ -73,6 +73,7 @@
           <p class="information__introText"><?php echo the_field('introduce'); ?></p>
         </div>
       </div>
+      <p class="information__arrow">PROFILE >>></p>
       </a>
     </div>
   
@@ -80,7 +81,6 @@
   endif;
   wp_reset_query();
   ?>
-  <p class="information__arrow">PROFILE >>></p>
   </section>
   <div class="profile-btn">
     <a href="<?php echo home_url('contact'); ?>">お仕事・PRのご依頼はコチラ</a>

@@ -1,0 +1,23 @@
+.Pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(80);
+  }
+.Pagination-Item {
+border: rem(3) solid #333;
+margin-left: rem(16);
+padding-top: rem(4);
+padding-bottom: rem(2);
+width: rem(45);
+display: flex;
+justify-content: center;
+align-items: center;
+background: #fff;
+color: #333;
+font-size: rem(22);
+}
+.Pagination-Item.isActive {
+border: none;
+background: #333;
+color: #fff;
+}

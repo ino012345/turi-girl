@@ -4,11 +4,8 @@
 <div id="splash_logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-white.svg" alt="" class="fadeIn"></div>
 <!--/splash--></div>
 <section class="fv">
-  <figure class="fv__preImage pc">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/preImage.jpg" alt="イメージ画像">
-  </figure>
-  <figure class="fv__preImage sp">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/preImage-sp.svg" alt="イメージ画像">
+  <figure class="fv__preImage">
+    <img src="https://tsuribijyo.jp/wp-content/uploads/2022/02/preImage-scaled.jpg" alt="イメージ画像">
   </figure>
   <!-- <ul class="fv__imageList slider">
     <li class="fv__image">
@@ -110,14 +107,25 @@
       <a href="<?php the_permalink(); ?>">
         <figure class="member-blog__image">
           <?php keika_time(3);?>
-          <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail(); ?>
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
           <?php else : ?>
-            <p>サムネイルがないです</p>
-          <?php endif; ?>
+            <img src="<?php echo catch_that_image(); ?>" alt="" />
+          <?php endif ; ?>
         </figure>
         <p class="member-blog__date"><?php the_time('Y.m.d'); ?></p>
-        <p class="member-blog__title"><?php the_title(); ?></p>
+        <p class="member-blog__title">
+          
+        <?php
+          if(mb_strlen(get_the_title())>20){
+          $text= mb_substr(strip_tags(get_the_title()), 0, 20);
+          echo $text.'…';
+          }else{
+          echo strip_tags(get_the_title());
+          }
+        ?>
+
+        </p>
         <div class="member-blog__author">
           <figure class="member-blog__icon">
           <?php
@@ -158,15 +166,26 @@
     <a href="<?php the_permalink(); ?>" class="pickup__media">
       <figure class="pickup__image">
         <?php keika_time_pickup(3);?>
-        <?php if ( has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail(); ?>
+        <?php if (has_post_thumbnail()) : ?>
+          <?php the_post_thumbnail('thumbnail'); ?>
         <?php else : ?>
-          <p>サムネイルがないです</p>
-        <?php endif; ?>
+          <img src="<?php echo catch_that_image(); ?>" alt="" />
+        <?php endif ; ?>
       </figure>
       <div class="pickup__body">
         <p class="pickup__date"><?php the_time('Y.m.d') ?></p>
-        <p class="pickup__title"><?php the_title(); ?></p>
+        <p class="pickup__title">
+
+                  <?php
+          if(mb_strlen(get_the_title())>20){
+          $text= mb_substr(strip_tags(get_the_title()), 0, 20);
+          echo $text.'…';
+          }else{
+          echo strip_tags(get_the_title());
+          }
+        ?>
+
+        </p>
         <p class="pickup__description"><?php the_excerpt(); ?></p>
         <div class="pickup__author">
           <figure class="pickup__icon">

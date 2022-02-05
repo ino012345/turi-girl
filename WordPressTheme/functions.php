@@ -193,6 +193,7 @@ register_post_type( 'profile', array( //カスタム投稿の名前
 	'menu_position' => 6, //管理画面での表示場所。5=（投稿の下）10=（メディアの下）
 	'supports' => array( //編集ページに表示させるもの
 			'title', //タイトル
+			'custom-fields',
 	),
 	'has_archive' => true //通常のarchive.phpを使うか。基本trueでOK
 ));
@@ -322,12 +323,11 @@ function mwform_birthday_year_value_setting( $value, $name ) {
 }
 
 function show_only_authorpost($query) {
-	global $current_user;
-	if(is_admin()){
-			if(current_user_can('author') ){
-					$query->set('author', $current_user->ID);
-			}
-	}
+  global $current_user;
+  global $pagenow;
+  if( is_admin() && !current_user_can('edit_others_posts') && $pagenow === 'edit.php' ){
+    $query->set('author', $current_user->ID);
+  }
 }
 add_action('pre_get_posts', 'show_only_authorpost');
 
@@ -343,3 +343,83 @@ function show_only_authorimage( $where ){
 	return $where;
 }
 add_filter( 'posts_where', 'show_only_authorimage' );
+
+function change_post_types_cap() {
+	global $wp_post_types;
+	$target_post_types = array(
+			'profile'
+	);
+	foreach($target_post_types as $target_post_type) {
+			// create_postsの権限を変更
+			$cap = &$wp_post_types[$target_post_type]->cap;
+			$cap->create_posts = "create_posts";
+	}
+	// create_posts権限を無効化
+	$role = get_role( 'author' );
+	$role->add_cap( 'create_posts', false );
+}
+add_action( 'init', 'change_post_types_cap' );
+
+//管理バーの要素を非表示に設定する
+function remove_admin_bar_menu_control( $wp_admin_bar ) {
+
+	//ログインユーザーが管理者権限の場合は何もしない
+	if ( current_user_can( 'administrator' ) ) {
+		return;
+	}
+
+	//ログインユーザーが管理者権限以外の場合は非表示を実行
+	$wp_admin_bar->remove_menu( 'new-news' );     // 新規 → 投稿
+	$wp_admin_bar->remove_menu( 'new-pickups' );     // 新規 → 投稿
+	$wp_admin_bar->remove_menu( 'new-media' );    // 新規 → メディア
+	$wp_admin_bar->remove_menu( 'new-link' );     // 新規 → リンク
+	$wp_admin_bar->remove_menu( 'new-page' );     // 新規 → 固定ページ
+	$wp_admin_bar->remove_menu( 'new-user' );     // 新規 → ユーザー
+}
+add_action('admin_bar_menu', 'remove_admin_bar_menu_control', 111);
+
+
+function pagination( $pages, $paged, $range = 2 ) {
+	$pages = ( int ) $pages;
+	$paged = $paged ?: 1;
+	$text_before  = "←";
+	$text_next    = "→";
+	if ( 1 !== $pages ) {
+	//２ページ以上の時
+	echo '<div class="Pagination">';
+	if ( $paged > 1 ) {
+	// 「‹」１ページ前へ戻るリンクを表示
+	echo '<a href="', get_pagenum_link( $paged - 1 ) ,'" class="Pagination-Item">', $text_before ,'</a>';
+	}
+	for ( $i = 1; $i <= $pages; $i++ ) {
+	if ( $i <= $paged + $range && $i >= $paged - $range ) {
+	if ( $paged === $i ) {
+	echo '<span class="Pagination-Item isActive">', $i ,'</span>'; // 現在のページの数字
+	} else {
+	echo '<a href="', get_pagenum_link( $i ) ,'" class="Pagination-Item">', $i ,'</a>';
+	}
+	}
+	}
+	if ( $paged < $pages ) {
+	// 「›」１ページ後へ進むリンクを表示
+	echo '<a href="', get_pagenum_link( $paged + 1 ) ,'" class="Pagination-Item">' ,$text_next ,'</a>';
+	}
+	echo '</div>';
+	}
+}
+
+function catch_that_image() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = $matches [1] [0];
+
+	if(empty($first_img)){
+		// 記事内で画像がなかった時のための画像を指定（ディレクトリ先や画像名称は任意）
+		$first_img = esc_url(get_template_directory_uri()) . "/images/common/noImage.png";
+	}
+
+	return $first_img;
+}

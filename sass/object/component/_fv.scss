@@ -13,6 +13,9 @@
       width: 100%;
       height: 100%;
     }
+    @include mq(sp){
+      width: 95vw;
+    }
   }
 }
 

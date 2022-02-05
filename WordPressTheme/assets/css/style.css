@@ -2061,6 +2061,32 @@ summary {
 	width: 100%;
 }
 
+.Pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+}
+
+.Pagination-Item {
+	align-items: center;
+	background: #fff;
+	border: 0.1875rem solid #333;
+	color: #333;
+	display: flex;
+	font-size: 1.375rem;
+	justify-content: center;
+	margin-left: 1rem;
+	padding-bottom: 0.125rem;
+	padding-top: 0.25rem;
+	width: 2.8125rem;
+}
+
+.Pagination-Item.isActive {
+	background: #333;
+	border: none;
+	color: #fff;
+}
+
 .pickup {
 	background-color: #00b8ff;
 	padding: 6.25rem 0.9375rem;
@@ -3306,6 +3332,10 @@ html {
 .fv {
 	margin-top: 4.375rem;
 	padding-top: 0.3125rem;
+}
+
+.fv__preImage {
+	width: 95vw;
 }
 
 .slider img {
