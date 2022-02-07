@@ -3032,6 +3032,7 @@ summary {
 	background: #0397de;
 	bottom: 0;
 	color: #fff;
+	display: none;
 	height: 100vh;
 	left: 0; /*fixedで全面に固定*/
 	position: fixed;

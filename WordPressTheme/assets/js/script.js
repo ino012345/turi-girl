@@ -127,7 +127,7 @@ jQuery(function ($) {
 		var myYear = String(myD.getFullYear());//年
 		var myMonth = String(myD.getMonth() + 1);//月
 		var myDate = String(myD.getDate());//日
-				
+		
 		if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセスした日付を比較↓
 						$("#splash").css("display", "block");//１回目はローディングを表示
 						setTimeout(function () {
@@ -205,6 +205,7 @@ jQuery(function ($) {
 
 		$(function() {
 			$('.required input').attr('required', '');
+			$('#pwbox-224').attr('required', '');
 		});
 
 		$(function() {
@@ -262,6 +263,6 @@ jQuery(function ($) {
 		// $('.toSixth').click(function() {//前の項目をクリックしたら
 		// 	$('.sixth .contact__box').slideDown();//アコーディオンの上下動作
 		// });
-
 	});
 });
+
