@@ -109,7 +109,7 @@ jQuery(function ($) {
 			infinite: true,//スライドをループさせるかどうか。初期値はtrue。
 			autoplaySpeed: 2000,//自動的に動き出す待ち時間。初期値は3000
 			speed: 1000,//スライドのスピード。初期値は300。
-			slidesToShow: 3,//スライドを画面に3枚見せる
+			slidesToShow: 1,//スライドを画面に3枚見せる
 			slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
 			prevArrow: false,
 			nextArrow: false,

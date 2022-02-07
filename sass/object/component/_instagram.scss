@@ -51,3 +51,24 @@
 .sb_instagram_header.sbi_no_avatar {
   display: none;
 }
+
+#sbi_load {
+  display: none;
+}
+
+#sbi_images {
+  .sbi_item.sbi_type_image {
+    .sbi_photo_wrap {
+      a {
+        @include mq(sp){
+          height: rem(173);
+        }
+      }
+    }
+  }
+}
+#sb_instagram.sbi_col_6 #sbi_images .sbi_item {
+  @include mq(sp){
+    width: 50% !important;
+  }
+}

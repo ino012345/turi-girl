@@ -9,15 +9,21 @@
         <li class="profile-contents__image">
           <img src="<?php echo the_field('image1'); ?>" alt="プロフィール写真">
         </li>
+        <?php if( get_field('image2') ){ ?>
         <li class="profile-contents__image">
           <img src="<?php echo the_field('image2'); ?>" alt="プロフィール写真">
         </li>
+        <?php } ?>
+        <?php if( get_field('image3') ){ ?>
         <li class="profile-contents__image">
           <img src="<?php echo the_field('image3'); ?>" alt="プロフィール写真">
         </li>
+        <?php } ?>
+        <?php if( get_field('image4') ){ ?>
         <li class="profile-contents__image">
           <img src="<?php echo the_field('image4'); ?>" alt="プロフィール写真">
         </li>
+        <?php } ?>
       </ul>
       <div class="profile-contents__body">
         <p class="profile-contents__name"><?php the_title();?></p>

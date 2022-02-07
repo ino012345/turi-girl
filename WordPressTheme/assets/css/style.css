@@ -1697,6 +1697,10 @@ summary {
 	display: none;
 }
 
+#sbi_load {
+	display: none;
+}
+
 .member-blog {
 	background-color: #4986d9;
 	padding: 6.25rem 0.9375rem;
@@ -2306,6 +2310,10 @@ summary {
 .profile-contents__value {
 	font-size: 1rem;
 	width: 60%;
+}
+
+.slick-dots > li:first-child:last-child {
+	display: none;
 }
 
 .profile-introduce {
@@ -3414,6 +3422,14 @@ html {
 
 .instagram__button {
 	font-size: 0.875rem;
+}
+
+#sbi_images .sbi_item.sbi_type_image .sbi_photo_wrap a {
+	height: 10.8125rem;
+}
+
+#sb_instagram.sbi_col_6 #sbi_images .sbi_item {
+	width: 50% !important;
 }
 
 .member-blog__item {
