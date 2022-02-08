@@ -205,7 +205,7 @@ jQuery(function ($) {
 
 		$(function() {
 			$('.required input').attr('required', '');
-			$('#pwbox-224').attr('required', '');
+			$('input[type="password"]').attr('required', '');
 		});
 
 		$(function() {
