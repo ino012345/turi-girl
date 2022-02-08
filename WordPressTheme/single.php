@@ -111,11 +111,11 @@
       <a href="<?php the_permalink(); ?>">
         <figure class="member-blog__image">
           <?php keika_time(3);?>
-          <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail(); ?>
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
           <?php else : ?>
-            <p>サムネイルがないです</p>
-          <?php endif; ?>
+            <img src="<?php echo catch_that_image(); ?>" alt="" />
+          <?php endif ; ?>
         </figure>
         <p class="member-blog__date"><?php the_time('Y.m.d'); ?></p>
         <p class="member-blog__title"><?php the_title(); ?></p>
